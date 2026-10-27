@@ -1,0 +1,4 @@
+interface:
+  display_name: "OCCT DRAW 建模"
+  short_description: "通过 Tcl 直接建模、检查几何与导出 STEP，保留会话及持久任务记忆"
+  default_prompt: "使用 $occ-draw，按给定尺寸创建并验证三维实体，保存检查点和 STEP 文件。"

@@ -1,0 +1,63 @@
+{
+  "ok": true,
+  "session": "mounting_plate_demo",
+  "checkpoint": "finished_1793115852679555800",
+  "inspection": {
+    "name": "final_part",
+    "type": "compound",
+    "valid": true,
+    "topology": {
+      "compound": 1,
+      "compsolid": 0,
+      "solid": 1,
+      "shell": 1,
+      "face": 14,
+      "wire": 25,
+      "edge": 33,
+      "vertex": 22
+    },
+    "bbox": {
+      "min": [
+        -4.440892098500626e-16,
+        -4.440892098500626e-16,
+        0.0
+      ],
+      "max": [
+        100.0,
+        70.0,
+        22.0
+      ],
+      "size": [
+        100.0,
+        70.0,
+        22.0
+      ]
+    },
+    "area": 20015.91570045325,
+    "length": 1304.0796025351367,
+    "volume": 76232.45521534949,
+    "center_of_mass": [
+      50.0124981645434,
+      35.00869778216563,
+      6.414351139112886
+    ],
+    "units": "model_units (default convention: mm)"
+  },
+  "files": {
+    "brep": {
+      "path": "C:/Projects/occ-harness/artifacts/demo/mounting_plate.brep",
+      "format": "brep",
+      "bytes": 9924
+    },
+    "step": {
+      "path": "C:/Projects/occ-harness/artifacts/demo/mounting_plate.step",
+      "format": "step",
+      "bytes": 40982
+    },
+    "stl": {
+      "path": "C:/Projects/occ-harness/artifacts/demo/mounting_plate.stl",
+      "format": "stl",
+      "bytes": 38284
+    }
+  }
+}

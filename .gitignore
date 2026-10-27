@@ -1,0 +1,7 @@
+build/
+.occ-harness/
+__pycache__/
+*.pyc
+bin/*.exp
+bin/*.lib
+bin/*.pdb

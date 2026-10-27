@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "occ_draw": {
+      "command": "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe",
+      "args": ["-NoLogo", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:/Projects/occ-harness/occ-harness.ps1", "--state-dir", "C:/Projects/occ-harness/.occ-harness", "mcp"]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+# Merge the desired fields into your client's config; this file is not installed automatically.
+model = "gpt-6-luna"
+
+[mcp_servers.occ_draw]
+command = "C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe"
+args = ["-NoLogo", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:/Projects/occ-harness/occ-harness.ps1", "--state-dir", "C:/Projects/occ-harness/.occ-harness", "mcp"]
+startup_timeout_sec = 30
+tool_timeout_sec = 65

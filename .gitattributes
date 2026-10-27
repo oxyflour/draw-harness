@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.cmd text eol=crlf
+
+# Preserve generated geometry and compiled modules byte-for-byte.
+*.brep binary
+*.step binary
+*.stp binary
+*.stl binary
+*.dll binary
