@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "data": {
+    "ok": true,
+    "code": 0,
+    "result": " -- The Shape base has problems :\n  Check                                    Count\n ------------------------------------------------\n  Invalid Curve on Surface ................. 370\n  Unorientable Shape ....................... 224\n ------------------------------------------------\n*** Shapes with problems : 594\nEDGE\t: 370 Items -> compound named chk_base_e\nFACE\t: 224 Items -> compound named chk_base_f\n",
+    "result_truncated": false,
+    "stdout": "",
+    "native_output": "",
+    "native_output_truncated": false
+  }
+}

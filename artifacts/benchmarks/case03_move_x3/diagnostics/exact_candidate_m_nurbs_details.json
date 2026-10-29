@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "data": {
+    "ok": true,
+    "code": 0,
+    "result": " -- The Shape candidate_m_nurbs has problems :\n  Check                                    Count\n ------------------------------------------------\n  Invalid Curve on Surface ................. 364\n  Unorientable Shape ....................... 222\n ------------------------------------------------\n*** Shapes with problems : 586\nEDGE\t: 364 Items -> compound named chk_candidate_m_nurbs_e\nFACE\t: 222 Items -> compound named chk_candidate_m_nurbs_f\n",
+    "result_truncated": false,
+    "stdout": "",
+    "native_output": "",
+    "native_output_truncated": false
+  }
+}

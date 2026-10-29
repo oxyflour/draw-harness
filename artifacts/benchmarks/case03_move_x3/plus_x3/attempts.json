@@ -1,0 +1,580 @@
+[
+  {
+    "script": "checkshape base input_errors -exact",
+    "seconds": 1.3590000001713634,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": " -- The Shape base has problems :\n  Check                                    Count\n ------------------------------------------------\n  Invalid Curve on Surface ................. 370\n  Unorientable Shape ....................... 224\n ------------------------------------------------\n*** Shapes with problems : 594\nEDGE\t: 370 Items -> compound named input_errors_e\nFACE\t: 224 Items -> compound named input_errors_f\n",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    }
+  },
+  {
+    "script": "boptions -default; bnondestructive 1",
+    "seconds": 0.031999999890103936,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    }
+  },
+  {
+    "script": "tcopy f6 target6; ttranslate target6 3 0 0",
+    "seconds": 0.031999999890103936,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "target6": {
+          "ok": true,
+          "data": {
+            "name": "target6",
+            "type": "face",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 1,
+              "edge": 5,
+              "vertex": 5
+            },
+            "bbox": {
+              "min": [
+                -1.8850500999999997,
+                -84.59411966027,
+                0.16377667858589645
+              ],
+              "max": [
+                -0.2566998999999999,
+                -83.74974432060975,
+                1.792126878586
+              ],
+              "size": [
+                1.6283501999999999,
+                0.844375339660246,
+                1.6283502000001036
+              ]
+            },
+            "area": 1.566817206208244,
+            "length": 6.3589413175651135,
+            "volume": null,
+            "center_of_mass": [
+              -1.2906724163135985,
+              -84.20224002242018,
+              1.2040017949400244
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "tcopy f727 target727; ttranslate target727 3 0 0",
+    "seconds": 0.0470000000204891,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "target727": {
+          "ok": true,
+          "data": {
+            "name": "target727",
+            "type": "face",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 1,
+              "edge": 5,
+              "vertex": 5
+            },
+            "bbox": {
+              "min": [
+                -1.8850500999999997,
+                -84.35027697470073,
+                -1.464573321414
+              ],
+              "max": [
+                -0.2566998999999999,
+                -83.52089465242001,
+                0.16377687858603696
+              ],
+              "size": [
+                1.6283501999999999,
+                0.829382322280722,
+                1.628350200000037
+              ]
+            },
+            "area": 1.5665734326671685,
+            "length": 6.355009255045202,
+            "volume": null,
+            "center_of_mass": [
+              -1.290590764271987,
+              -83.90979188515134,
+              -0.8765432749754757
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "compound target6 target727 targets",
+    "seconds": 0.0470000000204891,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "targets": {
+          "ok": true,
+          "data": {
+            "name": "targets",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 2,
+              "wire": 2,
+              "edge": 10,
+              "vertex": 10
+            },
+            "bbox": {
+              "min": [
+                -1.8850500999999997,
+                -84.59411966027,
+                -1.464573321414
+              ],
+              "max": [
+                -0.2566998999999999,
+                -83.52089465242001,
+                1.792126878586
+              ],
+              "size": [
+                1.6283501999999999,
+                1.0732250078499845,
+                3.2567002
+              ]
+            },
+            "area": 3.1333906388754125,
+            "length": 12.713950572610315,
+            "volume": null,
+            "center_of_mass": [
+              -1.2906315934690014,
+              -84.05602732981993,
+              0.1638101917743029
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "reshape naive base -replace f6 target6 -replace f727 target727",
+    "seconds": 0.014999999897554517,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    }
+  },
+  {
+    "script": "prism sweep6 f6 3 0 0",
+    "seconds": 0.01600000006146729,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "sweep6": {
+          "ok": true,
+          "data": {
+            "name": "sweep6",
+            "type": "solid",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 1,
+              "shell": 1,
+              "face": 7,
+              "wire": 7,
+              "edge": 15,
+              "vertex": 10
+            },
+            "bbox": {
+              "min": [
+                -4.8850501,
+                -84.59411966027,
+                0.16377667858589645
+              ],
+              "max": [
+                -0.2566998999999999,
+                -83.74974432060975,
+                1.792126878586
+              ],
+              "size": [
+                4.6283502,
+                0.844375339660246,
+                1.6283502000001036
+              ]
+            },
+            "area": 16.654616404862374,
+            "length": 27.71788263513023,
+            "volume": 2.98470180450961,
+            "center_of_mass": [
+              -3.033294844231758,
+              -84.17023542797413,
+              0.9818476812895772
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "prism sweep727 f727 3 0 0",
+    "seconds": 0.06199999991804361,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "sweep727": {
+          "ok": true,
+          "data": {
+            "name": "sweep727",
+            "type": "solid",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 1,
+              "shell": 1,
+              "face": 7,
+              "wire": 7,
+              "edge": 15,
+              "vertex": 10
+            },
+            "bbox": {
+              "min": [
+                -4.8850501,
+                -84.35027697470073,
+                -1.464573321414
+              ],
+              "max": [
+                -0.2566998999999999,
+                -83.52089465242001,
+                0.16377687858603696
+              ],
+              "size": [
+                4.6283502,
+                0.829382322280722,
+                1.628350200000037
+              ]
+            },
+            "area": 16.64162381874716,
+            "length": 27.7100185100904,
+            "volume": 2.9840009453654965,
+            "center_of_mass": [
+              -3.0332282897151854,
+              -83.94020702975605,
+              -0.6543867508721499
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "bfuse tool sweep6 sweep727",
+    "seconds": 0.0940000000409782,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "tool": {
+          "ok": true,
+          "data": {
+            "name": "tool",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 1,
+              "shell": 1,
+              "face": 12,
+              "wire": 12,
+              "edge": 26,
+              "vertex": 16
+            },
+            "bbox": {
+              "min": [
+                -4.8850501,
+                -84.59411966027,
+                -1.464573321414
+              ],
+              "max": [
+                -0.2566998999999999,
+                -83.52089465242001,
+                1.792126878586
+              ],
+              "size": [
+                4.6283502,
+                1.0732250078499845,
+                3.2567002
+              ]
+            },
+            "area": 29.69304549906953,
+            "length": 48.22683623704062,
+            "volume": 5.968704890037736,
+            "center_of_mass": [
+              -3.0332616519725732,
+              -84.05523480233762,
+              0.16382642865543964
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "bfuse result base tool",
+    "seconds": 2.780999999959022,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "result": {
+          "ok": true,
+          "data": {
+            "name": "result",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 1,
+              "shell": 1,
+              "face": 791,
+              "wire": 804,
+              "edge": 2293,
+              "vertex": 1501
+            },
+            "bbox": {
+              "min": [
+                -44.2818847512364,
+                -84.65078314689299,
+                -3.5598532039494835
+              ],
+              "max": [
+                44.28188475111489,
+                -65.83489794854,
+                3.880906878587975
+              ],
+              "size": [
+                88.56376950235128,
+                18.815885198352987,
+                7.440760082537459
+              ]
+            },
+            "area": 2247.012845942463,
+            "length": 3005.195237701042,
+            "volume": 786.1057410378337,
+            "center_of_mass": [
+              -1.2392841365321046,
+              -78.06921938721251,
+              -1.3297534429614675
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "checkshape result output_errors -exact",
+    "seconds": 1.4060000001918525,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": " -- The Shape result has problems :\n  Check                                    Count\n ------------------------------------------------\n  Invalid Curve on Surface ................. 370\n  Unorientable Shape ....................... 224\n ------------------------------------------------\n*** Shapes with problems : 594\nEDGE\t: 370 Items -> compound named output_errors_e\nFACE\t: 224 Items -> compound named output_errors_f\n",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    }
+  },
+  {
+    "script": "eval compound [explode result F] boundary",
+    "seconds": 0.01600000006146729,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    }
+  },
+  {
+    "script": "bcommon overlap6 boundary target6",
+    "seconds": 0.14099999982863665,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    }
+  },
+  {
+    "script": "bcommon old_overlap6 boundary f6",
+    "seconds": 0.125,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    }
+  },
+  {
+    "script": "bcommon overlap727 boundary target727",
+    "seconds": 0.14099999982863665,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    }
+  },
+  {
+    "script": "bcommon old_overlap727 boundary f727",
+    "seconds": 0.14000000013038516,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    }
+  }
+]

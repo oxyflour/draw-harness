@@ -1,0 +1,50 @@
+{
+  "units": "mm",
+  "canonical_input_sha256": "a6b2e2bf215d149449553f7f0405f2e3f74a5407002d6050187f704c7846d6e6",
+  "faces": [
+    6,
+    727
+  ],
+  "cases": [
+    "plus_x3",
+    "minus_x3"
+  ],
+  "reports": [
+    "plus_x3/report.json",
+    "minus_x3/report.json"
+  ],
+  "bundle_files_sha256": {
+    "diagnostics/input_topology.json": "d910a13f061e3523b293aefa6f2e6dc0410ac73e763ceca34c8d491d9e37b5fc",
+    "diagnostics/neighbor_geometry.json": "f0ceacdb09df508c3a6ea81a21c669caf00ef82acacf3d7a83a8df5ad67d73b5",
+    "diagnostics/selected_adjacency.json": "0fe8765e3aac010285049baa0960e98d5956583f3963025af40f07b89e0a1423",
+    "diagnostics/surface_dump.json": "cb823198354a355844579ea004cc8d2318d4a1800ad03d2958365a6aeeca02f3",
+    "input/part_03.brep": "a6b2e2bf215d149449553f7f0405f2e3f74a5407002d6050187f704c7846d6e6",
+    "input/selections.jsonl": "c0a0aaedd1183a878493cb301e5620647944788ee330de902b913baa2d660716",
+    "minus_x3/attempts.json": "2113eb4f3d8f0edd4aa08c53e7106ff627b5692e6e0784dc80cd871c705ef4aa",
+    "minus_x3/candidate.brep": "d8f23420ed2705f33fc1d2b2959877b5ae5ecae2a4624bb907626db44c0457a5",
+    "minus_x3/candidate.stp": "b796b231c712b0d8ae04300ebd7c075e09a8a95dba12d2f9a6e999aebc25d11b",
+    "minus_x3/case.json": "03b45ddb0e776ee42c71d06641ebe12d126511d9a12b567f808fd2df64fa6ea2",
+    "minus_x3/preview.png": "f24edd8e2b6d6b5bd8152315da84a7ca5982f92b276458f88db0b37977a4cb0f",
+    "minus_x3/replay.tcl": "d6da72ea3ce80dc74dd544fa4cea4d9e6ce54a8330de8dce22b2d4cd486c8328",
+    "minus_x3/replay_verification.json": "e9d1c7193084c1fbfcbb1a123430f431e6e22f4230c82fd5b8bd62df1762f80a",
+    "minus_x3/report.json": "050ba8c4449449131eccbd3c782a16842b4f98b261a5146c574e0d73ee8d1c7e",
+    "minus_x3/target_face_6.brep": "e9dec5bb1d11fbab9d762042a6dab36aef6ccb94935384967ec66b6c710879f6",
+    "minus_x3/target_face_727.brep": "01e098f24e976eef7fe337254c941a93ca24dfd8186fc7e3c61d2c6f2aea4518",
+    "minus_x3/target_faces.step": "3080f07065fa2a0fbbc71e179a694dbaa32334f3ffa0d698da668640aabd2083",
+    "minus_x3/topology.json": "e8cb41c51cb6c06ed0c9de9d0999be644bcc3470749d40a092e31b31267253cd",
+    "plus_x3/attempts.json": "bfd361dd0b81abd54184ee368c31a36b5f9aa667c1a29b4b29addd0e96c5a214",
+    "plus_x3/candidate.brep": "a73c9dde26c37fde880de817ea34dcbf23ea926284c7aa3a91b3403fa431c4cd",
+    "plus_x3/candidate.stp": "8b340bdc17571a21bf53f975da963ef5d3504bbf4516ad2a35418a32dc77a83c",
+    "plus_x3/case.json": "77fcd0dbf22198ac9b248f7fcd9cdf18cf7eb98a67656e4c64c93be2bb5e7d63",
+    "plus_x3/preview.png": "92d4f1192b004d518b38f94119edc2ac55eff2e67a0d04ff985401624d76d983",
+    "plus_x3/replay.tcl": "40316b1ca531a868ac8d8fde11352c26ebb9ffd7c4fa51145b231b44e253a760",
+    "plus_x3/replay_verification.json": "48b18423a96ca249e8c52fd02591a6b090e3842ccd62aaac324d6f9e935ca1f7",
+    "plus_x3/report.json": "f096586fb6678fc12abddf766a6ef0e37af4d05f1e71eb36f1d61c4ab72851b9",
+    "plus_x3/target_face_6.brep": "25baa2a7b60e6f3accd355295bc6d959df491c82be1664d9bae6f9e890ecad3f",
+    "plus_x3/target_face_727.brep": "b24b252a0d1d4d2851a89884f38c76dfdb56e45754e711992678e5baa6b14719",
+    "plus_x3/target_faces.step": "61d2c1e8db5cccb87fb0258914ede9bd5b749b416cb2ab0d9fd04b4fc548d0d9",
+    "plus_x3/topology.json": "cf451670aa17a0daf1aa4361c919be7d71cf1194be924d2608574ecdac4bd3a8",
+    "README.md": "12ddfa50f92d64dc7ca3fab82f32d2020262738f2ab6600d2e2d09c9095113a4",
+    "review.tcl": "619361a5fab7e8504d5bd4cefafac9609c204b4a4632135254a5f76736d41dc8"
+  }
+}

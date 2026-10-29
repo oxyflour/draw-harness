@@ -1,7 +1,7 @@
 {
   "ok": true,
   "session": "mounting_plate_demo",
-  "checkpoint": "finished_1793115852679555800",
+  "checkpoint": "finished_1793117439903834800",
   "inspection": {
     "name": "final_part",
     "type": "compound",
@@ -58,6 +58,15 @@
       "path": "C:/Projects/occ-harness/artifacts/demo/mounting_plate.stl",
       "format": "stl",
       "bytes": 38284
+    },
+    "topology_graph": {
+      "schema_version": 1,
+      "shape": "final_part",
+      "path": "C:/Projects/occ-harness/artifacts/demo/topology_graph.json",
+      "format": "json",
+      "bytes": 41742,
+      "node_count": 97,
+      "use_count": 173
     }
   }
 }

@@ -22,7 +22,7 @@ cd C:\Projects\occ-harness
 ## 接入 gpt-6-luna
 
 1. 执行 `scripts/install-skill.ps1`，将 `occ-draw` 安装到个人 skills 目录；本次已经安装。仓库的 `AGENTS.md` 也指向同一 skill。
-2. 本项目 `.codex/config.toml` 已配置目标模型和本地 MCP 服务。客户端载入项目配置后可发现八个 `occ_*` 工具；其他 MCP 客户端使用 `config/mcp.json.example`。
+2. 本项目 `.codex/config.toml` 已配置目标模型和本地 MCP 服务。客户端载入项目配置后可发现九个 `occ_*` 工具；其他 MCP 客户端使用 `config/mcp.json.example`。
 3. 在选择 **gpt-6-luna** 的聊天中使用 `$occ-draw`，例如：“创建 100×70×10 安装板，中心凸台直径 36、高 12，中心通孔直径 16，四个直径 7 的安装孔，外角 R3；检查并导出 STEP。”
 
 MCP 未连接时，skill 可直接调用自己的 `scripts/occ.ps1`。切换模型由客户端完成；`start --model` 仅记录元数据。该工具链不需要 OpenAI API key，也不自行调用模型 API。项目配置只影响本项目，未修改用户全局配置。
@@ -52,7 +52,28 @@ DRAWEXE -b -f server.tcl → occ_agent.dll → OCCT 7.7 BRep
 
 全部 DRAW Tcl 均可执行，不受预定义建模操作限制；`set`、`expr`、`foreach`、过程、原生布尔与圆角命令直接使用。几何协议另外提供结构化 inspect、topology/select，以及 STEP/BREP/STL 输出。STEP/BREP 支持导入；STL 导入、交互视窗、截图及 OCAF 历史不是当前接口的内置功能。可按需用 Tcl 加载额外 DRAW 插件。
 
+## BRep 拓扑关系图
+
+`topology_graph` 操作返回 `nodes`、`uses`、`edge_faces` 和 `vertex_edges`，包含共享边、方向、局部/累积 Location、重复引用及非流形邻接。图节点按 TShape + 累积 Location 去重，`node.type_index` 对应现有 select 索引，图 ID 仅适用于当前快照。
+
+```powershell
+.\occ-harness.ps1 topology_graph part block_v1
+.\occ-harness.ps1 topology_graph part block_v1 --output C:/Projects/occ-harness/artifacts/graph.json
+```
+
+MCP 为 `occ_topology_graph(session,shape,path?,overwrite?)`；Tcl 为 `ah_topology_graph shape [absolute-json-path]`。内联上限 3 MiB，文件方式返回摘要并写入完整 UTF-8 JSON，不受传输的 4 MiB 上限限制。字段及 seam/实例语义见 [关系图接口说明](skills/occ-draw/references/topology-graph.md)。升级 DLL 后需保存检查点并重启已有会话。
+
 ## 会话与恢复
+
+### 交互选面
+
+`python examples/launch_benchmark_picker.py --initial 3` 会启动原安装的 `draw.bat`，通过其 `CSF_DrawAppliInit` 扩展点加载图形选面面板。默认读取 toStudent_EM_top10 的 manifest，也可传 `--manifest`。面板可切换零件、按面选择并记录；当前选择在 `current_selection.json`，正式选择在 `selections.jsonl`。
+
+记录保存同一会话中的面索引、源 STEP SHA256、完整零件 BREP 快照和实际面 BREP。窗口拾取与 native 索引使用同一 TopExp 去重顺序；后续以冻结的 BREP 和面几何复核，不能套用其他软件或重新导入 STEP 后的面号。启动验证数据写入独立的 validation 子目录，不作为用户选面。
+
+GUI 会话仍支持 RPC。它复用 DRAW 自己的 Tcl/Tk 事件循环，批处理会话继续使用独立事件循环。
+
+### 持久会话
 
 CLI 退出后 DRAW 会话继续存在，同名 start 会重用活会话。`context` 返回存活状态、任务记忆、最近六条操作摘要和检查点列表；完整输入/输出在 `history.jsonl`，DRAW 诊断在 `draw.log`。不同会话彼此隔离，同一会话的 CLI/MCP 调用通过文件锁串行执行。
 
@@ -75,9 +96,9 @@ python examples/demo.py
 
 本机 Python 如未在 PATH，可使用 `C:/Users/oxyfl/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe`。
 
-11 项集成测试在真实 DRAW/OCCT 上通过：实体与 Tcl 跨调用保留、切孔体积、选边圆角、中文/空格路径的 BREP/STEP/STL 导出及往返、重启恢复、错误后的部分状态、超时停止且不重放、认证与并发、输出限幅、MCP 协议及工具调用、实际 PowerShell MCP 入口的中文传输。工具链已验证，尚未进行 gpt-6-luna 自主建模成功率评测。
+18 项集成测试在真实 DRAW/OCCT 上通过：原有建模、交换、记忆、恢复、并发、超时、MCP/PowerShell 中文传输，以及关系图的共享边、seam、闭合边、实例变换、重合独立实体、根方向、自由边、孤立顶点、非流形邻接、选择索引一致性、中文路径及超过 4 MiB 的图文件。工具链已验证，尚未进行 gpt-6-luna 自主建模成功率评测。
 
-完整演示输出在 [artifacts/demo/report.json](artifacts/demo/report.json)，包含有效的单实体安装板、R3 外角、五个孔及凸台，bbox **100×70×22 mm**，体积 **76232.45521534949 mm³**；同时提供 STEP、BREP、二进制 STL。`examples/demo.py` 会明确覆盖自己的演示输出。
+完整演示输出在 [artifacts/demo/report.json](artifacts/demo/report.json)，包含有效的单实体安装板、R3 外角、五个孔及凸台，bbox **100×70×22 mm**，体积 **76232.45521534949 mm³**；同时提供 STEP、BREP、二进制 STL 和 [拓扑关系图 JSON](artifacts/demo/topology_graph.json)。`examples/demo.py` 会明确覆盖自己的演示输出。
 
 ## 参考来源
 

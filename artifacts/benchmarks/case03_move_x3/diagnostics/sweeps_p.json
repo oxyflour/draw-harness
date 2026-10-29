@@ -1,0 +1,102 @@
+{
+  "ok": true,
+  "data": {
+    "ok": true,
+    "code": 0,
+    "result": "",
+    "result_truncated": false,
+    "stdout": "",
+    "native_output": "",
+    "native_output_truncated": false
+  },
+  "checks": {
+    "sweep_p6": {
+      "ok": true,
+      "data": {
+        "name": "sweep_p6",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 7,
+          "wire": 7,
+          "edge": 15,
+          "vertex": 10
+        },
+        "bbox": {
+          "min": [
+            -4.8850501,
+            -84.59411966027,
+            0.16377667858589645
+          ],
+          "max": [
+            -0.2566998999999999,
+            -83.74974432060975,
+            1.792126878586
+          ],
+          "size": [
+            4.6283502,
+            0.844375339660246,
+            1.6283502000001036
+          ]
+        },
+        "area": 16.654616404862374,
+        "length": 27.71788263513023,
+        "volume": 2.98470180450961,
+        "center_of_mass": [
+          -3.033294844231758,
+          -84.17023542797413,
+          0.9818476812895772
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    },
+    "sweep_p727": {
+      "ok": true,
+      "data": {
+        "name": "sweep_p727",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 7,
+          "wire": 7,
+          "edge": 15,
+          "vertex": 10
+        },
+        "bbox": {
+          "min": [
+            -4.8850501,
+            -84.35027697470073,
+            -1.464573321414
+          ],
+          "max": [
+            -0.2566998999999999,
+            -83.52089465242001,
+            0.16377687858603696
+          ],
+          "size": [
+            4.6283502,
+            0.829382322280722,
+            1.628350200000037
+          ]
+        },
+        "area": 16.64162381874716,
+        "length": 27.7100185100904,
+        "volume": 2.9840009453654965,
+        "center_of_mass": [
+          -3.0332282897151854,
+          -83.94020702975605,
+          -0.6543867508721499
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    }
+  }
+}

@@ -13,7 +13,7 @@ def main() -> int:
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("doctor")
     sub.add_parser("mcp", help="MCP stdio server; no API key required")
-    for command in ("start", "stop", "context", "exec", "inspect", "topology", "select", "export", "import", "checkpoint", "restore", "memory", "help"):
+    for command in ("start", "stop", "context", "exec", "inspect", "topology", "topology_graph", "select", "export", "import", "checkpoint", "restore", "memory", "help"):
         p = sub.add_parser(command)
         p.add_argument("session")
         if command == "start":
@@ -24,8 +24,11 @@ def main() -> int:
             source.add_argument("--file", type=Path)
             source.add_argument("--stdin", action="store_true")
             p.add_argument("--check", nargs="+", help="Require these outputs to exist and pass BRepCheck")
-        elif command in ("inspect", "topology", "select", "export", "import"):
+        elif command in ("inspect", "topology", "topology_graph", "select", "export", "import"):
             p.add_argument("shape")
+            if command == "topology_graph":
+                p.add_argument("--output", type=Path, help="Write complete graph JSON and return a small summary")
+                p.add_argument("--overwrite", action="store_true")
             if command in ("topology", "select"):
                 p.add_argument("type", choices=["edge", "face", "vertex", "wire", "shell", "solid", "compound", "compsolid"])
             if command == "topology":
@@ -73,6 +76,9 @@ def main() -> int:
             result = harness.call(args.session, "inspect", shape=args.shape)
         elif cmd == "topology":
             result = harness.call(args.session, "subshapes", shape=args.shape, type=args.type, offset=args.offset, limit=args.limit)
+        elif cmd == "topology_graph":
+            extra = {"path": args.output.resolve().as_posix()} if args.output else {}
+            result = harness.call(args.session, "topology_graph", shape=args.shape, overwrite=args.overwrite, **extra)
         elif cmd == "select":
             result = harness.call(args.session, "select", shape=args.shape, type=args.type, index=args.index, name=args.name)
         elif cmd in ("export", "import"):

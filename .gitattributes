@@ -7,3 +7,6 @@
 *.stp binary
 *.stl binary
 *.dll binary
+
+# Benchmark manifests hash raw fixture bytes, including their line endings.
+artifacts/benchmarks/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

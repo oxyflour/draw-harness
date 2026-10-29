@@ -1,0 +1,376 @@
+{
+  "case": {
+    "schema_version": 1,
+    "id": "minus_x3",
+    "units": "mm",
+    "input": "../input/part_03.brep",
+    "input_sha256": "a6b2e2bf215d149449553f7f0405f2e3f74a5407002d6050187f704c7846d6e6",
+    "source_step_sha256": "e6bacd0e01d8e44dfb366b743953927ccf04509ab21f15ec4999d33ea930e0c1",
+    "selection": {
+      "type": "face",
+      "indices": [
+        6,
+        727
+      ],
+      "index_basis": "1-based TopExp::MapShapes of frozen input BREP"
+    },
+    "operation": {
+      "type": "translate_faces",
+      "vector": [
+        -3,
+        0,
+        0
+      ],
+      "simultaneous": true
+    },
+    "target_contract": "Rigidly translated trimmed patches; rebuild connections to one closed solid",
+    "baseline_policy": "Sweep patches and fuse/cut; ruled transition faces are allowed. This does not preserve all neighboring support surfaces.",
+    "checks": [
+      "ordinary BRepCheck",
+      "single manifold solid",
+      "full target patch coverage",
+      "old patches absent",
+      "STEP roundtrip",
+      "exact check compared with input"
+    ]
+  },
+  "input_inspection": {
+    "name": "base",
+    "type": "solid",
+    "valid": true,
+    "topology": {
+      "compound": 0,
+      "compsolid": 0,
+      "solid": 1,
+      "shell": 1,
+      "face": 785,
+      "wire": 798,
+      "edge": 2279,
+      "vertex": 1493
+    },
+    "bbox": {
+      "min": [
+        -44.2818847512364,
+        -84.65078314689299,
+        -3.5598532039494835
+      ],
+      "max": [
+        44.28188475111489,
+        -65.83489794854,
+        3.880906878587975
+      ],
+      "size": [
+        88.56376950235128,
+        18.815885198352987,
+        7.440760082537459
+      ]
+    },
+    "area": 2230.972887378847,
+    "length": 2982.9134029795614,
+    "volume": 780.1371109388668,
+    "center_of_mass": [
+      -1.2255584033832287,
+      -78.02342184315754,
+      -1.341180420587368
+    ],
+    "units": "model_units (default convention: mm)"
+  },
+  "naive_replacement_valid": false,
+  "candidate_inspection": {
+    "name": "result",
+    "type": "compound",
+    "valid": true,
+    "topology": {
+      "compound": 1,
+      "compsolid": 0,
+      "solid": 1,
+      "shell": 1,
+      "face": 787,
+      "wire": 799,
+      "edge": 2282,
+      "vertex": 1495
+    },
+    "bbox": {
+      "min": [
+        -44.2818847512364,
+        -84.65078314689299,
+        -3.5598532039494835
+      ],
+      "max": [
+        44.28188475111489,
+        -65.83489794854,
+        3.880906878587975
+      ],
+      "size": [
+        88.56376950235128,
+        18.815885198352987,
+        7.440760082537459
+      ]
+    },
+    "area": 2218.861908930426,
+    "length": 2979.83695467438,
+    "volume": 777.6778754782584,
+    "center_of_mass": [
+      -1.2131218885329502,
+      -78.00450506068331,
+      -1.3460152466817048
+    ],
+    "units": "model_units (default convention: mm)"
+  },
+  "nurbs_tool_fallback": true,
+  "two_face_incidence_for_all_edges": true,
+  "target_coverage": [
+    {
+      "input_face_index": 6,
+      "target_area_mm2": 1.566817206208244,
+      "retained_target_area_mm2": 0.005635599951993109,
+      "retained_fraction": 0.0035968458411504626,
+      "full_patch_retained": false,
+      "original_patch_remaining_area_mm2": 0.0,
+      "target": {
+        "name": "target6",
+        "type": "face",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 0,
+          "shell": 0,
+          "face": 1,
+          "wire": 1,
+          "edge": 5,
+          "vertex": 5
+        },
+        "bbox": {
+          "min": [
+            -7.8850501,
+            -84.59411966027,
+            0.16377667858589645
+          ],
+          "max": [
+            -6.2566999,
+            -83.74974432060975,
+            1.792126878586
+          ],
+          "size": [
+            1.6283501999999999,
+            0.844375339660246,
+            1.6283502000001036
+          ]
+        },
+        "area": 1.566817206208244,
+        "length": 6.3589413175651135,
+        "volume": null,
+        "center_of_mass": [
+          -7.2906724163135985,
+          -84.20224002242018,
+          1.2040017949400244
+        ],
+        "units": "model_units (default convention: mm)"
+      },
+      "overlap": {
+        "name": "overlap6",
+        "type": "compound",
+        "valid": true,
+        "topology": {
+          "compound": 1,
+          "compsolid": 0,
+          "solid": 0,
+          "shell": 0,
+          "face": 1,
+          "wire": 1,
+          "edge": 3,
+          "vertex": 3
+        },
+        "bbox": {
+          "min": [
+            -6.378276609003013,
+            -84.06951853560747,
+            1.7875805173343948
+          ],
+          "max": [
+            -6.2566999,
+            -83.97794432995143,
+            1.792126878586
+          ],
+          "size": [
+            0.12157670900301287,
+            0.09157420565604468,
+            0.004546361251605235
+          ]
+        },
+        "area": 0.005635599951993109,
+        "length": 0.3649285303245737,
+        "volume": null,
+        "center_of_mass": [
+          -6.297622540252321,
+          -84.00907055326206,
+          1.7913579957677856
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    },
+    {
+      "input_face_index": 727,
+      "target_area_mm2": 1.5665734326671685,
+      "retained_target_area_mm2": 0.0,
+      "retained_fraction": 0.0,
+      "full_patch_retained": false,
+      "original_patch_remaining_area_mm2": 0.0,
+      "target": {
+        "name": "target727",
+        "type": "face",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 0,
+          "shell": 0,
+          "face": 1,
+          "wire": 1,
+          "edge": 5,
+          "vertex": 5
+        },
+        "bbox": {
+          "min": [
+            -7.8850501,
+            -84.35027697470073,
+            -1.464573321414
+          ],
+          "max": [
+            -6.2566999,
+            -83.52089465242001,
+            0.16377687858603696
+          ],
+          "size": [
+            1.6283501999999999,
+            0.829382322280722,
+            1.628350200000037
+          ]
+        },
+        "area": 1.5665734326671685,
+        "length": 6.355009255045202,
+        "volume": null,
+        "center_of_mass": [
+          -7.290590764271986,
+          -83.90979188515134,
+          -0.8765432749754757
+        ],
+        "units": "model_units (default convention: mm)"
+      },
+      "overlap": {
+        "name": "overlap727",
+        "type": "compound",
+        "valid": true,
+        "topology": {
+          "compound": 1,
+          "compsolid": 0,
+          "solid": 0,
+          "shell": 0,
+          "face": 0,
+          "wire": 0,
+          "edge": 0,
+          "vertex": 0
+        },
+        "bbox": null,
+        "area": 0.0,
+        "length": 0.0,
+        "volume": null,
+        "center_of_mass": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    }
+  ],
+  "full_target_patches_retained": false,
+  "original_patches_removed": true,
+  "ordinary_single_manifold_solid": true,
+  "full_patch_move_baseline_pass": false,
+  "exact_checks": {
+    "input": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": " -- The Shape base has problems :\n  Check                                    Count\n ------------------------------------------------\n  Invalid Curve on Surface ................. 370\n  Unorientable Shape ....................... 224\n ------------------------------------------------\n*** Shapes with problems : 594\nEDGE\t: 370 Items -> compound named input_errors_e\nFACE\t: 224 Items -> compound named input_errors_f\n",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    },
+    "candidate": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": " -- The Shape result has problems :\n  Check                                    Count\n ------------------------------------------------\n  Invalid Curve on Surface ................. 364\n  Unorientable Shape ....................... 222\n ------------------------------------------------\n*** Shapes with problems : 586\nEDGE\t: 364 Items -> compound named output_errors_e\nFACE\t: 222 Items -> compound named output_errors_f\n",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    },
+    "input_issue_counts": {
+      "Invalid Curve on Surface": 370,
+      "Unorientable Shape": 224
+    },
+    "candidate_issue_counts": {
+      "Invalid Curve on Surface": 364,
+      "Unorientable Shape": 222
+    },
+    "note": "Both source and results fail exact checking; ordinary validity does not certify exact curve-on-surface consistency."
+  },
+  "step_roundtrip": {
+    "inspection": {
+      "name": "roundtrip",
+      "type": "solid",
+      "valid": true,
+      "topology": {
+        "compound": 0,
+        "compsolid": 0,
+        "solid": 1,
+        "shell": 1,
+        "face": 787,
+        "wire": 799,
+        "edge": 2282,
+        "vertex": 1495
+      },
+      "bbox": {
+        "min": [
+          -44.2818847512364,
+          -84.65078314689299,
+          -3.5598532039494835
+        ],
+        "max": [
+          44.28188475111489,
+          -65.83489794854,
+          3.880906878587973
+        ],
+        "size": [
+          88.56376950235128,
+          18.815885198352987,
+          7.440760082537457
+        ]
+      },
+      "area": 2218.861908927598,
+      "length": 2979.8369514066076,
+      "volume": 777.677875476227,
+      "center_of_mass": [
+        -1.2131218885460477,
+        -78.00450506069457,
+        -1.3460152466753197
+      ],
+      "units": "model_units (default convention: mm)"
+    },
+    "relative_volume_error": 2.6122256621975233e-12,
+    "pass": true
+  },
+  "artifacts": {
+    "candidate.stp": "b796b231c712b0d8ae04300ebd7c075e09a8a95dba12d2f9a6e999aebc25d11b",
+    "candidate.brep": "d8f23420ed2705f33fc1d2b2959877b5ae5ecae2a4624bb907626db44c0457a5"
+  }
+}

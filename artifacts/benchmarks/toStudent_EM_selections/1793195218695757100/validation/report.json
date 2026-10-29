@@ -1,0 +1,9 @@
+{
+  "viewer_pick_equals_recorded_native_shape_including_orientation": true,
+  "snapshot_face_index_recovers_boundary_geometry": true,
+  "max_edge_fingerprint_roundtrip_error": 1.4210854715202004e-14,
+  "test_case": 3,
+  "test_face_index": 396,
+  "formal_benchmark_selection": false,
+  "note": "Display triangulation can change serialized BREP bytes; actual topology and boundary geometry checked separately."
+}

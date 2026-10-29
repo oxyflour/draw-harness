@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "data": {
+    "ok": true,
+    "code": 0,
+    "result": "C:/Projects/occ-harness/artifacts/benchmarks/case03_move_x3/minus_x3/replayed.brep",
+    "result_truncated": false,
+    "stdout": "",
+    "native_output": "",
+    "native_output_truncated": false
+  },
+  "checks": {
+    "result": {
+      "ok": true,
+      "data": {
+        "name": "result",
+        "type": "compound",
+        "valid": true,
+        "topology": {
+          "compound": 1,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 787,
+          "wire": 799,
+          "edge": 2282,
+          "vertex": 1495
+        },
+        "bbox": {
+          "min": [
+            -44.2818847512364,
+            -84.65078314689299,
+            -3.5598532039494835
+          ],
+          "max": [
+            44.28188475111489,
+            -65.83489794854,
+            3.880906878587975
+          ],
+          "size": [
+            88.56376950235128,
+            18.815885198352987,
+            7.440760082537459
+          ]
+        },
+        "area": 2218.861908930426,
+        "length": 2979.83695467438,
+        "volume": 777.6778754782584,
+        "center_of_mass": [
+          -1.2131218885329502,
+          -78.00450506068331,
+          -1.3460152466817048
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    }
+  }
+}

@@ -39,6 +39,7 @@ def main():
         for fmt in ("brep", "step", "stl"):
             path = output / f"mounting_plate.{fmt}"
             files[fmt] = require(h.call(session, "export", shape="final_part", path=path.as_posix(), format=fmt, overwrite=True))
+        files["topology_graph"] = require(h.call(session, "topology_graph", shape="final_part", path=(output / "topology_graph.json").as_posix(), overwrite=True))
         report = {"ok": True, "session": session, "checkpoint": checkpoint, "inspection": measured, "files": files}
         write_json(output / "report.json", report)
         print(json.dumps(report, ensure_ascii=False, indent=2))

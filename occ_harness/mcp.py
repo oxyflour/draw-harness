@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import sys
 from .engine import Harness, HarnessError, ROOT
+from . import __version__
 
 
 def text(description=""):
@@ -33,6 +34,9 @@ TOOLS = [
          {"shape": text(), "type": enum("edge", "face", "vertex", "wire", "shell", "solid"),
           "offset": {"type": "integer", "minimum": 0}, "limit": {"type": "integer", "minimum": 1, "maximum": 500},
           "index": {"type": "integer", "minimum": 1}, "name": text("Set with index to bind a subshape")}, ["shape", "type"]),
+    tool("occ_topology_graph", "Get the complete BRep containment/adjacency graph. Nodes identify TShape+world Location; uses preserve local orientation and duplicates. IDs apply to this snapshot. Supply path for large JSON graphs.",
+         {"shape": text(), "path": text("Optional absolute output JSON path; returns a summary instead of the inline graph"),
+          "overwrite": {"type": "boolean"}}, ["shape"]),
     tool("occ_file", "Export BREP/STEP/STL or import BREP/STEP. Use absolute paths; existing exports require overwrite=true.",
          {"action": enum("export", "import"), "shape": text(), "path": text(), "format": enum("brep", "step", "stl"),
           "overwrite": {"type": "boolean"}, "deflection": {"type": "number", "exclusiveMinimum": 0}}, ["action", "shape", "path", "format"]),
@@ -81,6 +85,12 @@ def invoke(h: Harness, name: str, args: dict) -> dict:
         return h.execute(session, p["script"], p["check"])
     if name == "occ_inspect":
         return h.call(session, "inspect", **p)
+    if name == "occ_topology_graph":
+        if "path" in p:
+            if not Path(p["path"]).is_absolute():
+                raise HarnessError("Graph output path must be absolute")
+            p["path"] = Path(p["path"]).resolve().as_posix()
+        return h.call(session, "topology_graph", **p)
     if name == "occ_topology":
         if "index" in p or "name" in p:
             if "index" not in p or "name" not in p:
@@ -132,7 +142,7 @@ def serve(harness: Harness):
                 requested = params.get("protocolVersion")
                 protocol = requested if requested in SUPPORTED else SUPPORTED[0]
                 result = {"protocolVersion": protocol, "capabilities": {"tools": {}, "prompts": {}},
-                          "serverInfo": {"name": "occ-draw-harness", "version": "0.1.0"},
+                          "serverInfo": {"name": "occ-draw-harness", "version": __version__},
                           "instructions": "Start a named session. Execute native Tcl in small steps; check output shapes. Use inspect and installed command help. Save BRep checkpoints and task memory."}
             elif method == "ping":
                 result = {}

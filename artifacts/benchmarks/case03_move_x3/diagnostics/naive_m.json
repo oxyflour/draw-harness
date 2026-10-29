@@ -1,0 +1,70 @@
+{
+  "operation": {
+    "ok": true,
+    "data": {
+      "ok": true,
+      "code": 0,
+      "result": "",
+      "result_truncated": false,
+      "stdout": "",
+      "native_output": "",
+      "native_output_truncated": false
+    }
+  },
+  "inspection": {
+    "ok": true,
+    "data": {
+      "name": "naive_m",
+      "type": "solid",
+      "valid": false,
+      "topology": {
+        "compound": 0,
+        "compsolid": 0,
+        "solid": 1,
+        "shell": 1,
+        "face": 785,
+        "wire": 798,
+        "edge": 2288,
+        "vertex": 1503
+      },
+      "bbox": {
+        "min": [
+          -44.2818847512364,
+          -84.65078314689299,
+          -3.5598532039494835
+        ],
+        "max": [
+          44.28188475111489,
+          -65.83489794854,
+          3.880906878587975
+        ],
+        "size": [
+          88.56376950235128,
+          18.815885198352987,
+          7.440760082537459
+        ]
+      },
+      "area": 2230.972887378847,
+      "length": 2995.0268210980817,
+      "volume": 0.0,
+      "center_of_mass": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "units": "model_units (default convention: mm)"
+    }
+  },
+  "checkshape": {
+    "ok": true,
+    "data": {
+      "ok": true,
+      "code": 0,
+      "result": "This shape has faulty shapes",
+      "result_truncated": false,
+      "stdout": "",
+      "native_output": "",
+      "native_output_truncated": false
+    }
+  }
+}

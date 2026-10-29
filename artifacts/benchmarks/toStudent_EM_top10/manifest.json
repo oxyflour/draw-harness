@@ -1,0 +1,2480 @@
+{
+  "source": "C:\\Users\\oxyfl\\Downloads\\toStudent_EM.stp",
+  "source_sha256": "7d994f8337a2652aeafb4e14b30fa391b982f2eb3d64af94f29579d5e8e34d65",
+  "source_bytes": 21965620,
+  "session": "em_rank_1793193973366349600",
+  "ranking_basis": "Unique located solids; unique located faces per solid; descending face count, ascending source solid index for ties",
+  "requested_count": 10,
+  "exports": [
+    {
+      "rank": 1,
+      "faces": 1869,
+      "source_solid_index": 52,
+      "shape": "em_source_52",
+      "file": "01_faces_1869_solid_0052.stp",
+      "bytes": 15617489,
+      "sha256": "5d71eff4f30a5999c8c36bee824529b68c4ece4f42d4edbde523e0bc3e9d081e",
+      "volume_relative_difference": 1.4140768688053597e-06,
+      "edge_count_difference": -2,
+      "source_inspection": {
+        "name": "em_source_52",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 1869,
+          "wire": 1897,
+          "edge": 5145,
+          "vertex": 3276
+        },
+        "bbox": {
+          "min": [
+            -43.287912856032484,
+            -84.37590680320557,
+            -1.9362535874593192
+          ],
+          "max": [
+            43.287905121804236,
+            -60.1021707175016,
+            4.466107115881279
+          ],
+          "size": [
+            86.57581797783672,
+            24.273736085703966,
+            6.402360703340598
+          ]
+        },
+        "area": 3153.093144278489,
+        "length": 6210.723771690496,
+        "volume": 1190.7280304289657,
+        "center_of_mass": [
+          -4.830617233911768,
+          -79.10497317439662,
+          2.437115230229346
+        ],
+        "units": "model_units (default convention: mm)"
+      },
+      "roundtrip_inspection": {
+        "name": "verify_01",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 1869,
+          "wire": 1897,
+          "edge": 5143,
+          "vertex": 3276
+        },
+        "bbox": {
+          "min": [
+            -43.287912856029955,
+            -84.37590680319938,
+            -1.936253587459376
+          ],
+          "max": [
+            43.287905121804336,
+            -60.10217071749788,
+            4.466107115881
+          ],
+          "size": [
+            86.57581797783429,
+            24.273736085701508,
+            6.402360703340376
+          ]
+        },
+        "area": 3153.0946624864546,
+        "length": 6210.723709783843,
+        "volume": 1190.7297142099305,
+        "center_of_mass": [
+          -4.830569278883177,
+          -79.10497011658738,
+          2.437116063812581
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    },
+    {
+      "rank": 2,
+      "faces": 1452,
+      "source_solid_index": 48,
+      "shape": "em_source_48",
+      "file": "02_faces_1452_solid_0048.stp",
+      "bytes": 13864148,
+      "sha256": "b812b51edbe4324cd207be7d9509db148e50c36c3a2d551aff6f0f7b2e2f69bc",
+      "volume_relative_difference": 1.1813281965422116e-07,
+      "edge_count_difference": 0,
+      "source_inspection": {
+        "name": "em_source_48",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 1452,
+          "wire": 1472,
+          "edge": 3901,
+          "vertex": 2441
+        },
+        "bbox": {
+          "min": [
+            -43.11758510000004,
+            -79.37113641938271,
+            -3.0592333214139007
+          ],
+          "max": [
+            43.117585100000014,
+            -60.02637534226433,
+            3.9370568785861213
+          ],
+          "size": [
+            86.23517020000006,
+            19.344761077118378,
+            6.996290200000022
+          ]
+        },
+        "area": 4149.972455896118,
+        "length": 4806.316381963497,
+        "volume": 1398.022611356903,
+        "center_of_mass": [
+          -6.937134278649313,
+          -69.07797165733497,
+          1.3002433244812746
+        ],
+        "units": "model_units (default convention: mm)"
+      },
+      "roundtrip_inspection": {
+        "name": "verify_02",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 1452,
+          "wire": 1472,
+          "edge": 3901,
+          "vertex": 2441
+        },
+        "bbox": {
+          "min": [
+            -43.11758509999612,
+            -79.37113641938,
+            -3.0592333214139997
+          ],
+          "max": [
+            43.117585100000056,
+            -60.02637534225907,
+            3.9370568785863083
+          ],
+          "size": [
+            86.23517019999618,
+            19.34476107712092,
+            6.996290200000308
+          ]
+        },
+        "area": 4149.972624922538,
+        "length": 4806.316381990924,
+        "volume": 1398.02244620455,
+        "center_of_mass": [
+          -6.937136065338682,
+          -69.07797203663056,
+          1.3002433873280033
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    },
+    {
+      "rank": 3,
+      "faces": 785,
+      "source_solid_index": 13,
+      "shape": "em_source_13",
+      "file": "03_faces_0785_solid_0013.stp",
+      "bytes": 5854230,
+      "sha256": "e6bacd0e01d8e44dfb366b743953927ccf04509ab21f15ec4999d33ea930e0c1",
+      "volume_relative_difference": 2.4579912003663704e-06,
+      "edge_count_difference": 0,
+      "source_inspection": {
+        "name": "em_source_13",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 785,
+          "wire": 798,
+          "edge": 2279,
+          "vertex": 1493
+        },
+        "bbox": {
+          "min": [
+            -44.28188475124031,
+            -84.65078314689565,
+            -3.559853203949455
+          ],
+          "max": [
+            44.281884751114596,
+            -65.8348979485455,
+            3.880906878586106
+          ],
+          "size": [
+            88.56376950235492,
+            18.815885198350145,
+            7.4407600825355615
+          ]
+        },
+        "area": 2230.9726104173324,
+        "length": 2982.913402979676,
+        "volume": 780.135193373426,
+        "center_of_mass": [
+          -1.2255711135372074,
+          -78.02342276864383,
+          -1.3411845035949295
+        ],
+        "units": "model_units (default convention: mm)"
+      },
+      "roundtrip_inspection": {
+        "name": "verify_03",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 785,
+          "wire": 798,
+          "edge": 2279,
+          "vertex": 1493
+        },
+        "bbox": {
+          "min": [
+            -44.2818847512364,
+            -84.65078314689299,
+            -3.5598532039494835
+          ],
+          "max": [
+            44.28188475111489,
+            -65.83489794854,
+            3.880906878587973
+          ],
+          "size": [
+            88.56376950235128,
+            18.815885198352987,
+            7.440760082537457
+          ]
+        },
+        "area": 2230.972887378847,
+        "length": 2982.91340297956,
+        "volume": 780.1371109388664,
+        "center_of_mass": [
+          -1.2255584033832125,
+          -78.02342184315725,
+          -1.3411804205873694
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    },
+    {
+      "rank": 4,
+      "faces": 489,
+      "source_solid_index": 47,
+      "shape": "em_source_47",
+      "file": "04_faces_0489_solid_0047.stp",
+      "bytes": 4046412,
+      "sha256": "64438100efabb9b5aec1b55aa4285e77d2b311c2ad40cc374b05285b8d065d09",
+      "volume_relative_difference": 1.8832649269381958e-06,
+      "edge_count_difference": 0,
+      "source_inspection": {
+        "name": "em_source_47",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 489,
+          "wire": 495,
+          "edge": 1404,
+          "vertex": 919
+        },
+        "bbox": {
+          "min": [
+            -44.35293544101684,
+            -79.0342363193828,
+            -4.395611046966729
+          ],
+          "max": [
+            44.35293544101684,
+            -60.102170717428656,
+            3.8809068785861
+          ],
+          "size": [
+            88.70587088203368,
+            18.932065601954143,
+            8.27651792555283
+          ]
+        },
+        "area": 3687.752080530433,
+        "length": 2502.186735570799,
+        "volume": 1548.1533169543425,
+        "center_of_mass": [
+          -3.241030928399604,
+          -68.70462789781213,
+          -2.7858847774272517
+        ],
+        "units": "model_units (default convention: mm)"
+      },
+      "roundtrip_inspection": {
+        "name": "verify_04",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 489,
+          "wire": 495,
+          "edge": 1404,
+          "vertex": 919
+        },
+        "bbox": {
+          "min": [
+            -44.35293544101293,
+            -79.03423631938,
+            -4.39561104696687
+          ],
+          "max": [
+            44.352935441017,
+            -60.10217071742,
+            3.8809068785867145
+          ],
+          "size": [
+            88.70587088202993,
+            18.932065601959998,
+            8.276517925553584
+          ]
+        },
+        "area": 3687.7523418451083,
+        "length": 2502.186735570782,
+        "volume": 1548.1562325371858,
+        "center_of_mass": [
+          -3.2410238233308077,
+          -68.70463903093213,
+          -2.7858778075604014
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    },
+    {
+      "rank": 5,
+      "faces": 383,
+      "source_solid_index": 15,
+      "shape": "em_source_15",
+      "file": "05_faces_0383_solid_0015.stp",
+      "bytes": 3727931,
+      "sha256": "0db581203481df87b29f8af7345c8d50c3bf8e2c6f836ffa7d599aadbdefc7d9",
+      "volume_relative_difference": 3.096259623146354e-06,
+      "edge_count_difference": 0,
+      "source_inspection": {
+        "name": "em_source_15",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 383,
+          "wire": 395,
+          "edge": 1135,
+          "vertex": 752
+        },
+        "bbox": {
+          "min": [
+            -43.99981168756886,
+            -85.44099544383559,
+            -3.4661478730433073
+          ],
+          "max": [
+            43.999811686519855,
+            -78.68049121938255,
+            3.880906878586106
+          ],
+          "size": [
+            87.99962337408871,
+            6.760504224453044,
+            7.347054751629413
+          ]
+        },
+        "area": 1971.0922027594083,
+        "length": 2629.5852138529694,
+        "volume": 758.3483174000655,
+        "center_of_mass": [
+          -0.7244423027173746,
+          -83.73737958767775,
+          -0.17140530146037808
+        ],
+        "units": "model_units (default convention: mm)"
+      },
+      "roundtrip_inspection": {
+        "name": "verify_05",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 383,
+          "wire": 395,
+          "edge": 1135,
+          "vertex": 752
+        },
+        "bbox": {
+          "min": [
+            -43.999811687564716,
+            -85.44099544383255,
+            -3.4661478730435804
+          ],
+          "max": [
+            43.99981168651948,
+            -78.68049121937352,
+            3.880906878586
+          ],
+          "size": [
+            87.9996233740842,
+            6.7605042244590265,
+            7.34705475162958
+          ]
+        },
+        "area": 1971.09383916655,
+        "length": 2629.5852138528826,
+        "volume": 758.350665443341,
+        "center_of_mass": [
+          -0.7244389136390167,
+          -83.73737603344416,
+          -0.17140637110142753
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    },
+    {
+      "rank": 6,
+      "faces": 111,
+      "source_solid_index": 18,
+      "shape": "em_source_18",
+      "file": "06_faces_0111_solid_0018.stp",
+      "bytes": 488188,
+      "sha256": "5c41a76c966278c14249722b553fe13f3685590c509082d7a0dada84f7dc6f19",
+      "volume_relative_difference": 2.8369826925560926e-13,
+      "edge_count_difference": 0,
+      "source_inspection": {
+        "name": "em_source_18",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 111,
+          "wire": 111,
+          "edge": 327,
+          "vertex": 218
+        },
+        "bbox": {
+          "min": [
+            -37.5082072973146,
+            -83.30183578771091,
+            -0.16526222141520366
+          ],
+          "max": [
+            17.18180860088173,
+            -60.9539304199432,
+            -0.11921922140983233
+          ],
+          "size": [
+            54.69001589819633,
+            22.347905367767716,
+            0.04604300000537133
+          ]
+        },
+        "area": 1352.066140043565,
+        "length": 325.9325146108479,
+        "volume": 30.95650966443531,
+        "center_of_mass": [
+          -14.595985898376577,
+          -73.54108840212676,
+          -0.14224072138784577
+        ],
+        "units": "model_units (default convention: mm)"
+      },
+      "roundtrip_inspection": {
+        "name": "verify_06",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 111,
+          "wire": 111,
+          "edge": 327,
+          "vertex": 218
+        },
+        "bbox": {
+          "min": [
+            -37.50820729731326,
+            -83.30183578771002,
+            -0.16526222141516878
+          ],
+          "max": [
+            17.181808600882,
+            -60.953930419935816,
+            -0.11921922140978859
+          ],
+          "size": [
+            54.69001589819526,
+            22.347905367774203,
+            0.04604300000538018
+          ]
+        },
+        "area": 1352.066140044591,
+        "length": 325.93251461086044,
+        "volume": 30.95650966444409,
+        "center_of_mass": [
+          -14.595985898372378,
+          -73.54108840212393,
+          -0.1422407213879131
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    },
+    {
+      "rank": 7,
+      "faces": 111,
+      "source_solid_index": 19,
+      "shape": "em_source_19",
+      "file": "07_faces_0111_solid_0019.stp",
+      "bytes": 491634,
+      "sha256": "226cb83a9de5661c98b8307fa9801e0c1b5cf6ee80098ddeda4124c7127c9a15",
+      "volume_relative_difference": 2.9643714785082575e-13,
+      "edge_count_difference": 0,
+      "source_inspection": {
+        "name": "em_source_19",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 111,
+          "wire": 111,
+          "edge": 327,
+          "vertex": 218
+        },
+        "bbox": {
+          "min": [
+            -37.5082072973146,
+            -83.30183578771091,
+            -0.21692022141520367
+          ],
+          "max": [
+            17.18180860088173,
+            -60.9539304199432,
+            -0.16526222140983235
+          ],
+          "size": [
+            54.69001589819633,
+            22.347905367767716,
+            0.051658000005371324
+          ]
+        },
+        "area": 1352.967105614258,
+        "length": 326.5445496108454,
+        "volume": 34.731693769854125,
+        "center_of_mass": [
+          -14.595985898376604,
+          -73.54108840212672,
+          -0.19109122138483534
+        ],
+        "units": "model_units (default convention: mm)"
+      },
+      "roundtrip_inspection": {
+        "name": "verify_07",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 111,
+          "wire": 111,
+          "edge": 327,
+          "vertex": 218
+        },
+        "bbox": {
+          "min": [
+            -37.50820729731326,
+            -83.30183578771002,
+            -0.21692022141516878
+          ],
+          "max": [
+            17.181808600882,
+            -60.953930419935816,
+            -0.16526222140978858
+          ],
+          "size": [
+            54.69001589819526,
+            22.347905367774203,
+            0.051658000005380206
+          ]
+        },
+        "area": 1352.9671056152933,
+        "length": 326.54454961085804,
+        "volume": 34.73169376986442,
+        "center_of_mass": [
+          -14.595985898372179,
+          -73.54108840212396,
+          -0.19109122138490264
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    },
+    {
+      "rank": 8,
+      "faces": 111,
+      "source_solid_index": 20,
+      "shape": "em_source_20",
+      "file": "08_faces_0111_solid_0020.stp",
+      "bytes": 487095,
+      "sha256": "55036ef4399742c6a0ced71759639221ed97cc66e2b52f22e1fb0a81e63bf8d3",
+      "volume_relative_difference": 2.890571754147738e-13,
+      "edge_count_difference": 0,
+      "source_inspection": {
+        "name": "em_source_20",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 111,
+          "wire": 111,
+          "edge": 327,
+          "vertex": 218
+        },
+        "bbox": {
+          "min": [
+            -37.5082072973146,
+            -83.30183578771086,
+            -0.3236052214152037
+          ],
+          "max": [
+            17.18180860088173,
+            -60.953930419943156,
+            -0.21692022140983233
+          ],
+          "size": [
+            54.69001589819633,
+            22.3479053677677,
+            0.10668500000537137
+          ]
+        },
+        "area": 1361.7965682071426,
+        "length": 332.5424926108507,
+        "volume": 71.72849800295953,
+        "center_of_mass": [
+          -14.595985898376648,
+          -73.5410884021268,
+          -0.27026272135533524
+        ],
+        "units": "model_units (default convention: mm)"
+      },
+      "roundtrip_inspection": {
+        "name": "verify_08",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 111,
+          "wire": 111,
+          "edge": 327,
+          "vertex": 218
+        },
+        "bbox": {
+          "min": [
+            -37.50820729731326,
+            -83.30183578771002,
+            -0.32360522141516873
+          ],
+          "max": [
+            17.181808600882,
+            -60.953930419935816,
+            -0.2169202214097886
+          ],
+          "size": [
+            54.69001589819526,
+            22.347905367774203,
+            0.10668500000538014
+          ]
+        },
+        "area": 1361.7965682081847,
+        "length": 332.5424926108636,
+        "volume": 71.72849800298026,
+        "center_of_mass": [
+          -14.595985898372385,
+          -73.5410884021239,
+          -0.27026272135540275
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    },
+    {
+      "rank": 9,
+      "faces": 111,
+      "source_solid_index": 21,
+      "shape": "em_source_21",
+      "file": "09_faces_0111_solid_0021.stp",
+      "bytes": 487797,
+      "sha256": "5031e416cf3a8a67c4e39c67bbda8f93e7e05ab9457dd47708aacff023fc4125",
+      "volume_relative_difference": 2.860358444174634e-13,
+      "edge_count_difference": 0,
+      "source_inspection": {
+        "name": "em_source_21",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 111,
+          "wire": 111,
+          "edge": 327,
+          "vertex": 218
+        },
+        "bbox": {
+          "min": [
+            -37.5082072973146,
+            -83.30183578771086,
+            -0.40895322141520274
+          ],
+          "max": [
+            17.18180860088173,
+            -60.953930419943156,
+            -0.32360522140983133
+          ],
+          "size": [
+            54.69001589819633,
+            22.3479053677677,
+            0.0853480000053714
+          ]
+        },
+        "area": 1358.3728990384777,
+        "length": 330.21675961084884,
+        "volume": 57.3827984023677,
+        "center_of_mass": [
+          -14.595985898376686,
+          -73.54108840212672,
+          -0.36627922136677404
+        ],
+        "units": "model_units (default convention: mm)"
+      },
+      "roundtrip_inspection": {
+        "name": "verify_09",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 111,
+          "wire": 111,
+          "edge": 327,
+          "vertex": 218
+        },
+        "bbox": {
+          "min": [
+            -37.50820729731326,
+            -83.30183578771002,
+            -0.40895322141516877
+          ],
+          "max": [
+            17.181808600882,
+            -60.953930419935816,
+            -0.32360522140978853
+          ],
+          "size": [
+            54.69001589819526,
+            22.347905367774203,
+            0.08534800000538023
+          ]
+        },
+        "area": 1358.372899039513,
+        "length": 330.2167596108618,
+        "volume": 57.38279840238411,
+        "center_of_mass": [
+          -14.595985898372433,
+          -73.54108840212396,
+          -0.366279221366842
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    },
+    {
+      "rank": 10,
+      "faces": 111,
+      "source_solid_index": 22,
+      "shape": "em_source_22",
+      "file": "10_faces_0111_solid_0022.stp",
+      "bytes": 488184,
+      "sha256": "ca87cb901b9ea2347e764ceff96ce6e975f8b43bb4332d65c0bce2f55f2c86ba",
+      "volume_relative_difference": 2.2438389493635979e-13,
+      "edge_count_difference": 0,
+      "source_inspection": {
+        "name": "em_source_22",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 111,
+          "wire": 111,
+          "edge": 327,
+          "vertex": 218
+        },
+        "bbox": {
+          "min": [
+            -37.5082072973146,
+            -83.30183578771086,
+            -0.5380982214152027
+          ],
+          "max": [
+            17.18180860088173,
+            -60.953930419943134,
+            -0.4089532214098323
+          ],
+          "size": [
+            54.69001589819633,
+            22.347905367767723,
+            0.12914500000537038
+          ]
+        },
+        "area": 1365.4004304899909,
+        "length": 334.990632610847,
+        "volume": 86.82923442463542,
+        "center_of_mass": [
+          -14.595985898376584,
+          -73.54108840212669,
+          -0.47352572134329407
+        ],
+        "units": "model_units (default convention: mm)"
+      },
+      "roundtrip_inspection": {
+        "name": "verify_10",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 111,
+          "wire": 111,
+          "edge": 327,
+          "vertex": 218
+        },
+        "bbox": {
+          "min": [
+            -37.50820729731326,
+            -83.30183578771003,
+            -0.5380982214151687
+          ],
+          "max": [
+            17.181808600882,
+            -60.953930419935816,
+            -0.40895322140978857
+          ],
+          "size": [
+            54.69001589819526,
+            22.347905367774217,
+            0.12914500000538015
+          ]
+        },
+        "area": 1365.400430490994,
+        "length": 334.9906326108591,
+        "volume": 86.8292344246549,
+        "center_of_mass": [
+          -14.595985898371403,
+          -73.54108840212369,
+          -0.473525721343364
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    }
+  ],
+  "source_inspection": {
+    "name": "em_source",
+    "type": "compound",
+    "valid": true,
+    "topology": {
+      "compound": 1,
+      "compsolid": 0,
+      "solid": 299,
+      "shell": 299,
+      "face": 8294,
+      "wire": 8414,
+      "edge": 21945,
+      "vertex": 14241
+    },
+    "bbox": {
+      "min": [
+        -44.35293544101684,
+        -85.44099544383559,
+        -4.395611046966729
+      ],
+      "max": [
+        44.35293544101684,
+        15.700329282571344,
+        4.836054678619666
+      ],
+      "size": [
+        88.70587088203368,
+        101.14132472640694,
+        9.231665725586396
+      ]
+    },
+    "area": 55459.326830234066,
+    "length": 30426.858235452186,
+    "volume": 67683.06680368762,
+    "center_of_mass": [
+      -0.369089830709832,
+      -29.60012974151466,
+      0.43717079712169776
+    ],
+    "units": "model_units (default convention: mm)"
+  },
+  "candidate_count": 299,
+  "all_solids_ranked": [
+    {
+      "faces": 1869,
+      "source_solid_index": 52,
+      "shape": "em_source_52"
+    },
+    {
+      "faces": 1452,
+      "source_solid_index": 48,
+      "shape": "em_source_48"
+    },
+    {
+      "faces": 785,
+      "source_solid_index": 13,
+      "shape": "em_source_13"
+    },
+    {
+      "faces": 489,
+      "source_solid_index": 47,
+      "shape": "em_source_47"
+    },
+    {
+      "faces": 383,
+      "source_solid_index": 15,
+      "shape": "em_source_15"
+    },
+    {
+      "faces": 111,
+      "source_solid_index": 18,
+      "shape": "em_source_18"
+    },
+    {
+      "faces": 111,
+      "source_solid_index": 19,
+      "shape": "em_source_19"
+    },
+    {
+      "faces": 111,
+      "source_solid_index": 20,
+      "shape": "em_source_20"
+    },
+    {
+      "faces": 111,
+      "source_solid_index": 21,
+      "shape": "em_source_21"
+    },
+    {
+      "faces": 111,
+      "source_solid_index": 22,
+      "shape": "em_source_22"
+    },
+    {
+      "faces": 111,
+      "source_solid_index": 23,
+      "shape": "em_source_23"
+    },
+    {
+      "faces": 111,
+      "source_solid_index": 24,
+      "shape": "em_source_24"
+    },
+    {
+      "faces": 111,
+      "source_solid_index": 25,
+      "shape": "em_source_25"
+    },
+    {
+      "faces": 110,
+      "source_solid_index": 64,
+      "shape": "em_source_64"
+    },
+    {
+      "faces": 88,
+      "source_solid_index": 26,
+      "shape": "em_source_26"
+    },
+    {
+      "faces": 88,
+      "source_solid_index": 27,
+      "shape": "em_source_27"
+    },
+    {
+      "faces": 88,
+      "source_solid_index": 28,
+      "shape": "em_source_28"
+    },
+    {
+      "faces": 83,
+      "source_solid_index": 12,
+      "shape": "em_source_12"
+    },
+    {
+      "faces": 77,
+      "source_solid_index": 67,
+      "shape": "em_source_67"
+    },
+    {
+      "faces": 74,
+      "source_solid_index": 46,
+      "shape": "em_source_46"
+    },
+    {
+      "faces": 72,
+      "source_solid_index": 299,
+      "shape": "em_source_299"
+    },
+    {
+      "faces": 49,
+      "source_solid_index": 11,
+      "shape": "em_source_11"
+    },
+    {
+      "faces": 40,
+      "source_solid_index": 6,
+      "shape": "em_source_6"
+    },
+    {
+      "faces": 40,
+      "source_solid_index": 17,
+      "shape": "em_source_17"
+    },
+    {
+      "faces": 39,
+      "source_solid_index": 4,
+      "shape": "em_source_4"
+    },
+    {
+      "faces": 39,
+      "source_solid_index": 9,
+      "shape": "em_source_9"
+    },
+    {
+      "faces": 38,
+      "source_solid_index": 10,
+      "shape": "em_source_10"
+    },
+    {
+      "faces": 28,
+      "source_solid_index": 30,
+      "shape": "em_source_30"
+    },
+    {
+      "faces": 28,
+      "source_solid_index": 32,
+      "shape": "em_source_32"
+    },
+    {
+      "faces": 28,
+      "source_solid_index": 34,
+      "shape": "em_source_34"
+    },
+    {
+      "faces": 25,
+      "source_solid_index": 49,
+      "shape": "em_source_49"
+    },
+    {
+      "faces": 23,
+      "source_solid_index": 69,
+      "shape": "em_source_69"
+    },
+    {
+      "faces": 22,
+      "source_solid_index": 7,
+      "shape": "em_source_7"
+    },
+    {
+      "faces": 20,
+      "source_solid_index": 68,
+      "shape": "em_source_68"
+    },
+    {
+      "faces": 19,
+      "source_solid_index": 14,
+      "shape": "em_source_14"
+    },
+    {
+      "faces": 18,
+      "source_solid_index": 1,
+      "shape": "em_source_1"
+    },
+    {
+      "faces": 18,
+      "source_solid_index": 44,
+      "shape": "em_source_44"
+    },
+    {
+      "faces": 18,
+      "source_solid_index": 45,
+      "shape": "em_source_45"
+    },
+    {
+      "faces": 18,
+      "source_solid_index": 55,
+      "shape": "em_source_55"
+    },
+    {
+      "faces": 18,
+      "source_solid_index": 298,
+      "shape": "em_source_298"
+    },
+    {
+      "faces": 16,
+      "source_solid_index": 35,
+      "shape": "em_source_35"
+    },
+    {
+      "faces": 16,
+      "source_solid_index": 36,
+      "shape": "em_source_36"
+    },
+    {
+      "faces": 16,
+      "source_solid_index": 60,
+      "shape": "em_source_60"
+    },
+    {
+      "faces": 16,
+      "source_solid_index": 61,
+      "shape": "em_source_61"
+    },
+    {
+      "faces": 16,
+      "source_solid_index": 62,
+      "shape": "em_source_62"
+    },
+    {
+      "faces": 15,
+      "source_solid_index": 63,
+      "shape": "em_source_63"
+    },
+    {
+      "faces": 14,
+      "source_solid_index": 2,
+      "shape": "em_source_2"
+    },
+    {
+      "faces": 14,
+      "source_solid_index": 65,
+      "shape": "em_source_65"
+    },
+    {
+      "faces": 14,
+      "source_solid_index": 66,
+      "shape": "em_source_66"
+    },
+    {
+      "faces": 12,
+      "source_solid_index": 38,
+      "shape": "em_source_38"
+    },
+    {
+      "faces": 11,
+      "source_solid_index": 37,
+      "shape": "em_source_37"
+    },
+    {
+      "faces": 11,
+      "source_solid_index": 50,
+      "shape": "em_source_50"
+    },
+    {
+      "faces": 11,
+      "source_solid_index": 51,
+      "shape": "em_source_51"
+    },
+    {
+      "faces": 10,
+      "source_solid_index": 5,
+      "shape": "em_source_5"
+    },
+    {
+      "faces": 10,
+      "source_solid_index": 8,
+      "shape": "em_source_8"
+    },
+    {
+      "faces": 10,
+      "source_solid_index": 39,
+      "shape": "em_source_39"
+    },
+    {
+      "faces": 10,
+      "source_solid_index": 41,
+      "shape": "em_source_41"
+    },
+    {
+      "faces": 10,
+      "source_solid_index": 42,
+      "shape": "em_source_42"
+    },
+    {
+      "faces": 9,
+      "source_solid_index": 40,
+      "shape": "em_source_40"
+    },
+    {
+      "faces": 7,
+      "source_solid_index": 29,
+      "shape": "em_source_29"
+    },
+    {
+      "faces": 7,
+      "source_solid_index": 31,
+      "shape": "em_source_31"
+    },
+    {
+      "faces": 7,
+      "source_solid_index": 33,
+      "shape": "em_source_33"
+    },
+    {
+      "faces": 6,
+      "source_solid_index": 16,
+      "shape": "em_source_16"
+    },
+    {
+      "faces": 6,
+      "source_solid_index": 53,
+      "shape": "em_source_53"
+    },
+    {
+      "faces": 6,
+      "source_solid_index": 54,
+      "shape": "em_source_54"
+    },
+    {
+      "faces": 6,
+      "source_solid_index": 56,
+      "shape": "em_source_56"
+    },
+    {
+      "faces": 6,
+      "source_solid_index": 297,
+      "shape": "em_source_297"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 3,
+      "shape": "em_source_3"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 43,
+      "shape": "em_source_43"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 57,
+      "shape": "em_source_57"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 58,
+      "shape": "em_source_58"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 59,
+      "shape": "em_source_59"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 70,
+      "shape": "em_source_70"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 71,
+      "shape": "em_source_71"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 72,
+      "shape": "em_source_72"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 73,
+      "shape": "em_source_73"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 74,
+      "shape": "em_source_74"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 75,
+      "shape": "em_source_75"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 76,
+      "shape": "em_source_76"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 77,
+      "shape": "em_source_77"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 78,
+      "shape": "em_source_78"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 79,
+      "shape": "em_source_79"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 80,
+      "shape": "em_source_80"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 81,
+      "shape": "em_source_81"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 82,
+      "shape": "em_source_82"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 83,
+      "shape": "em_source_83"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 84,
+      "shape": "em_source_84"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 85,
+      "shape": "em_source_85"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 86,
+      "shape": "em_source_86"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 87,
+      "shape": "em_source_87"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 88,
+      "shape": "em_source_88"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 89,
+      "shape": "em_source_89"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 90,
+      "shape": "em_source_90"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 91,
+      "shape": "em_source_91"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 92,
+      "shape": "em_source_92"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 93,
+      "shape": "em_source_93"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 94,
+      "shape": "em_source_94"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 95,
+      "shape": "em_source_95"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 96,
+      "shape": "em_source_96"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 97,
+      "shape": "em_source_97"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 98,
+      "shape": "em_source_98"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 99,
+      "shape": "em_source_99"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 100,
+      "shape": "em_source_100"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 101,
+      "shape": "em_source_101"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 102,
+      "shape": "em_source_102"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 103,
+      "shape": "em_source_103"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 104,
+      "shape": "em_source_104"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 105,
+      "shape": "em_source_105"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 106,
+      "shape": "em_source_106"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 107,
+      "shape": "em_source_107"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 108,
+      "shape": "em_source_108"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 109,
+      "shape": "em_source_109"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 110,
+      "shape": "em_source_110"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 111,
+      "shape": "em_source_111"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 112,
+      "shape": "em_source_112"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 113,
+      "shape": "em_source_113"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 114,
+      "shape": "em_source_114"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 115,
+      "shape": "em_source_115"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 116,
+      "shape": "em_source_116"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 117,
+      "shape": "em_source_117"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 118,
+      "shape": "em_source_118"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 119,
+      "shape": "em_source_119"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 120,
+      "shape": "em_source_120"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 121,
+      "shape": "em_source_121"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 122,
+      "shape": "em_source_122"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 123,
+      "shape": "em_source_123"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 124,
+      "shape": "em_source_124"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 125,
+      "shape": "em_source_125"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 126,
+      "shape": "em_source_126"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 127,
+      "shape": "em_source_127"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 128,
+      "shape": "em_source_128"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 129,
+      "shape": "em_source_129"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 130,
+      "shape": "em_source_130"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 131,
+      "shape": "em_source_131"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 132,
+      "shape": "em_source_132"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 133,
+      "shape": "em_source_133"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 134,
+      "shape": "em_source_134"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 135,
+      "shape": "em_source_135"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 136,
+      "shape": "em_source_136"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 137,
+      "shape": "em_source_137"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 138,
+      "shape": "em_source_138"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 139,
+      "shape": "em_source_139"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 140,
+      "shape": "em_source_140"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 141,
+      "shape": "em_source_141"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 142,
+      "shape": "em_source_142"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 143,
+      "shape": "em_source_143"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 144,
+      "shape": "em_source_144"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 145,
+      "shape": "em_source_145"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 146,
+      "shape": "em_source_146"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 147,
+      "shape": "em_source_147"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 148,
+      "shape": "em_source_148"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 149,
+      "shape": "em_source_149"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 150,
+      "shape": "em_source_150"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 151,
+      "shape": "em_source_151"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 152,
+      "shape": "em_source_152"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 153,
+      "shape": "em_source_153"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 154,
+      "shape": "em_source_154"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 155,
+      "shape": "em_source_155"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 156,
+      "shape": "em_source_156"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 157,
+      "shape": "em_source_157"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 158,
+      "shape": "em_source_158"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 159,
+      "shape": "em_source_159"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 160,
+      "shape": "em_source_160"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 161,
+      "shape": "em_source_161"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 162,
+      "shape": "em_source_162"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 163,
+      "shape": "em_source_163"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 164,
+      "shape": "em_source_164"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 165,
+      "shape": "em_source_165"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 166,
+      "shape": "em_source_166"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 167,
+      "shape": "em_source_167"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 168,
+      "shape": "em_source_168"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 169,
+      "shape": "em_source_169"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 170,
+      "shape": "em_source_170"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 171,
+      "shape": "em_source_171"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 172,
+      "shape": "em_source_172"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 173,
+      "shape": "em_source_173"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 174,
+      "shape": "em_source_174"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 175,
+      "shape": "em_source_175"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 176,
+      "shape": "em_source_176"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 177,
+      "shape": "em_source_177"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 178,
+      "shape": "em_source_178"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 179,
+      "shape": "em_source_179"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 180,
+      "shape": "em_source_180"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 181,
+      "shape": "em_source_181"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 182,
+      "shape": "em_source_182"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 183,
+      "shape": "em_source_183"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 184,
+      "shape": "em_source_184"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 185,
+      "shape": "em_source_185"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 186,
+      "shape": "em_source_186"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 187,
+      "shape": "em_source_187"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 188,
+      "shape": "em_source_188"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 189,
+      "shape": "em_source_189"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 190,
+      "shape": "em_source_190"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 191,
+      "shape": "em_source_191"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 192,
+      "shape": "em_source_192"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 193,
+      "shape": "em_source_193"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 194,
+      "shape": "em_source_194"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 195,
+      "shape": "em_source_195"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 196,
+      "shape": "em_source_196"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 197,
+      "shape": "em_source_197"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 198,
+      "shape": "em_source_198"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 199,
+      "shape": "em_source_199"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 200,
+      "shape": "em_source_200"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 201,
+      "shape": "em_source_201"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 202,
+      "shape": "em_source_202"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 203,
+      "shape": "em_source_203"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 204,
+      "shape": "em_source_204"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 205,
+      "shape": "em_source_205"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 206,
+      "shape": "em_source_206"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 207,
+      "shape": "em_source_207"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 208,
+      "shape": "em_source_208"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 209,
+      "shape": "em_source_209"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 210,
+      "shape": "em_source_210"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 211,
+      "shape": "em_source_211"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 212,
+      "shape": "em_source_212"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 213,
+      "shape": "em_source_213"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 214,
+      "shape": "em_source_214"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 215,
+      "shape": "em_source_215"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 216,
+      "shape": "em_source_216"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 217,
+      "shape": "em_source_217"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 218,
+      "shape": "em_source_218"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 219,
+      "shape": "em_source_219"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 220,
+      "shape": "em_source_220"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 221,
+      "shape": "em_source_221"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 222,
+      "shape": "em_source_222"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 223,
+      "shape": "em_source_223"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 224,
+      "shape": "em_source_224"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 225,
+      "shape": "em_source_225"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 226,
+      "shape": "em_source_226"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 227,
+      "shape": "em_source_227"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 228,
+      "shape": "em_source_228"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 229,
+      "shape": "em_source_229"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 230,
+      "shape": "em_source_230"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 231,
+      "shape": "em_source_231"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 232,
+      "shape": "em_source_232"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 233,
+      "shape": "em_source_233"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 234,
+      "shape": "em_source_234"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 235,
+      "shape": "em_source_235"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 236,
+      "shape": "em_source_236"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 237,
+      "shape": "em_source_237"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 238,
+      "shape": "em_source_238"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 239,
+      "shape": "em_source_239"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 240,
+      "shape": "em_source_240"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 241,
+      "shape": "em_source_241"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 242,
+      "shape": "em_source_242"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 243,
+      "shape": "em_source_243"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 244,
+      "shape": "em_source_244"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 245,
+      "shape": "em_source_245"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 246,
+      "shape": "em_source_246"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 247,
+      "shape": "em_source_247"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 248,
+      "shape": "em_source_248"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 249,
+      "shape": "em_source_249"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 250,
+      "shape": "em_source_250"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 251,
+      "shape": "em_source_251"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 252,
+      "shape": "em_source_252"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 253,
+      "shape": "em_source_253"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 254,
+      "shape": "em_source_254"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 255,
+      "shape": "em_source_255"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 256,
+      "shape": "em_source_256"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 257,
+      "shape": "em_source_257"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 258,
+      "shape": "em_source_258"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 259,
+      "shape": "em_source_259"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 260,
+      "shape": "em_source_260"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 261,
+      "shape": "em_source_261"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 262,
+      "shape": "em_source_262"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 263,
+      "shape": "em_source_263"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 264,
+      "shape": "em_source_264"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 265,
+      "shape": "em_source_265"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 266,
+      "shape": "em_source_266"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 267,
+      "shape": "em_source_267"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 268,
+      "shape": "em_source_268"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 269,
+      "shape": "em_source_269"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 270,
+      "shape": "em_source_270"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 271,
+      "shape": "em_source_271"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 272,
+      "shape": "em_source_272"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 273,
+      "shape": "em_source_273"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 274,
+      "shape": "em_source_274"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 275,
+      "shape": "em_source_275"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 276,
+      "shape": "em_source_276"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 277,
+      "shape": "em_source_277"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 278,
+      "shape": "em_source_278"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 279,
+      "shape": "em_source_279"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 280,
+      "shape": "em_source_280"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 281,
+      "shape": "em_source_281"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 282,
+      "shape": "em_source_282"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 283,
+      "shape": "em_source_283"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 284,
+      "shape": "em_source_284"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 285,
+      "shape": "em_source_285"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 286,
+      "shape": "em_source_286"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 287,
+      "shape": "em_source_287"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 288,
+      "shape": "em_source_288"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 289,
+      "shape": "em_source_289"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 290,
+      "shape": "em_source_290"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 291,
+      "shape": "em_source_291"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 292,
+      "shape": "em_source_292"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 293,
+      "shape": "em_source_293"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 294,
+      "shape": "em_source_294"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 295,
+      "shape": "em_source_295"
+    },
+    {
+      "faces": 4,
+      "source_solid_index": 296,
+      "shape": "em_source_296"
+    }
+  ],
+  "complete": true
+}

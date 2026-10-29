@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(occ_agent_harness VERSION 0.1.0 LANGUAGES CXX)
+project(occ_agent_harness VERSION 0.2.0 LANGUAGES CXX)
 set(OCCT_ROOT "C:/Programs/OpenCASCADE-7.7.0-vc14-64/opencascade-7.7.0" CACHE PATH "OCCT SDK root")
 get_filename_component(OCCT_PRODUCTS "${OCCT_ROOT}" DIRECTORY)
 set(TCL_ROOT "${OCCT_PRODUCTS}/tcltk-86-64" CACHE PATH "Tcl 8.6 SDK")

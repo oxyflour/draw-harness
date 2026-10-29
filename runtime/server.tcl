@@ -55,5 +55,10 @@ fconfigure $ready -encoding utf-8 -translation lf
 puts $ready $port
 close $ready
 file rename -force "$::env(OCC_HARNESS_READY).tmp" $::env(OCC_HARNESS_READY)
-vwait ::occ_harness::done
-close $listener
+if {[info exists ::env(OCC_HARNESS_GUI)] && $::env(OCC_HARNESS_GUI) eq "1"} {
+    # Interactive DRAW already owns a Tcl/Tk event loop; never block its startup.
+    trace add variable ::occ_harness::done write {apply {{args} {after 50 exit}}}
+} else {
+    vwait ::occ_harness::done
+    close $listener
+}

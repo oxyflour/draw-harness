@@ -1,0 +1,16 @@
+{
+  "ok": false,
+  "data": {
+    "ok": false,
+    "code": 1,
+    "result": "naive_plus is not a topological shape!!!\n",
+    "result_truncated": false,
+    "stdout": "",
+    "native_output": "",
+    "native_output_truncated": false,
+    "error": "naive_plus is not a topological shape!!!\n",
+    "error_info": "naive_plus is not a topological shape!!!\n\n    while executing\n\"checkshape naive_plus -short\"",
+    "error_line": 1,
+    "state_may_have_changed": true
+  }
+}

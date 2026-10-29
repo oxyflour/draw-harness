@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "data": {
+    "ok": true,
+    "code": 0,
+    "result": "\n\n*********** Dump of surf6 *************\nCylindricalSurface\n  Origin :-3.2567, -87.79363631938, 0.163776778586 \n  Axis   :-0, -1, -0 \n  XAxis  :-1, 0, 0 \n  YAxis  :0, 0, -1 \n  Radius :1.62835\n\n\n\n*********** Dump of surf727 *************\nCylindricalSurface\n  Origin :-3.2567, -87.79363631938, 0.163776778586 \n  Axis   :-0, -1, -0 \n  XAxis  :-1, 0, 0 \n  YAxis  :0, 0, -1 \n  Radius :1.62835\n\n",
+    "result_truncated": false,
+    "stdout": "",
+    "native_output": "",
+    "native_output_truncated": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "session": "benchmark_gui_1793195218695757100",
+  "pid": 93292,
+  "status": "running",
+  "started_at": "2026-10-28T13:47:01.220614+00:00",
+  "gui": true,
+  "model": "gpt-6-luna",
+  "units": "mm",
+  "occt_root": "C:\\Programs\\OpenCASCADE-7.7.0-vc14-64\\opencascade-7.7.0",
+  "selection_directory": "C:\\Projects\\occ-harness\\artifacts\\benchmarks\\toStudent_EM_selections\\1793195218695757100",
+  "launcher_pid": 90232
+}

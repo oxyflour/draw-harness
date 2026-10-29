@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "plus_x3",
+  "units": "mm",
+  "input": "../input/part_03.brep",
+  "input_sha256": "a6b2e2bf215d149449553f7f0405f2e3f74a5407002d6050187f704c7846d6e6",
+  "source_step_sha256": "e6bacd0e01d8e44dfb366b743953927ccf04509ab21f15ec4999d33ea930e0c1",
+  "selection": {
+    "type": "face",
+    "indices": [
+      6,
+      727
+    ],
+    "index_basis": "1-based TopExp::MapShapes of frozen input BREP"
+  },
+  "operation": {
+    "type": "translate_faces",
+    "vector": [
+      3,
+      0,
+      0
+    ],
+    "simultaneous": true
+  },
+  "target_contract": "Rigidly translated trimmed patches; rebuild connections to one closed solid",
+  "baseline_policy": "Sweep patches and fuse/cut; ruled transition faces are allowed. This does not preserve all neighboring support surfaces.",
+  "checks": [
+    "ordinary BRepCheck",
+    "single manifold solid",
+    "full target patch coverage",
+    "old patches absent",
+    "STEP roundtrip",
+    "exact check compared with input"
+  ]
+}

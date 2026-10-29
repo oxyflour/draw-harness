@@ -12,7 +12,10 @@
 #include <BRep_Tool.hxx>
 #include <TopExp.hxx>
 #include <TopTools_IndexedMapOfShape.hxx>
+#include <TopTools_IndexedDataMapOfShapeListOfShape.hxx>
+#include <TopTools_ListIteratorOfListOfShape.hxx>
 #include <TopoDS.hxx>
+#include <TopoDS_Iterator.hxx>
 #include <GProp_GProps.hxx>
 #include <Bnd_Box.hxx>
 #include <STEPControl_Writer.hxx>
@@ -27,11 +30,13 @@
 #include <algorithm>
 #include <cmath>
 #include <filesystem>
+#include <fstream>
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
 #include <streambuf>
 #include <string>
+#include <vector>
 
 namespace {
 using J = rapidjson::Value;
@@ -161,6 +166,126 @@ J subshapes(const J& request, A& a) {
   return v;
 }
 
+const char* orientation(TopAbs_Orientation value) {
+  const char* names[] = {"FORWARD", "REVERSED", "INTERNAL", "EXTERNAL"};
+  return names[value];
+}
+J location(const TopLoc_Location& loc, A& a) {
+  const auto& transform = loc.Transformation();
+  J rows(rapidjson::kArrayType);
+  for (int r = 1; r <= 4; ++r) {
+    J row(rapidjson::kArrayType);
+    for (int c = 1; c <= 4; ++c) row.PushBack(num(r == 4 ? (c == 4 ? 1.0 : 0.0) : transform.Value(r, c)), a);
+    rows.PushBack(row, a);
+  }
+  return rows;
+}
+J ancestors(const TopoDS_Shape& root, TopAbs_ShapeEnum childType, TopAbs_ShapeEnum parentType,
+            const TopTools_IndexedMapOfShape& nodes, A& a) {
+  TopTools_IndexedDataMapOfShapeListOfShape map;
+  TopExp::MapShapesAndUniqueAncestors(root, childType, parentType, map);
+  J result(rapidjson::kObjectType);
+  // Include free edges and isolated vertices with empty ancestor lists.
+  for (int id = 1; id <= nodes.Extent(); ++id) {
+    if (nodes(id).ShapeType() != childType) continue;
+    J parents(rapidjson::kArrayType);
+    const int index = map.FindIndex(nodes(id));
+    if (index != 0) {
+      for (TopTools_ListIteratorOfListOfShape it(map(index)); it.More(); it.Next()) {
+        const int parent = nodes.FindIndex(it.Value());
+        if (parent == 0) throw std::runtime_error("Topology ancestor missing from graph");
+        parents.PushBack(J(parent), a);
+      }
+    }
+    result.AddMember(str(std::to_string(id), a), parents, a);
+  }
+  return result;
+}
+J topologyGraph(const J& request, A& a) {
+  const auto name = field(request, "shape");
+  const auto root = shape(name);
+  const bool toFile = request.HasMember("path");
+  std::filesystem::path output;
+  if (toFile) {
+    output = std::filesystem::u8path(field(request, "path"));
+    if (!output.is_absolute()) throw std::runtime_error("Use an absolute graph output path");
+    if (std::filesystem::exists(output) && !flag(request, "overwrite")) throw std::runtime_error("File exists; set overwrite=true explicitly");
+  } else if (flag(request, "overwrite")) {
+    throw std::runtime_error("overwrite requires a graph output path");
+  }
+  TopTools_IndexedMapOfShape nodes, definitions;
+  nodes.Add(root.Oriented(TopAbs_FORWARD));
+  J uses(rapidjson::kArrayType);
+  // A node is (TShape, cumulative Location), independent of orientation.
+  // Expand each node once, but keep EVERY direct child use, including duplicates.
+  for (int parentId = 1; parentId <= nodes.Extent(); ++parentId) {
+    const TopoDS_Shape parent = nodes(parentId); // Copy: inserting children can reallocate the map.
+    int ordinal = 0;
+    for (TopoDS_Iterator it(parent, false, false); it.More(); it.Next()) {
+      const auto& local = it.Value();
+      if (local.IsNull()) throw std::runtime_error("Null child in topology graph");
+      const auto child = local.Moved(parent.Location(), false).Oriented(TopAbs_FORWARD);
+      const int childId = nodes.Add(child);
+      if (nodes.Extent() > 100000 || uses.Size() >= 500000) throw std::runtime_error("Topology graph exceeds 100000 nodes or 500000 uses");
+      J use(rapidjson::kObjectType);
+      use.AddMember("id", J(static_cast<int>(uses.Size()) + 1), a);
+      use.AddMember("parent", parentId, a);
+      use.AddMember("child", childId, a);
+      use.AddMember("ordinal", ++ordinal, a);
+      use.AddMember("orientation", str(orientation(local.Orientation()), a), a);
+      use.AddMember("location", location(local.Location(), a), a);
+      uses.PushBack(use, a);
+    }
+  }
+  // These are the SAME per-type indices used by subshapes/select, not graph IDs.
+  TopTools_IndexedMapOfShape typed[8];
+  for (int type = 0; type < 8; ++type) TopExp::MapShapes(root, static_cast<TopAbs_ShapeEnum>(type), typed[type]);
+  J graph(rapidjson::kObjectType), items(rapidjson::kArrayType);
+  for (int id = 1; id <= nodes.Extent(); ++id) {
+    const auto& node = nodes(id);
+    J item(rapidjson::kObjectType);
+    item.AddMember("id", id, a);
+    item.AddMember("type", str(types[node.ShapeType()], a), a);
+    const int typeIndex = typed[node.ShapeType()].FindIndex(node);
+    item.AddMember("type_index", typeIndex == 0 ? J() : J(typeIndex), a);
+    item.AddMember("definition_id", definitions.Add(node.Located(TopLoc_Location())), a);
+    item.AddMember("location", location(node.Location(), a), a);
+    items.PushBack(item, a);
+  }
+  graph.AddMember("schema_version", 1, a);
+  graph.AddMember("shape", str(name, a), a);
+  graph.AddMember("root", 1, a);
+  graph.AddMember("root_orientation", str(orientation(root.Orientation()), a), a);
+  graph.AddMember("node_count", nodes.Extent(), a);
+  const auto useCount = uses.Size();
+  graph.AddMember("use_count", J(useCount), a);
+  graph.AddMember("definition_count", definitions.Extent(), a);
+  graph.AddMember("id_scope", "current shape snapshot only", a);
+  graph.AddMember("nodes", items, a);
+  graph.AddMember("uses", uses, a);
+  graph.AddMember("edge_faces", ancestors(root, TopAbs_EDGE, TopAbs_FACE, nodes, a), a);
+  graph.AddMember("vertex_edges", ancestors(root, TopAbs_VERTEX, TopAbs_EDGE, nodes, a), a);
+  const auto serialized = encode(graph);
+  if (!toFile) {
+    // Leave room for the RPC envelope under the Python client's 4 MiB bound.
+    if (serialized.size() > 3 * 1024 * 1024) throw std::runtime_error("Topology graph exceeds 3 MiB inline limit; supply path to write the complete JSON graph");
+    return graph;
+  }
+  std::ofstream stream(output, std::ios::binary | std::ios::trunc);
+  stream.write(serialized.data(), static_cast<std::streamsize>(serialized.size()));
+  stream.close();
+  if (!stream) throw std::runtime_error("Could not write topology graph file");
+  J summary(rapidjson::kObjectType);
+  summary.AddMember("schema_version", 1, a);
+  summary.AddMember("shape", str(name, a), a);
+  summary.AddMember("path", str(output.u8string(), a), a);
+  summary.AddMember("format", "json", a);
+  summary.AddMember("bytes", J(static_cast<uint64_t>(serialized.size())), a);
+  summary.AddMember("node_count", nodes.Extent(), a);
+  summary.AddMember("use_count", J(useCount), a);
+  return summary;
+}
+
 // Bounded streams prevent a noisy DRAW command from flooding tool output.
 class Capture : public std::streambuf {
  public:
@@ -217,6 +342,7 @@ J dispatch(Draw_Interpretor& di, const J& request, A& a) {
   if (op == "eval") return evaluate(di, field(request, "script"), a);
   if (op == "inspect") return inspect(field(request, "shape"), a);
   if (op == "subshapes") return subshapes(request, a);
+  if (op == "topology_graph") return topologyGraph(request, a);
   if (op == "select") {
     const auto name = field(request, "name"); nameCheck(name);
     auto s = shape(field(request, "shape"));
@@ -276,7 +402,7 @@ J dispatch(Draw_Interpretor& di, const J& request, A& a) {
   if (op == "ping") {
     J v(rapidjson::kObjectType);
     v.AddMember("module", "occ-agent-harness", a);
-    v.AddMember("version", "0.1.0", a);
+    v.AddMember("version", "0.2.0", a);
     v.AddMember("occt", OCC_VERSION_COMPLETE, a);
     v.AddMember("protocol", 1, a);
     return v;
@@ -323,12 +449,25 @@ int inspectCommand(Draw_Interpretor& di, int argc, const char** argv) {
   } catch (const Standard_Failure& e) { di << e.GetMessageString(); return 1; }
     catch (const std::exception& e) { di << e.what(); return 1; }
 }
+int graphCommand(Draw_Interpretor& di, int argc, const char** argv) {
+  try {
+    if (argc < 2 || argc > 3) throw std::runtime_error("ah_topology_graph shape ?absolute-json-path?");
+    rapidjson::Document request(rapidjson::kObjectType);
+    auto& a = request.GetAllocator();
+    request.AddMember("shape", str(argv[1], a), a);
+    if (argc == 3) request.AddMember("path", str(argv[2], a), a);
+    di << encode(topologyGraph(request, a)).c_str();
+    return 0;
+  } catch (const Standard_Failure& e) { di << e.GetMessageString(); return 1; }
+    catch (const std::exception& e) { di << e.what(); return 1; }
+}
 }
 class OccAgent {
  public:
   static void Factory(Draw_Interpretor& di) {
     di.Add("ah_rpc", "ah_rpc json token: structured agent protocol", __FILE__, rpc, "Agent harness");
     di.Add("ah_inspect", "ah_inspect shape: JSON validity, bounds, topology, mass properties", __FILE__, inspectCommand, "Agent harness");
+    di.Add("ah_topology_graph", "ah_topology_graph shape [absolute-json-path]: containment uses and adjacency graph", __FILE__, graphCommand, "Agent harness");
   }
 };
 DPLUGIN(OccAgent)

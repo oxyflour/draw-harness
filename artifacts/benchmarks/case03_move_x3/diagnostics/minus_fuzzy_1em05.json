@@ -1,0 +1,20 @@
+{
+  "ok": false,
+  "data": {
+    "ok": true,
+    "code": 0,
+    "result": "Warning: Building 2D curve of edge on face has failed\nError: Building of the result shape has failed\n",
+    "result_truncated": false,
+    "stdout": "",
+    "native_output": "",
+    "native_output_truncated": false
+  },
+  "checks": {
+    "candidate_m_1em05": {
+      "ok": false,
+      "error": "Shape not found: candidate_m_1em05"
+    }
+  },
+  "error": "A requested output shape is absent or invalid; prior state may have changed",
+  "elapsed_seconds": 2.922000000020489
+}

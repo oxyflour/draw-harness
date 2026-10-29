@@ -1,0 +1,398 @@
+{
+  "p": {
+    "6": {
+      "target": {
+        "operation": {
+          "ok": true,
+          "data": {
+            "ok": true,
+            "code": 0,
+            "result": "",
+            "result_truncated": false,
+            "stdout": "",
+            "native_output": "",
+            "native_output_truncated": false
+          }
+        },
+        "inspection": {
+          "ok": true,
+          "data": {
+            "name": "common_p_target6",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 1,
+              "edge": 5,
+              "vertex": 5
+            },
+            "bbox": {
+              "min": [
+                -1.8850500999999997,
+                -84.59411966027,
+                0.16377667858589645
+              ],
+              "max": [
+                -0.2566998999999999,
+                -83.74974432060975,
+                1.792126878586
+              ],
+              "size": [
+                1.6283501999999999,
+                0.844375339660246,
+                1.6283502000001036
+              ]
+            },
+            "area": 1.566817206208244,
+            "length": 6.3589413175651135,
+            "volume": null,
+            "center_of_mass": [
+              -1.2906724163135987,
+              -84.20224002242018,
+              1.2040017949400244
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      },
+      "original": {
+        "operation": {
+          "ok": true,
+          "data": {
+            "ok": true,
+            "code": 0,
+            "result": "",
+            "result_truncated": false,
+            "stdout": "",
+            "native_output": "",
+            "native_output_truncated": false
+          }
+        },
+        "inspection": {
+          "ok": true,
+          "data": {
+            "name": "common_p_original6",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 0,
+              "vertex": 0
+            },
+            "bbox": null,
+            "area": 0.0,
+            "length": 0.0,
+            "volume": null,
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    },
+    "727": {
+      "target": {
+        "operation": {
+          "ok": true,
+          "data": {
+            "ok": true,
+            "code": 0,
+            "result": "",
+            "result_truncated": false,
+            "stdout": "",
+            "native_output": "",
+            "native_output_truncated": false
+          }
+        },
+        "inspection": {
+          "ok": true,
+          "data": {
+            "name": "common_p_target727",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 1,
+              "edge": 5,
+              "vertex": 5
+            },
+            "bbox": {
+              "min": [
+                -1.8850500999999997,
+                -84.35027697470073,
+                -1.464573321414
+              ],
+              "max": [
+                -0.2566998999999999,
+                -83.52089465242001,
+                0.16377687858603696
+              ],
+              "size": [
+                1.6283501999999999,
+                0.829382322280722,
+                1.628350200000037
+              ]
+            },
+            "area": 1.5665734326671685,
+            "length": 6.355009255045202,
+            "volume": null,
+            "center_of_mass": [
+              -1.290590764271986,
+              -83.90979188515134,
+              -0.8765432749754757
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      },
+      "original": {
+        "operation": {
+          "ok": true,
+          "data": {
+            "ok": true,
+            "code": 0,
+            "result": "",
+            "result_truncated": false,
+            "stdout": "",
+            "native_output": "",
+            "native_output_truncated": false
+          }
+        },
+        "inspection": {
+          "ok": true,
+          "data": {
+            "name": "common_p_original727",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 0,
+              "vertex": 0
+            },
+            "bbox": null,
+            "area": 0.0,
+            "length": 0.0,
+            "volume": null,
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  "m": {
+    "6": {
+      "target": {
+        "operation": {
+          "ok": true,
+          "data": {
+            "ok": true,
+            "code": 0,
+            "result": "",
+            "result_truncated": false,
+            "stdout": "",
+            "native_output": "",
+            "native_output_truncated": false
+          }
+        },
+        "inspection": {
+          "ok": true,
+          "data": {
+            "name": "common_m_target6",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 1,
+              "edge": 3,
+              "vertex": 3
+            },
+            "bbox": {
+              "min": [
+                -6.378276609003013,
+                -84.06951853560747,
+                1.7875805173343948
+              ],
+              "max": [
+                -6.2566999,
+                -83.97794432995143,
+                1.792126878586
+              ],
+              "size": [
+                0.12157670900301287,
+                0.09157420565604468,
+                0.004546361251605235
+              ]
+            },
+            "area": 0.005635599951993109,
+            "length": 0.3649285303245737,
+            "volume": null,
+            "center_of_mass": [
+              -6.297622540252321,
+              -84.00907055326206,
+              1.7913579957677856
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      },
+      "original": {
+        "operation": {
+          "ok": true,
+          "data": {
+            "ok": true,
+            "code": 0,
+            "result": "",
+            "result_truncated": false,
+            "stdout": "",
+            "native_output": "",
+            "native_output_truncated": false
+          }
+        },
+        "inspection": {
+          "ok": true,
+          "data": {
+            "name": "common_m_original6",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 0,
+              "vertex": 0
+            },
+            "bbox": null,
+            "area": 0.0,
+            "length": 0.0,
+            "volume": null,
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    },
+    "727": {
+      "target": {
+        "operation": {
+          "ok": true,
+          "data": {
+            "ok": true,
+            "code": 0,
+            "result": "",
+            "result_truncated": false,
+            "stdout": "",
+            "native_output": "",
+            "native_output_truncated": false
+          }
+        },
+        "inspection": {
+          "ok": true,
+          "data": {
+            "name": "common_m_target727",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 0,
+              "vertex": 0
+            },
+            "bbox": null,
+            "area": 0.0,
+            "length": 0.0,
+            "volume": null,
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      },
+      "original": {
+        "operation": {
+          "ok": true,
+          "data": {
+            "ok": true,
+            "code": 0,
+            "result": "",
+            "result_truncated": false,
+            "stdout": "",
+            "native_output": "",
+            "native_output_truncated": false
+          }
+        },
+        "inspection": {
+          "ok": true,
+          "data": {
+            "name": "common_m_original727",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 0,
+              "vertex": 0
+            },
+            "bbox": null,
+            "area": 0.0,
+            "length": 0.0,
+            "volume": null,
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  }
+}
