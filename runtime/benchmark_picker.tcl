@@ -81,6 +81,7 @@ proc ::bench::loadCase {{rank ""}} {
             ::bench::rpc "\"op\":\"export\",\"shape\":[::bench::quote $shape],\"path\":[::bench::quote $snapshot],\"format\":\"brep\""
             dict set loaded $rank $snapshot
         }
+        ::bench::globalcmd vactivate $::bench::viewer
         ::bench::globalcmd vclear
         ::bench::globalcmd vdisplay -dispMode 1 $shape
         ::bench::globalcmd vselmode $shape Face on -set
@@ -102,6 +103,7 @@ proc ::bench::record {} {
     variable status
     variable busy
     variable testMode
+    variable selectionCase
     if {$busy} {return}
     set faces [::bench::faces]
     if {![llength $faces]} {set status "尚未选中面，请先在图形窗口点选。"; return}
@@ -117,7 +119,7 @@ proc ::bench::record {} {
             set inspection [::bench::rpc "\"op\":\"select\",\"shape\":[::bench::quote $shape],\"type\":\"face\",\"index\":$index,\"name\":[::bench::quote $id]"]
             set path [file join $target faces "$id.brep"]
             set exported [::bench::rpc "\"op\":\"export\",\"shape\":[::bench::quote $id],\"path\":[::bench::quote $path],\"format\":\"brep\""]
-            set json "{\"id\":[::bench::quote $id],\"case\":$current,\"face_index\":$index,\"shape\":[::bench::quote $shape],\"source_step\":[::bench::quote [dict get $item path]],\"source_sha256\":[::bench::quote [dict get $item sha256]],\"part_snapshot\":[::bench::quote [dict get $loaded $current]],\"face_brep\":[::bench::quote $path],\"inspection_rpc\":$inspection,\"export_rpc\":$exported}"
+            set json "{\"id\":[::bench::quote $id],\"selection_case\":$selectionCase,\"case\":$current,\"face_index\":$index,\"shape\":[::bench::quote $shape],\"source_step\":[::bench::quote [dict get $item path]],\"source_sha256\":[::bench::quote [dict get $item sha256]],\"part_snapshot\":[::bench::quote [dict get $loaded $current]],\"face_brep\":[::bench::quote $path],\"inspection_rpc\":$inspection,\"export_rpc\":$exported}"
             set file [open [file join $target selections.jsonl] a]
             fconfigure $file -encoding utf-8 -translation lf
             puts $file $json
@@ -132,25 +134,25 @@ proc ::bench::record {} {
 }
 proc ::bench::safeLoad {} {catch {::bench::loadCase}}
 proc ::bench::safeRecord {} {catch {::bench::record}}
+source -encoding utf-8 [file join [file dirname [info script]] benchmark_cases.tcl]
+source -encoding utf-8 [file join [file dirname [info script]] benchmark_parts.tcl]
 
 toplevel .benchmark
 wm title .benchmark "Benchmark 选面记录 — OCCT DRAW"
 wm geometry .benchmark 540x650+25+50
 ttk::label .benchmark.title -text "toStudent_EM · 面选择" -font {SegoeUI 16 bold}
 ttk::label .benchmark.help -text "1. 选择零件并载入。\n2. 左键点选面，Shift+左键可多选。\n3. 点击“记录选中面”，再切换零件。\n滚轮缩放；鼠标拖动旋转；F 可适配视图。" -justify left
-set labels {}
-dict for {rank item} $::bench::cases {lappend labels [format "%02d | %d faces | solid %d" $rank [dict get $item faces] [dict get $item source_index]]}
-ttk::combobox .benchmark.case -state readonly -values $labels -textvariable ::bench::chosen -width 46
-.benchmark.case current [expr {$::bench::initial - 1}]
 ttk::button .benchmark.load -text "载入零件" -command ::bench::safeLoad
 ttk::label .benchmark.selected -textvariable ::bench::selectedText -wraplength 500
 ttk::button .benchmark.record -text "记录选中面" -command ::bench::safeRecord
 ttk::label .benchmark.status -textvariable ::bench::status -wraplength 500
 listbox .benchmark.list -height 8 -width 65
 ttk::label .benchmark.path -text "记录目录：$::bench::output" -wraplength 500
-foreach child {title help case load selected record status list path} {pack .benchmark.$child -anchor w -padx 16 -pady 7 -fill x}
+foreach child {title help load selected record status list path} {pack .benchmark.$child -anchor w -padx 16 -pady 7 -fill x}
 bind .benchmark <F5> ::bench::safeRecord
-vinit -name BenchmarkPick -left 580 -top 50 -width 680 -height 650
+set ::bench::viewer [string trim [vinit -name BenchmarkPick -left 580 -top 50 -width 680 -height 650]]
+::bench::installCaseControls
+::bench::installPartSelector
 ::bench::writeFile $::env(OCC_GUI_INFO) "{\"pid\":[pid],\"output\":[::bench::quote $::bench::output]}"
 after 350 ::bench::poll
 after 500 ::bench::safeLoad

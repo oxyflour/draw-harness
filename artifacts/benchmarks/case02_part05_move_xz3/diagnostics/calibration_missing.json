@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "data": {
+    "name": "missing",
+    "type": "compound",
+    "valid": true,
+    "topology": {
+      "compound": 1,
+      "compsolid": 0,
+      "solid": 0,
+      "shell": 0,
+      "face": 0,
+      "wire": 0,
+      "edge": 0,
+      "vertex": 0
+    },
+    "bbox": null,
+    "area": 0.0,
+    "length": 0.0,
+    "volume": null,
+    "center_of_mass": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "units": "model_units (default convention: mm)"
+  }
+}

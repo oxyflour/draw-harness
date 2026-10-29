@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "data": {
+    "ok": true,
+    "code": 0,
+    "result": "",
+    "result_truncated": false,
+    "stdout": "",
+    "native_output": "",
+    "native_output_truncated": false
+  },
+  "checks": {
+    "feature_plug": {
+      "ok": true,
+      "data": {
+        "name": "feature_plug",
+        "type": "compound",
+        "valid": true,
+        "topology": {
+          "compound": 1,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 10,
+          "wire": 11,
+          "edge": 21,
+          "vertex": 14
+        },
+        "bbox": {
+          "min": [
+            -11.151391208761286,
+            -85.44094590197493,
+            -0.8244633214284166
+          ],
+          "max": [
+            -9.174908407878556,
+            -83.80698631938,
+            1.1520168785905835
+          ],
+          "size": [
+            1.9764828008827298,
+            1.633959582594926,
+            1.976480200019
+          ]
+        },
+        "area": 14.341972162715065,
+        "length": 32.13531469951611,
+        "volume": 3.948325876345243,
+        "center_of_mass": [
+          -10.163384991974986,
+          -84.70027788607032,
+          0.18000460792072323
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    }
+  }
+}

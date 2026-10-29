@@ -5,3 +5,4 @@ __pycache__/
 bin/*.exp
 bin/*.lib
 bin/*.pdb
+artifacts/benchmarks/**/replayed.brep

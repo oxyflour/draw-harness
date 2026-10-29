@@ -1,0 +1,73 @@
+{
+  "operation": {
+    "ok": true,
+    "data": {
+      "ok": true,
+      "code": 0,
+      "result": "",
+      "result_truncated": false,
+      "stdout": "",
+      "native_output": "",
+      "native_output_truncated": false
+    },
+    "checks": {
+      "step_extra": {
+        "ok": true,
+        "data": {
+          "name": "step_extra",
+          "type": "compound",
+          "valid": true,
+          "topology": {
+            "compound": 1,
+            "compsolid": 0,
+            "solid": 0,
+            "shell": 0,
+            "face": 0,
+            "wire": 0,
+            "edge": 0,
+            "vertex": 0
+          },
+          "bbox": null,
+          "area": 0.0,
+          "length": 0.0,
+          "volume": null,
+          "center_of_mass": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "units": "model_units (default convention: mm)"
+        }
+      }
+    }
+  },
+  "inspection": {
+    "ok": true,
+    "data": {
+      "name": "step_extra",
+      "type": "compound",
+      "valid": true,
+      "topology": {
+        "compound": 1,
+        "compsolid": 0,
+        "solid": 0,
+        "shell": 0,
+        "face": 0,
+        "wire": 0,
+        "edge": 0,
+        "vertex": 0
+      },
+      "bbox": null,
+      "area": 0.0,
+      "length": 0.0,
+      "volume": null,
+      "center_of_mass": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "units": "model_units (default convention: mm)"
+    }
+  },
+  "seconds": 39.139999999897555
+}

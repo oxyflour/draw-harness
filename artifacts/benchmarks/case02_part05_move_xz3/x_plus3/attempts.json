@@ -1,0 +1,1808 @@
+[
+  {
+    "script": "tcopy original_tool moved_tool; ttranslate moved_tool 3 0 0",
+    "seconds": 0.03100000019185245,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "moved_tool": {
+          "ok": true,
+          "data": {
+            "name": "moved_tool",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 1,
+              "shell": 1,
+              "face": 6,
+              "wire": 7,
+              "edge": 8,
+              "vertex": 5
+            },
+            "bbox": {
+              "min": [
+                -8.15139,
+                -86.4409954438325,
+                -0.824463221414
+              ],
+              "max": [
+                -6.17491,
+                -77.68049121937352,
+                1.1520167785860003
+              ],
+              "size": [
+                1.9764799999999996,
+                8.760504224458984,
+                1.9764800000000002
+              ]
+            },
+            "area": 50.09010167223572,
+            "length": 36.387144453200946,
+            "volume": 18.220125706549652,
+            "center_of_mass": [
+              -7.16315,
+              -82.51316140642611,
+              0.1637767785860003
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "tcopy f6 target6; ttranslate target6 3 0 0",
+    "seconds": 0.031999999890103936,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "target6": {
+          "ok": true,
+          "data": {
+            "name": "target6",
+            "type": "face",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 1,
+              "edge": 5,
+              "vertex": 5
+            },
+            "bbox": {
+              "min": [
+                -7.921175,
+                -84.36117968727,
+                -0.5942482214139999
+              ],
+              "max": [
+                -6.405125,
+                -83.80698631938,
+                0.1637767785860035
+              ],
+              "size": [
+                1.51605,
+                0.5541933678899937,
+                0.7580250000000034
+              ]
+            },
+            "area": 1.3197592846748114,
+            "length": 5.871198278254804,
+            "volume": null,
+            "center_of_mass": [
+              -7.163149999999849,
+              -84.084083003329,
+              -0.318796924362904
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "tcopy f7 target7; ttranslate target7 3 0 0",
+    "seconds": 0.0,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "target7": {
+          "ok": true,
+          "data": {
+            "name": "target7",
+            "type": "face",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 1,
+              "edge": 5,
+              "vertex": 5
+            },
+            "bbox": {
+              "min": [
+                -8.06155,
+                -84.60431631938006,
+                -0.7346232214139999
+              ],
+              "max": [
+                -7.163149999999997,
+                -84.36117968726947,
+                1.062176778586
+              ],
+              "size": [
+                0.8984000000000032,
+                0.24313663211059122,
+                1.7967999999999997
+              ]
+            },
+            "area": 0.7304851952954323,
+            "length": 5.765312611218194,
+            "volume": null,
+            "center_of_mass": [
+              -7.691668677806344,
+              -84.48618213654647,
+              0.16377677858594683
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "tcopy f8 target8; ttranslate target8 3 0 0",
+    "seconds": 0.0,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "target8": {
+          "ok": true,
+          "data": {
+            "name": "target8",
+            "type": "face",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 1,
+              "edge": 6,
+              "vertex": 6
+            },
+            "bbox": {
+              "min": [
+                -8.151391208761286,
+                -85.40731628105,
+                -0.8244633214284166
+              ],
+              "max": [
+                -6.174908407890302,
+                -84.60431621938001,
+                0.16377834729749366
+              ],
+              "size": [
+                1.9764828008709836,
+                0.8030000616699908,
+                0.9882416687259102
+              ]
+            },
+            "area": 2.2432108937191257,
+            "length": 7.829295935847329,
+            "volume": null,
+            "center_of_mass": [
+              -7.163149613027844,
+              -84.96696486168806,
+              -0.44664332628474285
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "tcopy f317 target317; ttranslate target317 3 0 0",
+    "seconds": 0.01500000013038516,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "target317": {
+          "ok": true,
+          "data": {
+            "name": "target317",
+            "type": "face",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 1,
+              "edge": 4,
+              "vertex": 4
+            },
+            "bbox": {
+              "min": [
+                -8.15139120872308,
+                -85.44094590197493,
+                0.1637766785859993
+              ],
+              "max": [
+                -6.174908407878555,
+                -84.60431621938001,
+                1.1520168785905835
+              ],
+              "size": [
+                1.9764828008445248,
+                0.8366296825949178,
+                0.9882402000045842
+              ]
+            },
+            "area": 2.5776779166879904,
+            "length": 7.817146743769542,
+            "volume": null,
+            "center_of_mass": [
+              -7.163151887882645,
+              -85.01949441799904,
+              0.7957472480869683
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "tcopy f318 target318; ttranslate target318 3 0 0",
+    "seconds": 0.04699999978765845,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "target318": {
+          "ok": true,
+          "data": {
+            "name": "target318",
+            "type": "face",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 2,
+              "edge": 4,
+              "vertex": 4
+            },
+            "bbox": {
+              "min": [
+                -8.15139,
+                -84.60431631938,
+                -0.824463221414
+              ],
+              "max": [
+                -6.17491,
+                -84.60431631938,
+                1.152016778586
+              ],
+              "size": [
+                1.9764799999999996,
+                0.0,
+                1.97648
+              ]
+            },
+            "area": 0.5324865640589393,
+            "length": 11.854108727937302,
+            "volume": null,
+            "center_of_mass": [
+              -7.163149999999998,
+              -84.60431631938,
+              0.1637767785860004
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "tcopy f319 target319; ttranslate target319 3 0 0",
+    "seconds": 0.03100000019185245,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "target319": {
+          "ok": true,
+          "data": {
+            "name": "target319",
+            "type": "face",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 1,
+              "edge": 5,
+              "vertex": 5
+            },
+            "bbox": {
+              "min": [
+                -7.163150000000004,
+                -84.60431631938006,
+                -0.7346232214139999
+              ],
+              "max": [
+                -6.26475,
+                -84.36117968726947,
+                1.062176778586
+              ],
+              "size": [
+                0.8984000000000041,
+                0.24313663211059122,
+                1.7967999999999997
+              ]
+            },
+            "area": 0.7304851952954262,
+            "length": 5.765312611218192,
+            "volume": null,
+            "center_of_mass": [
+              -6.634631322193657,
+              -84.48618213654647,
+              0.16377677858616455
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "tcopy f320 target320; ttranslate target320 3 0 0",
+    "seconds": 0.031999999890103936,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "target320": {
+          "ok": true,
+          "data": {
+            "name": "target320",
+            "type": "face",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 1,
+              "edge": 5,
+              "vertex": 5
+            },
+            "bbox": {
+              "min": [
+                -7.921175,
+                -84.36117968727,
+                0.163776778586
+              ],
+              "max": [
+                -6.405125,
+                -83.80698631938,
+                0.921801778586
+              ],
+              "size": [
+                1.51605,
+                0.5541933678899937,
+                0.758025
+              ]
+            },
+            "area": 1.3197592846748116,
+            "length": 5.871198278254788,
+            "volume": null,
+            "center_of_mass": [
+              -7.16315000000005,
+              -84.084083003329,
+              0.6463504815349042
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "compound target6 target7 target8 target317 target318 target319 target320 targets",
+    "seconds": 0.01500000013038516,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "targets": {
+          "ok": true,
+          "data": {
+            "name": "targets",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 7,
+              "wire": 8,
+              "edge": 34,
+              "vertex": 34
+            },
+            "bbox": {
+              "min": [
+                -8.151391208761286,
+                -85.44094590197493,
+                -0.8244633214284166
+              ],
+              "max": [
+                -6.174908407878555,
+                -83.80698631938,
+                1.1520168785905835
+              ],
+              "size": [
+                1.9764828008827307,
+                1.633959582594926,
+                1.976480200019
+              ]
+            },
+            "area": 9.453864334406537,
+            "length": 50.77357318650016,
+            "volume": null,
+            "center_of_mass": [
+              -7.163150422926854,
+              -84.64006218199222,
+              0.1912486445927117
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "bcut result_x_plus3 filled moved_tool",
+    "seconds": 1.875,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "result_x_plus3": {
+          "ok": true,
+          "data": {
+            "name": "result_x_plus3",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 1,
+              "shell": 1,
+              "face": 384,
+              "wire": 396,
+              "edge": 1139,
+              "vertex": 755
+            },
+            "bbox": {
+              "min": [
+                -43.999811687564716,
+                -85.44099544383255,
+                -3.4661478730435804
+              ],
+              "max": [
+                43.99981168651948,
+                -78.68049121937352,
+                3.880906878586
+              ],
+              "size": [
+                87.9996233740842,
+                6.7605042244590265,
+                7.34705475162958
+              ]
+            },
+            "area": 1971.1663591583476,
+            "length": 2635.456507330538,
+            "volume": 758.3115987064493,
+            "center_of_mass": [
+              -0.7397404332422561,
+              -83.73736934428584,
+              -0.17140848282828192
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "checkshape result_x_plus3 errors_x_plus3 -exact",
+    "seconds": 1.202999999979511,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": " -- The Shape result_x_plus3 has problems :\n  Check                                    Count\n ------------------------------------------------\n  Invalid Curve on Surface ................. 235\n  Unorientable Shape ....................... 124\n ------------------------------------------------\n*** Shapes with problems : 359\nEDGE\t: 235 Items -> compound named errors_x_plus3_e\nFACE\t: 124 Items -> compound named errors_x_plus3_f\n",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    }
+  },
+  {
+    "script": "eval compound [explode result_x_plus3 F] boundary",
+    "seconds": 0.0,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    }
+  },
+  {
+    "script": "bcommon overlap_x_plus3_6 boundary target6",
+    "seconds": 0.0940000000409782,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "overlap_x_plus3_6": {
+          "ok": true,
+          "data": {
+            "name": "overlap_x_plus3_6",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 1,
+              "edge": 6,
+              "vertex": 6
+            },
+            "bbox": {
+              "min": [
+                -7.921175,
+                -84.36117968727,
+                -0.5942482214139999
+              ],
+              "max": [
+                -6.405125,
+                -83.80698631938,
+                0.1637767785860035
+              ],
+              "size": [
+                1.51605,
+                0.5541933678899937,
+                0.7580250000000034
+              ]
+            },
+            "area": 1.319759284674725,
+            "length": 5.871198278254796,
+            "volume": null,
+            "center_of_mass": [
+              -7.163149999999999,
+              -84.084083003325,
+              -0.3187969243629358
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "bcommon old_overlap_x_plus3_6 boundary f6",
+    "seconds": 0.0779999999795109,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "old_overlap_x_plus3_6": {
+          "ok": true,
+          "data": {
+            "name": "old_overlap_x_plus3_6",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 0,
+              "vertex": 0
+            },
+            "bbox": null,
+            "area": 0.0,
+            "length": 0.0,
+            "volume": null,
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "bcommon overlap_x_plus3_7 boundary target7",
+    "seconds": 0.15600000019185245,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "overlap_x_plus3_7": {
+          "ok": true,
+          "data": {
+            "name": "overlap_x_plus3_7",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 1,
+              "edge": 5,
+              "vertex": 5
+            },
+            "bbox": {
+              "min": [
+                -8.06155,
+                -84.60431631938006,
+                -0.7346232214139999
+              ],
+              "max": [
+                -7.16315,
+                -84.36117968726947,
+                1.062176778586
+              ],
+              "size": [
+                0.8984000000000005,
+                0.24313663211059122,
+                1.7967999999999997
+              ]
+            },
+            "area": 0.7304851952947744,
+            "length": 5.7653126112181905,
+            "volume": null,
+            "center_of_mass": [
+              -7.69166867780597,
+              -84.4861821365469,
+              0.1637767785860006
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "bcommon old_overlap_x_plus3_7 boundary f7",
+    "seconds": 0.14099999982863665,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "old_overlap_x_plus3_7": {
+          "ok": true,
+          "data": {
+            "name": "old_overlap_x_plus3_7",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 0,
+              "vertex": 0
+            },
+            "bbox": null,
+            "area": 0.0,
+            "length": 0.0,
+            "volume": null,
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "bcommon overlap_x_plus3_8 boundary target8",
+    "seconds": 0.1559999999590218,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "overlap_x_plus3_8": {
+          "ok": true,
+          "data": {
+            "name": "overlap_x_plus3_8",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 1,
+              "edge": 6,
+              "vertex": 6
+            },
+            "bbox": {
+              "min": [
+                -8.151390099999999,
+                -85.40731628105,
+                -0.824463321428296
+              ],
+              "max": [
+                -6.174909899999995,
+                -84.60431621937997,
+                0.1637769876365567
+              ],
+              "size": [
+                1.9764802000000037,
+                0.8030000616700335,
+                0.9882403090648527
+              ]
+            },
+            "area": 2.2431650743186737,
+            "length": 7.8293030856959325,
+            "volume": null,
+            "center_of_mass": [
+              -7.163150110263949,
+              -84.96695600344523,
+              -0.446641013343929
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "bcommon old_overlap_x_plus3_8 boundary f8",
+    "seconds": 0.32899999991059303,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "old_overlap_x_plus3_8": {
+          "ok": true,
+          "data": {
+            "name": "old_overlap_x_plus3_8",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 0,
+              "vertex": 0
+            },
+            "bbox": null,
+            "area": 0.0,
+            "length": 0.0,
+            "volume": null,
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "bcommon overlap_x_plus3_317 boundary target317",
+    "seconds": 0.28100000019185245,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "overlap_x_plus3_317": {
+          "ok": true,
+          "data": {
+            "name": "overlap_x_plus3_317",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 1,
+              "edge": 4,
+              "vertex": 4
+            },
+            "bbox": {
+              "min": [
+                -8.151390099999999,
+                -85.44094373537644,
+                0.16377667858599693
+              ],
+              "max": [
+                -6.174909899999995,
+                -84.60431621937997,
+                1.1520168787908687
+              ],
+              "size": [
+                1.9764802000000037,
+                0.8366275159964687,
+                0.9882402002048718
+              ]
+            },
+            "area": 2.577638899593114,
+            "length": 7.817146108152184,
+            "volume": null,
+            "center_of_mass": [
+              -7.163150096031782,
+              -85.01948853033433,
+              0.7957460409865412
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "bcommon old_overlap_x_plus3_317 boundary f317",
+    "seconds": 0.34300000010989606,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "old_overlap_x_plus3_317": {
+          "ok": true,
+          "data": {
+            "name": "old_overlap_x_plus3_317",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 0,
+              "vertex": 0
+            },
+            "bbox": null,
+            "area": 0.0,
+            "length": 0.0,
+            "volume": null,
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "bcommon overlap_x_plus3_318 boundary target318",
+    "seconds": 0.1559999999590218,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "overlap_x_plus3_318": {
+          "ok": true,
+          "data": {
+            "name": "overlap_x_plus3_318",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 2,
+              "edge": 5,
+              "vertex": 5
+            },
+            "bbox": {
+              "min": [
+                -8.15139,
+                -84.60431631938,
+                -0.8244632214139997
+              ],
+              "max": [
+                -6.17491,
+                -84.60431631937996,
+                1.1520167785860003
+              ],
+              "size": [
+                1.9764799999999996,
+                4.263256414560601e-14,
+                1.97648
+              ]
+            },
+            "area": 0.5324865640589456,
+            "length": 11.854108727937302,
+            "volume": null,
+            "center_of_mass": [
+              -7.16315,
+              -84.60431631937996,
+              0.16377677858600145
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "bcommon old_overlap_x_plus3_318 boundary f318",
+    "seconds": 0.25,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "old_overlap_x_plus3_318": {
+          "ok": true,
+          "data": {
+            "name": "old_overlap_x_plus3_318",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 0,
+              "vertex": 0
+            },
+            "bbox": null,
+            "area": 0.0,
+            "length": 0.0,
+            "volume": null,
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "bcommon overlap_x_plus3_319 boundary target319",
+    "seconds": 0.1869999999180436,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "overlap_x_plus3_319": {
+          "ok": true,
+          "data": {
+            "name": "overlap_x_plus3_319",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 2,
+              "wire": 2,
+              "edge": 7,
+              "vertex": 6
+            },
+            "bbox": {
+              "min": [
+                -7.16315,
+                -84.60431631938006,
+                -0.7346232214139999
+              ],
+              "max": [
+                -6.26475,
+                -84.36117968726947,
+                1.062176778586
+              ],
+              "size": [
+                0.8983999999999996,
+                0.24313663211059122,
+                1.7967999999999997
+              ]
+            },
+            "area": 0.7304851952947786,
+            "length": 6.046062611216055,
+            "volume": null,
+            "center_of_mass": [
+              -6.6346313221940285,
+              -84.48618213654689,
+              0.16377677858600245
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "bcommon old_overlap_x_plus3_319 boundary f319",
+    "seconds": 0.125,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "old_overlap_x_plus3_319": {
+          "ok": true,
+          "data": {
+            "name": "old_overlap_x_plus3_319",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 0,
+              "vertex": 0
+            },
+            "bbox": null,
+            "area": 0.0,
+            "length": 0.0,
+            "volume": null,
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "bcommon overlap_x_plus3_320 boundary target320",
+    "seconds": 0.10900000017136335,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "overlap_x_plus3_320": {
+          "ok": true,
+          "data": {
+            "name": "overlap_x_plus3_320",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 1,
+              "wire": 1,
+              "edge": 9,
+              "vertex": 9
+            },
+            "bbox": {
+              "min": [
+                -7.9211751,
+                -84.36117978726999,
+                0.16377667858599754
+              ],
+              "max": [
+                -6.4051249,
+                -83.80698621938001,
+                0.9218018785859999
+              ],
+              "size": [
+                1.5160502000000005,
+                0.5541935678899819,
+                0.7580252000000024
+              ]
+            },
+            "area": 1.2879627211282856,
+            "length": 5.877118285811946,
+            "volume": null,
+            "center_of_mass": [
+              -7.167644914468341,
+              -84.09046428356854,
+              0.6409841602196324
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "bcommon old_overlap_x_plus3_320 boundary f320",
+    "seconds": 0.0779999999795109,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "old_overlap_x_plus3_320": {
+          "ok": true,
+          "data": {
+            "name": "old_overlap_x_plus3_320",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 0,
+              "vertex": 0
+            },
+            "bbox": null,
+            "area": 0.0,
+            "length": 0.0,
+            "volume": null,
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "circle probe_x_plus3_outer -7.1631499999999999 -85.022631110677466 0.16377677858600001 0 1 0 0.98824000000000001; mkedge ring_x_plus3_outer probe_x_plus3_outer; bcommon ring_overlap_x_plus3_outer boundary ring_x_plus3_outer",
+    "seconds": 0.0779999999795109,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "ring_x_plus3_outer": {
+          "ok": true,
+          "data": {
+            "name": "ring_x_plus3_outer",
+            "type": "edge",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 1,
+              "vertex": 1
+            },
+            "bbox": {
+              "min": [
+                -8.15139,
+                -85.02263111067747,
+                -0.824463221414
+              ],
+              "max": [
+                -6.17491,
+                -85.02263111067747,
+                1.152016778586
+              ],
+              "size": [
+                1.9764799999999996,
+                0.0,
+                1.97648
+              ]
+            },
+            "area": 0.0,
+            "length": 6.209295047967155,
+            "volume": null,
+            "center_of_mass": [
+              -7.163149999999999,
+              -85.02263111067745,
+              0.16377677858600473
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        },
+        "ring_overlap_x_plus3_outer": {
+          "ok": true,
+          "data": {
+            "name": "ring_overlap_x_plus3_outer",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 2,
+              "vertex": 2
+            },
+            "bbox": {
+              "min": [
+                -8.15139,
+                -85.02263111067747,
+                -0.824463221414
+              ],
+              "max": [
+                -6.17491,
+                -85.02263111067747,
+                1.152016778586
+              ],
+              "size": [
+                1.9764799999999996,
+                0.0,
+                1.97648
+              ]
+            },
+            "area": 0.0,
+            "length": 6.209295047967156,
+            "volume": null,
+            "center_of_mass": [
+              -7.163149999999999,
+              -85.02263111067745,
+              0.16377677858599993
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "circle probe_x_plus3_taper -7.1631499999999999 -84.482748003325 0.16377677858600001 0 1 0 0.82821250000000002; mkedge ring_x_plus3_taper probe_x_plus3_taper; bcommon ring_overlap_x_plus3_taper boundary ring_x_plus3_taper",
+    "seconds": 0.09300000010989606,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "ring_x_plus3_taper": {
+          "ok": true,
+          "data": {
+            "name": "ring_x_plus3_taper",
+            "type": "edge",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 1,
+              "vertex": 1
+            },
+            "bbox": {
+              "min": [
+                -7.9913625,
+                -84.482748003325,
+                -0.664435721414
+              ],
+              "max": [
+                -6.3349375,
+                -84.482748003325,
+                0.9919892785860001
+              ],
+              "size": [
+                1.6564250000000005,
+                0.0,
+                1.656425
+              ]
+            },
+            "area": 0.0,
+            "length": 5.203812611222473,
+            "volume": null,
+            "center_of_mass": [
+              -7.16315,
+              -84.482748003325,
+              0.16377677858600398
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        },
+        "ring_overlap_x_plus3_taper": {
+          "ok": true,
+          "data": {
+            "name": "ring_overlap_x_plus3_taper",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 2,
+              "vertex": 2
+            },
+            "bbox": {
+              "min": [
+                -7.9913625,
+                -84.482748003325,
+                -0.664435721414
+              ],
+              "max": [
+                -6.3349375,
+                -84.482748003325,
+                0.9919892785860001
+              ],
+              "size": [
+                1.6564250000000005,
+                0.0,
+                1.656425
+              ]
+            },
+            "area": 0.0,
+            "length": 5.203812611222473,
+            "volume": null,
+            "center_of_mass": [
+              -7.16315,
+              -84.482748003325,
+              0.163776778586
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "circle probe_x_plus3_inner -7.1631499999999999 -84.084083003324992 0.16377677858600001 0 1 0 0.75802499999999995; mkedge ring_x_plus3_inner probe_x_plus3_inner; bcommon ring_overlap_x_plus3_inner boundary ring_x_plus3_inner",
+    "seconds": 0.0779999999795109,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "ring_x_plus3_inner": {
+          "ok": true,
+          "data": {
+            "name": "ring_x_plus3_inner",
+            "type": "edge",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 1,
+              "vertex": 1
+            },
+            "bbox": {
+              "min": [
+                -7.921175,
+                -84.08408300332499,
+                -0.5942482214139999
+              ],
+              "max": [
+                -6.405125,
+                -84.08408300332499,
+                0.921801778586
+              ],
+              "size": [
+                1.51605,
+                0.0,
+                1.51605
+              ]
+            },
+            "area": 0.0,
+            "length": 4.7628115424748065,
+            "volume": null,
+            "center_of_mass": [
+              -7.163149999999998,
+              -84.08408300332498,
+              0.16377677858600356
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        },
+        "ring_overlap_x_plus3_inner": {
+          "ok": true,
+          "data": {
+            "name": "ring_overlap_x_plus3_inner",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 2,
+              "vertex": 2
+            },
+            "bbox": {
+              "min": [
+                -7.921175,
+                -84.08408300332499,
+                -0.5942482214139999
+              ],
+              "max": [
+                -6.405125,
+                -84.08408300332499,
+                0.921801778586
+              ],
+              "size": [
+                1.51605,
+                0.0,
+                1.51605
+              ]
+            },
+            "area": 0.0,
+            "length": 4.762811542474805,
+            "volume": null,
+            "center_of_mass": [
+              -7.163150000000001,
+              -84.084083003325,
+              0.163776778586
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "mksurface support_surface support_face; dump support_surface",
+    "seconds": 0.01500000013038516,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "\n\n*********** Dump of support_surface *************\nCylindricalSurface\n  Origin :-7.16315, -84.36117968727, 0.163776778586 \n  Axis   :0, 1, 1.11022302462516e-16 \n  XAxis  :1, 0, 0 \n  YAxis  :0, 1.11022302462516e-16, -1 \n  Radius :0.758025\n\n",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    }
+  },
+  {
+    "script": "mksurface support_surface support_face; dump support_surface",
+    "seconds": 0.030999999959021807,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "\n\n*********** Dump of support_surface *************\nCylindricalSurface\n  Origin :-7.46795, -81.56098631938, 27.547008778586 \n  Axis   :0, 0, -1 \n  XAxis  :1, 0, 0 \n  YAxis  :0, -1, 0 \n  Radius :2.246\n\n",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    }
+  },
+  {
+    "script": "mksurface support_surface support_face; dump support_surface",
+    "seconds": 0.015999999828636646,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "\n\n*********** Dump of support_surface *************\nConicalSurface\n  Origin :-7.16315, -84.60431631938, 0.163776778586 \n  Axis   :0, 1, 1.11022302462516e-16 \n  XAxis  :1, 0, 0 \n  YAxis  :0, 1.11022302462516e-16, -1 \n  Radius :0.8984\n\n  Angle :-0.523598775602703\n\n",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    }
+  },
+  {
+    "script": "mksurface support_surface support_face; dump support_surface",
+    "seconds": 0.031999999890103936,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "\n\n*********** Dump of support_surface *************\nPlane\n  Origin :-7.16315, -84.60431631938, 0.163776778586 \n  Axis   :0, 1, 1.11022302462516e-16 \n  XAxis  :1, 0, 0 \n  YAxis  :0, 1.11022302462516e-16, -1 \n\n",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    }
+  },
+  {
+    "script": "mksurface support_surface support_face; dump support_surface",
+    "seconds": 0.01600000006146729,
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "\n\n*********** Dump of support_surface *************\nCylindricalSurface\n  Origin :-7.16315, -86.4409954438325, 0.163776778586 \n  Axis   :0, 1, 1.11022302462516e-16 \n  XAxis  :1, 0, 0 \n  YAxis  :0, 1.11022302462516e-16, -1 \n  Radius :0.98824\n\n",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    }
+  }
+]

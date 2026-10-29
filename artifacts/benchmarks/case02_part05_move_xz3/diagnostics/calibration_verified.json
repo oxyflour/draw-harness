@@ -1,0 +1,228 @@
+{
+  "differences": {
+    "extra": {
+      "name": "calibration_extra",
+      "type": "compound",
+      "valid": true,
+      "topology": {
+        "compound": 1,
+        "compsolid": 0,
+        "solid": 0,
+        "shell": 0,
+        "face": 0,
+        "wire": 0,
+        "edge": 0,
+        "vertex": 0
+      },
+      "bbox": null,
+      "area": 0.0,
+      "length": 0.0,
+      "volume": null,
+      "center_of_mass": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "units": "model_units (default convention: mm)"
+    },
+    "missing": {
+      "name": "calibration_missing",
+      "type": "compound",
+      "valid": true,
+      "topology": {
+        "compound": 1,
+        "compsolid": 0,
+        "solid": 0,
+        "shell": 0,
+        "face": 0,
+        "wire": 0,
+        "edge": 0,
+        "vertex": 0
+      },
+      "bbox": null,
+      "area": 0.0,
+      "length": 0.0,
+      "volume": null,
+      "center_of_mass": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "units": "model_units (default convention: mm)"
+    }
+  },
+  "attempts": [
+    {
+      "script": "boptions -default; bnondestructive 1",
+      "seconds": 0.015999999828636646,
+      "response": {
+        "ok": true,
+        "data": {
+          "ok": true,
+          "code": 0,
+          "result": "",
+          "result_truncated": false,
+          "stdout": "",
+          "native_output": "",
+          "native_output_truncated": false
+        }
+      }
+    },
+    {
+      "script": "checkshape base source_errors -exact",
+      "seconds": 1.1559999999590218,
+      "response": {
+        "ok": true,
+        "data": {
+          "ok": true,
+          "code": 0,
+          "result": " -- The Shape base has problems :\n  Check                                    Count\n ------------------------------------------------\n  Invalid Curve on Surface ................. 239\n  Unorientable Shape ....................... 123\n ------------------------------------------------\n*** Shapes with problems : 362\nEDGE\t: 239 Items -> compound named source_errors_e\nFACE\t: 123 Items -> compound named source_errors_f\n",
+          "result_truncated": false,
+          "stdout": "",
+          "native_output": "",
+          "native_output_truncated": false
+        }
+      }
+    },
+    {
+      "script": "compound f6 f7 f8 f317 f318 f319 f320 original_patch",
+      "seconds": 0.030999999959021807,
+      "response": {
+        "ok": true,
+        "data": {
+          "ok": true,
+          "code": 0,
+          "result": "",
+          "result_truncated": false,
+          "stdout": "",
+          "native_output": "",
+          "native_output_truncated": false
+        },
+        "checks": {
+          "original_patch": {
+            "ok": true,
+            "data": {
+              "name": "original_patch",
+              "type": "compound",
+              "valid": true,
+              "topology": {
+                "compound": 1,
+                "compsolid": 0,
+                "solid": 0,
+                "shell": 0,
+                "face": 7,
+                "wire": 8,
+                "edge": 20,
+                "vertex": 14
+              },
+              "bbox": {
+                "min": [
+                  -11.151391208761286,
+                  -85.44094590197493,
+                  -0.8244633214284166
+                ],
+                "max": [
+                  -9.174908407878556,
+                  -83.80698631938,
+                  1.1520168785905835
+                ],
+                "size": [
+                  1.9764828008827298,
+                  1.633959582594926,
+                  1.976480200019
+                ]
+              },
+              "area": 9.453864334406537,
+              "length": 30.880767367802342,
+              "volume": null,
+              "center_of_mass": [
+                -10.163150422926856,
+                -84.64006218199222,
+                0.1912486445927117
+              ],
+              "units": "model_units (default convention: mm)"
+            }
+          }
+        }
+      }
+    },
+    {
+      "script": "bcut calibration filled original_tool",
+      "seconds": 2.0629999998491257,
+      "response": {
+        "ok": true,
+        "data": {
+          "ok": true,
+          "code": 0,
+          "result": "",
+          "result_truncated": false,
+          "stdout": "",
+          "native_output": "",
+          "native_output_truncated": false
+        },
+        "checks": {
+          "calibration": {
+            "ok": true,
+            "data": {
+              "name": "calibration",
+              "type": "compound",
+              "valid": true,
+              "topology": {
+                "compound": 1,
+                "compsolid": 0,
+                "solid": 1,
+                "shell": 1,
+                "face": 380,
+                "wire": 392,
+                "edge": 1127,
+                "vertex": 747
+              },
+              "bbox": {
+                "min": [
+                  -43.999811687564716,
+                  -85.44099544383255,
+                  -3.4661478730435804
+                ],
+                "max": [
+                  43.99981168651948,
+                  -78.68049121937352,
+                  3.880906878586
+                ],
+                "size": [
+                  87.9996233740842,
+                  6.7605042244590265,
+                  7.34705475162958
+                ]
+              },
+              "area": 1971.0938509992657,
+              "length": 2627.947270623325,
+              "volume": 758.3505287985057,
+              "center_of_mass": [
+                -0.7243490122762082,
+                -83.73738496589203,
+                -0.17140305795734256
+              ],
+              "units": "model_units (default convention: mm)"
+            }
+          }
+        }
+      }
+    },
+    {
+      "script": "bcut calibration_extra calibration base; bcut calibration_missing base calibration",
+      "seconds": 71.875,
+      "response": {
+        "ok": true,
+        "data": {
+          "ok": true,
+          "code": 0,
+          "result": "",
+          "result_truncated": false,
+          "stdout": "",
+          "native_output": "",
+          "native_output_truncated": false
+        }
+      }
+    }
+  ]
+}

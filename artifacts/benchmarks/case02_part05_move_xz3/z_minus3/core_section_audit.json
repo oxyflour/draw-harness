@@ -1,0 +1,317 @@
+[
+  {
+    "script": "circle probe_z_minus3_core_outer -10.16315 -84.605316319380009 -2.836223221414 0 1 0 0.98824000000000001; mkedge ring_z_minus3_core_outer probe_z_minus3_core_outer; bcommon ring_overlap_z_minus3_core_outer boundary ring_z_minus3_core_outer",
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "Warning: Some of the edges passed to the Face Builder algorithm have not been classified and not used for faces creation\n",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "ring_z_minus3_core_outer": {
+          "ok": true,
+          "data": {
+            "name": "ring_z_minus3_core_outer",
+            "type": "edge",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 1,
+              "vertex": 1
+            },
+            "bbox": {
+              "min": [
+                -11.15139,
+                -84.60531631938001,
+                -3.8244632214139997
+              ],
+              "max": [
+                -9.17491,
+                -84.60531631938001,
+                -1.847983221414
+              ],
+              "size": [
+                1.9764799999999987,
+                0.0,
+                1.9764799999999998
+              ]
+            },
+            "area": 0.0,
+            "length": 6.209295047967155,
+            "volume": null,
+            "center_of_mass": [
+              -10.163149999999998,
+              -84.60531631938,
+              -2.836223221413995
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        },
+        "ring_overlap_z_minus3_core_outer": {
+          "ok": true,
+          "data": {
+            "name": "ring_overlap_z_minus3_core_outer",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 3,
+              "vertex": 4
+            },
+            "bbox": {
+              "min": [
+                -11.15139,
+                -84.60531631938001,
+                -2.894945752424362
+              ],
+              "max": [
+                -9.17491,
+                -84.60531631938001,
+                -1.847983221414
+              ],
+              "size": [
+                1.9764799999999987,
+                0.0,
+                1.0469625310103619
+              ]
+            },
+            "area": 0.0,
+            "length": 3.2167917216959365,
+            "volume": null,
+            "center_of_mass": [
+              -10.1615028962293,
+              -84.60531631938001,
+              -2.230002387369248
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "circle probe_z_minus3_core_taper -10.16315 -84.482748003325 -2.836223221414 0 1 0 0.82821250000000002; mkedge ring_z_minus3_core_taper probe_z_minus3_core_taper; bcommon ring_overlap_z_minus3_core_taper boundary ring_z_minus3_core_taper",
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "Warning: Some of the edges passed to the Face Builder algorithm have not been classified and not used for faces creation\n",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "ring_z_minus3_core_taper": {
+          "ok": true,
+          "data": {
+            "name": "ring_z_minus3_core_taper",
+            "type": "edge",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 1,
+              "vertex": 1
+            },
+            "bbox": {
+              "min": [
+                -10.9913625,
+                -84.482748003325,
+                -3.6644357214139998
+              ],
+              "max": [
+                -9.3349375,
+                -84.482748003325,
+                -2.008010721414
+              ],
+              "size": [
+                1.6564249999999987,
+                0.0,
+                1.6564249999999996
+              ]
+            },
+            "area": 0.0,
+            "length": 5.203812611222473,
+            "volume": null,
+            "center_of_mass": [
+              -10.16315,
+              -84.482748003325,
+              -2.836223221413996
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        },
+        "ring_overlap_z_minus3_core_taper": {
+          "ok": true,
+          "data": {
+            "name": "ring_overlap_z_minus3_core_taper",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 3,
+              "vertex": 4
+            },
+            "bbox": {
+              "min": [
+                -10.9913625,
+                -84.482748003325,
+                -3.08514292188258
+              ],
+              "max": [
+                -9.3349375,
+                -84.482748003325,
+                -2.008010721414
+              ],
+              "size": [
+                1.6564249999999987,
+                0.0,
+                1.0771322004685797
+              ]
+            },
+            "area": 0.0,
+            "length": 3.103065874493163,
+            "volume": null,
+            "center_of_mass": [
+              -10.162004268871227,
+              -84.48274800332499,
+              -2.4142037052832275
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "circle probe_z_minus3_core_inner -10.16315 -84.360179687269991 -2.836223221414 0 1 0 0.75802499999999995; mkedge ring_z_minus3_core_inner probe_z_minus3_core_inner; bcommon ring_overlap_z_minus3_core_inner boundary ring_z_minus3_core_inner",
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "Warning: Some of the edges passed to the Face Builder algorithm have not been classified and not used for faces creation\n",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "ring_z_minus3_core_inner": {
+          "ok": true,
+          "data": {
+            "name": "ring_z_minus3_core_inner",
+            "type": "edge",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 1,
+              "vertex": 1
+            },
+            "bbox": {
+              "min": [
+                -10.921175,
+                -84.36017968726999,
+                -3.594248221414
+              ],
+              "max": [
+                -9.405125,
+                -84.36017968726999,
+                -2.078198221414
+              ],
+              "size": [
+                1.51605,
+                0.0,
+                1.51605
+              ]
+            },
+            "area": 0.0,
+            "length": 4.7628115424748065,
+            "volume": null,
+            "center_of_mass": [
+              -10.163149999999998,
+              -84.36017968726998,
+              -2.836223221413996
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        },
+        "ring_overlap_z_minus3_core_inner": {
+          "ok": true,
+          "data": {
+            "name": "ring_overlap_z_minus3_core_inner",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 3,
+              "vertex": 4
+            },
+            "bbox": {
+              "min": [
+                -10.921175,
+                -84.36017968726999,
+                -3.2753862870784833
+              ],
+              "max": [
+                -9.405125,
+                -84.36017968726999,
+                -2.078198221414
+              ],
+              "size": [
+                1.51605,
+                0.0,
+                1.1971880656644833
+              ]
+            },
+            "area": 0.0,
+            "length": 3.3141095807860603,
+            "volume": null,
+            "center_of_mass": [
+              -10.162381622398293,
+              -84.36017968727,
+              -2.553043083172195
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  }
+]

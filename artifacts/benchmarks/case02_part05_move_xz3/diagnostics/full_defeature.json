@@ -1,0 +1,59 @@
+{
+  "ok": true,
+  "data": {
+    "ok": true,
+    "code": 0,
+    "result": "",
+    "result_truncated": false,
+    "stdout": "",
+    "native_output": "",
+    "native_output_truncated": false
+  },
+  "checks": {
+    "full_healed": {
+      "ok": true,
+      "data": {
+        "name": "full_healed",
+        "type": "solid",
+        "valid": true,
+        "topology": {
+          "compound": 0,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 376,
+          "wire": 386,
+          "edge": 1167,
+          "vertex": 791
+        },
+        "bbox": {
+          "min": [
+            -43.999811687564716,
+            -85.44099544383255,
+            -3.4661478730435804
+          ],
+          "max": [
+            43.99981168651948,
+            -78.68049121937352,
+            3.880906878586
+          ],
+          "size": [
+            87.9996233740842,
+            6.7605042244590265,
+            7.34705475162958
+          ]
+        },
+        "area": 1967.9950470767812,
+        "length": 2599.9590359459958,
+        "volume": 765.2258281542036,
+        "center_of_mass": [
+          -0.8471650748036905,
+          -83.73888157260158,
+          -0.1661020927242987
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    }
+  },
+  "seconds": 16.094000000040978
+}

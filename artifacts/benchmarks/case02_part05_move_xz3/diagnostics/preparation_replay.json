@@ -1,0 +1,102 @@
+{
+  "ok": true,
+  "data": {
+    "ok": true,
+    "code": 0,
+    "result": "C:/Projects/occ-harness/.occ-harness/case2-replay-1793285311586594000/hole_tool.brep",
+    "result_truncated": false,
+    "stdout": "",
+    "native_output": "",
+    "native_output_truncated": false
+  },
+  "checks": {
+    "filled": {
+      "ok": true,
+      "data": {
+        "name": "filled",
+        "type": "compound",
+        "valid": true,
+        "topology": {
+          "compound": 1,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 379,
+          "wire": 390,
+          "edge": 1122,
+          "vertex": 744
+        },
+        "bbox": {
+          "min": [
+            -43.999811687564716,
+            -85.44099544383255,
+            -3.4661478730435804
+          ],
+          "max": [
+            43.99981168651948,
+            -78.68049121937352,
+            3.880906878586
+          ],
+          "size": [
+            87.9996233740842,
+            6.7605042244590265,
+            7.34705475162958
+          ]
+        },
+        "area": 1966.5280876637082,
+        "length": 2610.9469553658987,
+        "volume": 762.2981310871523,
+        "center_of_mass": [
+          -0.773188970051903,
+          -83.74237700195737,
+          -0.1695806287546995
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    },
+    "hole_tool": {
+      "ok": true,
+      "data": {
+        "name": "hole_tool",
+        "type": "compound",
+        "valid": true,
+        "topology": {
+          "compound": 1,
+          "compsolid": 0,
+          "solid": 1,
+          "shell": 1,
+          "face": 6,
+          "wire": 7,
+          "edge": 8,
+          "vertex": 5
+        },
+        "bbox": {
+          "min": [
+            -11.15139,
+            -86.44099544383255,
+            -0.824463221414
+          ],
+          "max": [
+            -9.17491,
+            -77.68049121937352,
+            1.1520167785860003
+          ],
+          "size": [
+            1.9764799999999987,
+            8.760504224459027,
+            1.9764800000000002
+          ]
+        },
+        "area": 50.09010167223575,
+        "length": 36.38714445320094,
+        "volume": 18.220125706549688,
+        "center_of_mass": [
+          -10.163149999999998,
+          -82.51316140642612,
+          0.16377677858600032
+        ],
+        "units": "model_units (default convention: mm)"
+      }
+    }
+  }
+}

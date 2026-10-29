@@ -1,0 +1,317 @@
+[
+  {
+    "script": "circle probe_x_minus3_core_outer -13.16315 -84.605316319380009 0.16377677858600001 0 1 0 0.98824000000000001; mkedge ring_x_minus3_core_outer probe_x_minus3_core_outer; bcommon ring_overlap_x_minus3_core_outer boundary ring_x_minus3_core_outer",
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "ring_x_minus3_core_outer": {
+          "ok": true,
+          "data": {
+            "name": "ring_x_minus3_core_outer",
+            "type": "edge",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 1,
+              "vertex": 1
+            },
+            "bbox": {
+              "min": [
+                -14.15139,
+                -84.60531631938001,
+                -0.824463221414
+              ],
+              "max": [
+                -12.17491,
+                -84.60531631938001,
+                1.152016778586
+              ],
+              "size": [
+                1.9764799999999987,
+                0.0,
+                1.97648
+              ]
+            },
+            "area": 0.0,
+            "length": 6.209295047967155,
+            "volume": null,
+            "center_of_mass": [
+              -13.163149999999998,
+              -84.60531631938,
+              0.16377677858600473
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        },
+        "ring_overlap_x_minus3_core_outer": {
+          "ok": true,
+          "data": {
+            "name": "ring_overlap_x_minus3_core_outer",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 2,
+              "vertex": 2
+            },
+            "bbox": {
+              "min": [
+                -14.15139,
+                -84.60531631938001,
+                -0.824463221414
+              ],
+              "max": [
+                -12.17491,
+                -84.60531631938001,
+                1.152016778586
+              ],
+              "size": [
+                1.9764799999999987,
+                0.0,
+                1.97648
+              ]
+            },
+            "area": 0.0,
+            "length": 6.209295047967156,
+            "volume": null,
+            "center_of_mass": [
+              -13.163149999999998,
+              -84.60531631938,
+              0.16377677858599993
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "circle probe_x_minus3_core_taper -13.16315 -84.482748003325 0.16377677858600001 0 1 0 0.82821250000000002; mkedge ring_x_minus3_core_taper probe_x_minus3_core_taper; bcommon ring_overlap_x_minus3_core_taper boundary ring_x_minus3_core_taper",
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "ring_x_minus3_core_taper": {
+          "ok": true,
+          "data": {
+            "name": "ring_x_minus3_core_taper",
+            "type": "edge",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 1,
+              "vertex": 1
+            },
+            "bbox": {
+              "min": [
+                -13.9913625,
+                -84.482748003325,
+                -0.664435721414
+              ],
+              "max": [
+                -12.3349375,
+                -84.482748003325,
+                0.9919892785860001
+              ],
+              "size": [
+                1.6564249999999987,
+                0.0,
+                1.656425
+              ]
+            },
+            "area": 0.0,
+            "length": 5.203812611222473,
+            "volume": null,
+            "center_of_mass": [
+              -13.16315,
+              -84.482748003325,
+              0.16377677858600398
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        },
+        "ring_overlap_x_minus3_core_taper": {
+          "ok": true,
+          "data": {
+            "name": "ring_overlap_x_minus3_core_taper",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 2,
+              "vertex": 2
+            },
+            "bbox": {
+              "min": [
+                -13.9913625,
+                -84.482748003325,
+                -0.664435721414
+              ],
+              "max": [
+                -12.3349375,
+                -84.482748003325,
+                0.9919892785860001
+              ],
+              "size": [
+                1.6564249999999987,
+                0.0,
+                1.656425
+              ]
+            },
+            "area": 0.0,
+            "length": 5.203812611222473,
+            "volume": null,
+            "center_of_mass": [
+              -13.163150000000003,
+              -84.482748003325,
+              0.163776778586
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  },
+  {
+    "script": "circle probe_x_minus3_core_inner -13.16315 -84.360179687269991 0.16377677858600001 0 1 0 0.75802499999999995; mkedge ring_x_minus3_core_inner probe_x_minus3_core_inner; bcommon ring_overlap_x_minus3_core_inner boundary ring_x_minus3_core_inner",
+    "response": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": "",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      },
+      "checks": {
+        "ring_x_minus3_core_inner": {
+          "ok": true,
+          "data": {
+            "name": "ring_x_minus3_core_inner",
+            "type": "edge",
+            "valid": true,
+            "topology": {
+              "compound": 0,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 1,
+              "vertex": 1
+            },
+            "bbox": {
+              "min": [
+                -13.921175,
+                -84.36017968726999,
+                -0.5942482214139999
+              ],
+              "max": [
+                -12.405125,
+                -84.36017968726999,
+                0.921801778586
+              ],
+              "size": [
+                1.51605,
+                0.0,
+                1.51605
+              ]
+            },
+            "area": 0.0,
+            "length": 4.7628115424748065,
+            "volume": null,
+            "center_of_mass": [
+              -13.163149999999996,
+              -84.36017968726998,
+              0.16377677858600356
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        },
+        "ring_overlap_x_minus3_core_inner": {
+          "ok": true,
+          "data": {
+            "name": "ring_overlap_x_minus3_core_inner",
+            "type": "compound",
+            "valid": true,
+            "topology": {
+              "compound": 1,
+              "compsolid": 0,
+              "solid": 0,
+              "shell": 0,
+              "face": 0,
+              "wire": 0,
+              "edge": 2,
+              "vertex": 2
+            },
+            "bbox": {
+              "min": [
+                -13.921175,
+                -84.36017968726999,
+                -0.5942482214139999
+              ],
+              "max": [
+                -12.405125,
+                -84.36017968726999,
+                0.921801778586
+              ],
+              "size": [
+                1.51605,
+                0.0,
+                1.51605
+              ]
+            },
+            "area": 0.0,
+            "length": 4.762811542474805,
+            "volume": null,
+            "center_of_mass": [
+              -13.163150000000003,
+              -84.36017968726999,
+              0.163776778586
+            ],
+            "units": "model_units (default convention: mm)"
+          }
+        }
+      }
+    }
+  }
+]

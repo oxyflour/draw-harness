@@ -1,0 +1,302 @@
+{
+  "case": {
+    "schema_version": 1,
+    "id": "x_plus3",
+    "units": "mm",
+    "selection_case": 2,
+    "part_rank": 5,
+    "input": "../input/part_05.brep",
+    "input_sha256": "dba5abfe36df255dfaae974751dd2f9ca6d27efd96ce38b9f92feae0d2754b0a",
+    "original_user_faces": [
+      8,
+      317
+    ],
+    "expanded_faces": [
+      6,
+      7,
+      8,
+      317,
+      318,
+      319,
+      320
+    ],
+    "fixed_exterior_faces_before_edit": [
+      30,
+      83,
+      84
+    ],
+    "operation": {
+      "type": "translate_expanded_stepped_hole",
+      "vector": [
+        3,
+        0,
+        0
+      ],
+      "simultaneous": true
+    },
+    "method": "Fill the old complete hole; cut a translated outer bore, annular ledge, taper and inner bore. Retrim exterior faces by Boolean intersection.",
+    "boundary_policy": "Support geometry moves rigidly; trimming may change. Full trimmed-patch coverage is measured separately."
+  },
+  "result_available": true,
+  "candidate_inspection": {
+    "name": "result_x_plus3",
+    "type": "compound",
+    "valid": true,
+    "topology": {
+      "compound": 1,
+      "compsolid": 0,
+      "solid": 1,
+      "shell": 1,
+      "face": 384,
+      "wire": 396,
+      "edge": 1139,
+      "vertex": 755
+    },
+    "bbox": {
+      "min": [
+        -43.999811687564716,
+        -85.44099544383255,
+        -3.4661478730435804
+      ],
+      "max": [
+        43.99981168651948,
+        -78.68049121937352,
+        3.880906878586
+      ],
+      "size": [
+        87.9996233740842,
+        6.7605042244590265,
+        7.34705475162958
+      ]
+    },
+    "area": 1971.1663591583476,
+    "length": 2635.456507330538,
+    "volume": 758.3115987064493,
+    "center_of_mass": [
+      -0.7397404332422561,
+      -83.73736934428584,
+      -0.17140848282828192
+    ],
+    "units": "model_units (default convention: mm)"
+  },
+  "ordinary_single_solid": true,
+  "target_coverage": [
+    {
+      "face_index_before_edit": 6,
+      "user_selected": false,
+      "target_area_mm2": 1.3197592846748114,
+      "retained_area_mm2": 1.319759284674725,
+      "retained_fraction": 0.9999999999999345,
+      "full_patch_retained": true,
+      "old_area_remaining_mm2": 0.0
+    },
+    {
+      "face_index_before_edit": 7,
+      "user_selected": false,
+      "target_area_mm2": 0.7304851952954323,
+      "retained_area_mm2": 0.7304851952947744,
+      "retained_fraction": 0.9999999999990994,
+      "full_patch_retained": true,
+      "old_area_remaining_mm2": 0.0
+    },
+    {
+      "face_index_before_edit": 8,
+      "user_selected": true,
+      "target_area_mm2": 2.2432108937191257,
+      "retained_area_mm2": 2.2431650743186737,
+      "retained_fraction": 0.9999795741895778,
+      "full_patch_retained": false,
+      "old_area_remaining_mm2": 0.0
+    },
+    {
+      "face_index_before_edit": 317,
+      "user_selected": true,
+      "target_area_mm2": 2.5776779166879904,
+      "retained_area_mm2": 2.577638899593114,
+      "retained_fraction": 0.9999848634716448,
+      "full_patch_retained": false,
+      "old_area_remaining_mm2": 0.0
+    },
+    {
+      "face_index_before_edit": 318,
+      "user_selected": false,
+      "target_area_mm2": 0.5324865640589393,
+      "retained_area_mm2": 0.5324865640589456,
+      "retained_fraction": 1.0000000000000118,
+      "full_patch_retained": true,
+      "old_area_remaining_mm2": 0.0
+    },
+    {
+      "face_index_before_edit": 319,
+      "user_selected": false,
+      "target_area_mm2": 0.7304851952954262,
+      "retained_area_mm2": 0.7304851952947786,
+      "retained_fraction": 0.9999999999991135,
+      "full_patch_retained": true,
+      "old_area_remaining_mm2": 0.0
+    },
+    {
+      "face_index_before_edit": 320,
+      "user_selected": false,
+      "target_area_mm2": 1.3197592846748116,
+      "retained_area_mm2": 1.2879627211282856,
+      "retained_fraction": 0.9759073007360121,
+      "full_patch_retained": false,
+      "old_area_remaining_mm2": 0.0
+    }
+  ],
+  "representative_circular_sections": [
+    {
+      "step": "outer",
+      "axial_y": -85.02263111067747,
+      "radius": 0.98824,
+      "retained_fraction": 1.0000000000000002,
+      "complete_circle": true
+    },
+    {
+      "step": "taper",
+      "axial_y": -84.482748003325,
+      "radius": 0.8282125,
+      "retained_fraction": 1.0,
+      "complete_circle": true
+    },
+    {
+      "step": "inner",
+      "axial_y": -84.08408300332499,
+      "radius": 0.758025,
+      "retained_fraction": 0.9999999999999998,
+      "complete_circle": true
+    }
+  ],
+  "mapped_support_faces_after_edit": {
+    "outer": [
+      140
+    ],
+    "ledge": [
+      76
+    ],
+    "taper": [
+      44
+    ],
+    "inner": [
+      14
+    ]
+  },
+  "support_chain_connections": {
+    "outer_ledge": true,
+    "ledge_taper": true,
+    "taper_inner": true
+  },
+  "support_chain_retained": true,
+  "full_trimmed_patch_move_pass": false,
+  "exact_checks": {
+    "input": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": " -- The Shape base has problems :\n  Check                                    Count\n ------------------------------------------------\n  Invalid Curve on Surface ................. 239\n  Unorientable Shape ....................... 123\n ------------------------------------------------\n*** Shapes with problems : 362\nEDGE\t: 239 Items -> compound named source_errors_e\nFACE\t: 123 Items -> compound named source_errors_f\n",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    },
+    "candidate": {
+      "ok": true,
+      "data": {
+        "ok": true,
+        "code": 0,
+        "result": " -- The Shape result_x_plus3 has problems :\n  Check                                    Count\n ------------------------------------------------\n  Invalid Curve on Surface ................. 235\n  Unorientable Shape ....................... 124\n ------------------------------------------------\n*** Shapes with problems : 359\nEDGE\t: 235 Items -> compound named errors_x_plus3_e\nFACE\t: 124 Items -> compound named errors_x_plus3_f\n",
+        "result_truncated": false,
+        "stdout": "",
+        "native_output": "",
+        "native_output_truncated": false
+      }
+    },
+    "input_issues": {
+      "Invalid Curve on Surface": 239,
+      "Unorientable Shape": 123
+    },
+    "candidate_issues": {
+      "Invalid Curve on Surface": 235,
+      "Unorientable Shape": 124
+    }
+  },
+  "nurbs_tool_fallback": false,
+  "step_roundtrip": {
+    "inspection": {
+      "name": "roundtrip",
+      "type": "solid",
+      "valid": true,
+      "topology": {
+        "compound": 0,
+        "compsolid": 0,
+        "solid": 1,
+        "shell": 1,
+        "face": 384,
+        "wire": 396,
+        "edge": 1139,
+        "vertex": 755
+      },
+      "bbox": {
+        "min": [
+          -43.999811687564716,
+          -85.44099544383255,
+          -3.4661478730435804
+        ],
+        "max": [
+          43.99981168651948,
+          -78.68049121937352,
+          3.880906878586
+        ],
+        "size": [
+          87.9996233740842,
+          6.7605042244590265,
+          7.34705475162958
+        ]
+      },
+      "area": 1971.1663794570443,
+      "length": 2635.4565000522784,
+      "volume": 758.3116205857792,
+      "center_of_mass": [
+        -0.7397405540631182,
+        -83.7373693686095,
+        -0.1714084557874894
+      ],
+      "units": "model_units (default convention: mm)"
+    },
+    "relative_volume_error": 2.885269054310799e-08,
+    "pass": true,
+    "relative_volume_tolerance": 1e-05
+  },
+  "artifacts": {
+    "candidate.brep": "ff875ebdeb5c22c4d260b364130655c1e12eb21bc8f0c7a517119bc85b9590df",
+    "candidate.stp": "15f7c1008b23e751195d3d9ae6003f87dde06d7742b7d4447155e5149ab85cd0"
+  },
+  "core_transition_sections": [
+    {
+      "step": "outer",
+      "axial_y": -84.60531631938001,
+      "radius": 0.98824,
+      "retained_fraction": 1.0000000000000002,
+      "complete_circle": true
+    },
+    {
+      "step": "taper",
+      "axial_y": -84.482748003325,
+      "radius": 0.8282125,
+      "retained_fraction": 1.0,
+      "complete_circle": true
+    },
+    {
+      "step": "inner",
+      "axial_y": -84.36017968726999,
+      "radius": 0.758025,
+      "retained_fraction": 0.9999999999999998,
+      "complete_circle": true
+    }
+  ],
+  "stepped_hole_core_pass": true,
+  "representative_sections_policy": "Translated original wall midpoints measure retrimming only; core-transition sections and adjacency test the internal step connection. Neither is a global proof."
+}

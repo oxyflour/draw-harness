@@ -1,0 +1,35 @@
+{
+  "axis": [
+    0,
+    1,
+    0
+  ],
+  "center_x": -10.16315,
+  "center_z": 0.163776778586,
+  "outer_radius": 0.98824,
+  "cone_start_radius": 0.8984,
+  "inner_radius": 0.758025,
+  "shoulder_y": -84.60431631938,
+  "cone_end_y": -84.36117968727,
+  "front_tool_y": -86.44099544383255,
+  "back_tool_y": -77.68049121937352,
+  "original_faces": [
+    8,
+    317
+  ],
+  "expanded_faces": [
+    6,
+    7,
+    8,
+    317,
+    318,
+    319,
+    320
+  ],
+  "fixed_boundary_faces": [
+    30,
+    83,
+    84
+  ],
+  "back_face_y": -83.80698631938
+}

@@ -1,0 +1,61 @@
+{
+  "script": "pcylinder bore_outer 0.98824000000000001 1.8366791244525444\ntrotate bore_outer 0 0 0 1 0 0 -90\nttranslate bore_outer -10.16315 -86.440995443832549 0.16377677858600001\npcone bore_taper 0.89839999999999998 0.75802499999999995 0.24313663211000858\ntrotate bore_taper 0 0 0 1 0 0 -90\nttranslate bore_taper -10.16315 -84.604316319380004 0.16377677858600001\npcylinder bore_inner 0.75802499999999995 6.6806884678964735\ntrotate bore_inner 0 0 0 1 0 0 -90\nttranslate bore_inner -10.16315 -84.361179687269995 0.16377677858600001\nbfuse bore_stage bore_outer bore_taper\nbfuse hole_tool bore_stage bore_inner",
+  "response": {
+    "ok": true,
+    "data": {
+      "ok": true,
+      "code": 0,
+      "result": "",
+      "result_truncated": false,
+      "stdout": "",
+      "native_output": "",
+      "native_output_truncated": false
+    },
+    "checks": {
+      "hole_tool": {
+        "ok": true,
+        "data": {
+          "name": "hole_tool",
+          "type": "compound",
+          "valid": true,
+          "topology": {
+            "compound": 1,
+            "compsolid": 0,
+            "solid": 1,
+            "shell": 1,
+            "face": 6,
+            "wire": 7,
+            "edge": 8,
+            "vertex": 5
+          },
+          "bbox": {
+            "min": [
+              -11.15139,
+              -86.44099544383255,
+              -0.824463221414
+            ],
+            "max": [
+              -9.17491,
+              -77.68049121937352,
+              1.1520167785860003
+            ],
+            "size": [
+              1.9764799999999987,
+              8.760504224459027,
+              1.9764800000000002
+            ]
+          },
+          "area": 50.09010167223575,
+          "length": 36.38714445320094,
+          "volume": 18.220125706549688,
+          "center_of_mass": [
+            -10.163149999999998,
+            -82.51316140642612,
+            0.16377677858600032
+          ],
+          "units": "model_units (default convention: mm)"
+        }
+      }
+    }
+  }
+}

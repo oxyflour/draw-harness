@@ -73,6 +73,14 @@ MCP 为 `occ_topology_graph(session,shape,path?,overwrite?)`；Tcl 为 `ah_topol
 
 GUI 会话仍支持 RPC。它复用 DRAW 自己的 Tcl/Tk 事件循环，批处理会话继续使用独立事件循环。
 
+零件选择使用可滚动列表：单击条目后点“载入所选零件”，或直接双击条目。此界面使用 `pack` 布局，避开 DRAW 的全局 `grid` 命令覆盖 Tk 同名命令、导致 ttk 下拉弹窗异常的问题。
+
+“清空当前选择”只取消高亮，保留本 case 已保存的面。“开始下一个 case”清空选择和当前列表，切换到独立的 `cases/case_0002` 等记录目录；旧记录、面 BREP 和零件快照仍保留。新 case 可以重复选择相同的面，不会被上一轮的去重状态跳过。`.occ-harness/latest_benchmark_picker.json` 指向当前 case 的记录目录。
+
+阶梯孔移动的四方向样例见 [选面 case 0002](artifacts/benchmarks/case02_part05_move_xz3/README.md)。`examples/relocate_hole_benchmark.py --package <样例目录>` 从已准备的填孔体、阶梯孔工具和参数独立生成 X/Z ±3 mm 候选；`--audit-existing` 只复核已有候选的核心截面。它是该样例的复现实验，还没有实现通用孔特征识别或自动选面扩展。
+
+样例分别记录常规实体有效性、支撑面邻接、核心截面、原面片覆盖和 STEP 往返结果。允许外形重裁剪不代表允许孔穿透外壁；应按任务语义解释这些指标。重放生成的 `replayed.brep` 不纳入版本控制。
+
 ### 持久会话
 
 CLI 退出后 DRAW 会话继续存在，同名 start 会重用活会话。`context` 返回存活状态、任务记忆、最近六条操作摘要和检查点列表；完整输入/输出在 `history.jsonl`，DRAW 诊断在 `draw.log`。不同会话彼此隔离，同一会话的 CLI/MCP 调用通过文件锁串行执行。

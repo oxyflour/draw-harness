@@ -39,6 +39,8 @@ def main():
     ready, info = directory / "ready.port", directory / "gui-info.json"
     env.update(OCC_HARNESS_GUI="1", OCC_HARNESS_TOKEN=token, OCC_HARNESS_READY=str(ready), OCC_GUI_INFO=str(info))
     config = ["namespace eval ::bench {}", f"set ::bench::output {tcl(output.as_posix())}",
+              f"set ::bench::session {tcl(session)}",
+              f"set ::bench::latestPointer {tcl((ROOT / '.occ-harness/latest_benchmark_picker.json').as_posix())}",
               f"set ::bench::initial {args.initial}", "set ::bench::cases [dict create]"]
     for entry in manifest["exports"]:
         path = args.manifest.parent / entry["file"]

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "x_minus3",
+  "units": "mm",
+  "selection_case": 2,
+  "part_rank": 5,
+  "input": "../input/part_05.brep",
+  "input_sha256": "dba5abfe36df255dfaae974751dd2f9ca6d27efd96ce38b9f92feae0d2754b0a",
+  "original_user_faces": [
+    8,
+    317
+  ],
+  "expanded_faces": [
+    6,
+    7,
+    8,
+    317,
+    318,
+    319,
+    320
+  ],
+  "fixed_exterior_faces_before_edit": [
+    30,
+    83,
+    84
+  ],
+  "operation": {
+    "type": "translate_expanded_stepped_hole",
+    "vector": [
+      -3,
+      0,
+      0
+    ],
+    "simultaneous": true
+  },
+  "method": "Fill the old complete hole; cut a translated outer bore, annular ledge, taper and inner bore. Retrim exterior faces by Boolean intersection.",
+  "boundary_policy": "Support geometry moves rigidly; trimming may change. Full trimmed-patch coverage is measured separately."
+}

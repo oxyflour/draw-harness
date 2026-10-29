@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "data": {
+    "ok": true,
+    "code": 0,
+    "result": "\n\nMass : 759.08199147756784\n\nRelative error of mass computation : 4.5107012895699834e-09\n\nCenter of gravity : \nX = -0.71406914125074716\nY = -83.751636761854286\nZ = -0.15715654594972189\n\nMatrix of Inertia :\n4695.6133105810732    1631.9074625037247    -1124.622066948524\n1631.9074625037247    532919.94867125456    650.76746693518908\n-1124.622066948524    650.76746693518908    531859.35302630533\n\nMoments :\nIX = 533230.98918567062\nIY = 531555.76185238303\nIZ = 4688.1639700873466\n\n",
+    "result_truncated": false,
+    "stdout": "",
+    "native_output": "",
+    "native_output_truncated": false
+  },
+  "seconds": 1.0
+}
