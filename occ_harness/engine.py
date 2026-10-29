@@ -257,6 +257,10 @@ class Harness:
         with self.lock(session):
             return self._rpc(session, dict(op=op, **arguments))
 
+    def edit_candidate(self, session: str, **arguments) -> dict:
+        from .editing import edit_candidate
+        return edit_candidate(self, session, **arguments)
+
     def execute(self, session: str, script: str, check: list[str] | None = None) -> dict:
         with self.lock(session):
             response = self._rpc(session, {"op": "eval", "script": script})

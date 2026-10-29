@@ -6,3 +6,4 @@
 - `harness.json` 的模型默认值是 gpt-6-luna；实际模型由客户端设置，harness 不发送模型 API 请求。
 - harness 可从任意项目目录运行；默认状态目录是调用方 cwd 下的 `.occ-harness`，可通过 `--state-dir` 或 `OCC_HARNESS_STATE_DIR` 固定。
 - DRAW/Tcl 是受信本地代码执行，不是沙箱。仅回环监听及随机 token 用于防止其他连接误用；token 存于本机 session.json，不应提交或粘贴到报告中。
+- v0.3 提供 revision 绑定的曲面/局部拓扑查询、同轴孔扩展和独立编辑验收，默认单次 RPC 超时为 180 秒。已运行的 DRAW 保留启动时加载的 DLL；升级后用新命名会话导入保存的原件/检查点。新增 MCP 工具需刷新客户端连接，CLI 同名子命令可直接使用。

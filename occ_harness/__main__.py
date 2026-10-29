@@ -13,10 +13,27 @@ def main() -> int:
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("doctor")
     sub.add_parser("mcp", help="MCP stdio server; no API key required")
-    for command in ("start", "stop", "context", "exec", "inspect", "topology", "topology_graph", "select", "export", "import", "checkpoint", "restore", "memory", "help"):
+    for command in ("start", "stop", "context", "exec", "inspect", "topology", "topology_graph", "select", "export", "import", "checkpoint", "restore", "memory", "help", "surface_info", "patch_context", "expand_selection", "edit_candidate", "validate_edit"):
         p = sub.add_parser(command)
         p.add_argument("session")
-        if command == "start":
+        if command in ("surface_info", "patch_context", "expand_selection", "edit_candidate", "validate_edit"):
+            p.add_argument("shape" if command != "validate_edit" else "source")
+            p.add_argument("--faces", nargs="+", type=int, required=command != "surface_info")
+            p.add_argument("--expected-revision", required=command in ("patch_context", "expand_selection", "edit_candidate"))
+            if command == "surface_info":
+                p.add_argument("--offset", type=int)
+                p.add_argument("--limit", type=int)
+            if command == "patch_context":
+                p.add_argument("--depth", type=int, default=1)
+                p.add_argument("--max-faces", type=int, default=100)
+            if command in ("edit_candidate", "validate_edit"):
+                p.add_argument("--vector", nargs=3, type=float, required=True)
+                p.add_argument("--policy", type=Path, required=True, help="JSON file declaring target_mode, allow_breakthrough and allow_new_supports")
+            if command == "validate_edit":
+                p.add_argument("candidate")
+                p.add_argument("--source-revision", required=True)
+                p.add_argument("--candidate-revision", required=True)
+        elif command == "start":
             p.add_argument("--model", default="gpt-6-luna", help="Session metadata; select the actual model in your agent client")
         elif command == "exec":
             source = p.add_mutually_exclusive_group(required=True)
@@ -74,6 +91,14 @@ def main() -> int:
             result = harness.execute(args.session, script, args.check)
         elif cmd == "inspect":
             result = harness.call(args.session, "inspect", shape=args.shape)
+        elif cmd in ("surface_info", "patch_context", "expand_selection", "edit_candidate", "validate_edit"):
+            from .mcp import invoke, validate, BY_NAME
+            p = {key: value for key, value in vars(args).items() if key not in ("command", "state_dir", "timeout") and value is not None}
+            if cmd in ("edit_candidate", "validate_edit"):
+                p["policy"] = json.loads(args.policy.read_text(encoding="utf-8-sig"))
+            tool_name = "occ_" + cmd
+            validate(p, BY_NAME[tool_name]["inputSchema"])
+            result = invoke(harness, tool_name, p)
         elif cmd == "topology":
             result = harness.call(args.session, "subshapes", shape=args.shape, type=args.type, offset=args.offset, limit=args.limit)
         elif cmd == "topology_graph":

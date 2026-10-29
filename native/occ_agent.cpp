@@ -10,7 +10,24 @@
 #include <BRepAdaptor_Curve.hxx>
 #include <BRepAdaptor_Surface.hxx>
 #include <BRep_Tool.hxx>
+#include <BRepAlgoAPI_Common.hxx>
+#include <BRepAlgoAPI_Cut.hxx>
+#include <BRepAlgoAPI_Fuse.hxx>
+#include <BRepPrimAPI_MakeCylinder.hxx>
+#include <BRepPrimAPI_MakeCone.hxx>
+#include <BRepBuilderAPI_Transform.hxx>
+#include <BRepBuilderAPI_Copy.hxx>
+#include <BRepBuilderAPI_MakeEdge.hxx>
+#include <BRepBuilderAPI_MakeFace.hxx>
+#include <Geom_Circle.hxx>
+#include <GeomTools.hxx>
+#include <gp_Lin.hxx>
+#include <gp_Circ.hxx>
+#include <set>
+#include <map>
+#include <iomanip>
 #include <TopExp.hxx>
+#include <TopExp_Explorer.hxx>
 #include <TopTools_IndexedMapOfShape.hxx>
 #include <TopTools_IndexedDataMapOfShapeListOfShape.hxx>
 #include <TopTools_ListIteratorOfListOfShape.hxx>
@@ -102,6 +119,27 @@ J bounds(const TopoDS_Shape& s, A& a) {
   v.AddMember("size", point(gp_Pnt(x1-x0, y1-y0, z1-z0), a), a);
   return v;
 }
+std::string canonicalBrep(const TopoDS_Shape& s) {
+  auto canonical = BRepBuilderAPI_Copy(s, false, false).Shape();
+  BRepTools::Clean(canonical);
+  TopTools_IndexedMapOfShape all; TopExp::MapShapes(canonical, all);
+  // Rendering/checking can update TShape bookkeeping flags without editing
+  // geometry or incidence. Normalize ONLY the private topological copy.
+  for (int i=1;i<=all.Extent();++i) {
+    auto item=all(i);item.Free(false);item.Modified(false);item.Checked(false);
+    item.Orientable(false);item.Closed(false);item.Infinite(false);item.Convex(false);
+  }
+  std::ostringstream stream;
+  BRepTools::Write(canonical, stream, false, false, TopTools_FormatVersion_VERSION_3);
+  return stream.str();
+}
+std::string revision(const TopoDS_Shape& s) {
+  // Mesh-independent content version, not an authentication/hash primitive.
+  uint64_t hash = 14695981039346656037ull;
+  for (unsigned char c : canonicalBrep(s)) { hash ^= c; hash *= 1099511628211ull; }
+  std::ostringstream result; result << "brep-v1-" << std::hex << std::setw(16) << std::setfill('0') << hash;
+  return result.str();
+}
 J inspect(const std::string& name, A& a) {
   auto s = shape(name);
   J v(rapidjson::kObjectType), counts(rapidjson::kObjectType);
@@ -112,12 +150,12 @@ J inspect(const std::string& name, A& a) {
   v.AddMember("topology", counts, a);
   v.AddMember("bbox", bounds(s, a), a);
   GProp_GProps surface, linear, volume;
-  BRepGProp::SurfaceProperties(s, surface, false, true);
-  BRepGProp::LinearProperties(s, linear, true);
+  BRepGProp::SurfaceProperties(s, surface, false, false);
+  BRepGProp::LinearProperties(s, linear, true, false);
   v.AddMember("area", num(surface.Mass()), a);
   v.AddMember("length", num(linear.Mass()), a);
   if (count(s, TopAbs_SOLID) > 0) {
-    BRepGProp::VolumeProperties(s, volume, true, false, true);
+    BRepGProp::VolumeProperties(s, volume, true, false, false);
     v.AddMember("volume", num(volume.Mass()), a);
     v.AddMember("center_of_mass", point(volume.CentreOfMass(), a), a);
   } else {
@@ -125,6 +163,8 @@ J inspect(const std::string& name, A& a) {
     v.AddMember("center_of_mass", point(surface.Mass() > 0 ? surface.CentreOfMass() : linear.CentreOfMass(), a), a);
   }
   v.AddMember("units", "model_units (default convention: mm)", a);
+  v.AddMember("measurement_mode", "geometry_without_triangulation", a);
+  v.AddMember("revision", str(revision(s), a), a);
   return v;
 }
 J subshapes(const J& request, A& a) {
@@ -286,6 +326,8 @@ J topologyGraph(const J& request, A& a) {
   return summary;
 }
 
+#include "direct_edit.hxx"
+
 // Bounded streams prevent a noisy DRAW command from flooding tool output.
 class Capture : public std::streambuf {
  public:
@@ -343,6 +385,10 @@ J dispatch(Draw_Interpretor& di, const J& request, A& a) {
   if (op == "inspect") return inspect(field(request, "shape"), a);
   if (op == "subshapes") return subshapes(request, a);
   if (op == "topology_graph") return topologyGraph(request, a);
+  if (op == "surface_info") return surfaceInfo(request, a);
+  if (op == "patch_context") return patchContext(request, a);
+  if (op == "expand_selection") return expandSelection(request, a);
+  if (op == "validate_edit") return validateEdit(request, a);
   if (op == "select") {
     const auto name = field(request, "name"); nameCheck(name);
     auto s = shape(field(request, "shape"));
@@ -402,7 +448,7 @@ J dispatch(Draw_Interpretor& di, const J& request, A& a) {
   if (op == "ping") {
     J v(rapidjson::kObjectType);
     v.AddMember("module", "occ-agent-harness", a);
-    v.AddMember("version", "0.2.0", a);
+    v.AddMember("version", "0.3.0", a);
     v.AddMember("occt", OCC_VERSION_COMPLETE, a);
     v.AddMember("protocol", 1, a);
     return v;

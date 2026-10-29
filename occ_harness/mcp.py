@@ -1,6 +1,7 @@
 """Dependency-free MCP stdio server, protocol revisions through 2025-11-25."""
 from __future__ import annotations
 import json
+import math
 from pathlib import Path
 import sys
 from .engine import Harness, HarnessError, ROOT
@@ -22,14 +23,40 @@ def tool(name, description, properties, required, read_only=False):
             "annotations": {"readOnlyHint": read_only, "openWorldHint": False}}
 
 
+FACE_IDS = {"type": "array", "items": {"type": "integer", "minimum": 1}, "minItems": 1, "maxItems": 500, "uniqueItems": True}
+VECTOR = {"type": "array", "items": {"type": "number", "minimum": -1e9, "maximum": 1e9}, "minItems": 3, "maxItems": 3}
+POLICY = {"type": "object", "properties": {
+    "target_mode": enum("support_geometry", "trimmed_patch"),
+    "allow_breakthrough": {"type": "boolean"}, "allow_new_supports": {"type": "boolean"},
+    "require_exact": {"type": "boolean"},
+    "linear_tolerance": {"type": "number", "exclusiveMinimum": 0, "maximum": .01},
+    "area_relative_tolerance": {"type": "number", "exclusiveMinimum": 0, "maximum": .1},
+    "max_tolerance_growth": {"type": "number", "minimum": 0, "maximum": .01},
+    "relative_volume_tolerance": {"type": "number", "exclusiveMinimum": 0, "maximum": .1}},
+    "required": ["target_mode", "allow_breakthrough", "allow_new_supports"], "additionalProperties": False}
+
 TOOLS = [
     tool("occ_session", "Start/reuse a persistent OCCT DRAW session, inspect context, or stop. Model selection belongs to your client.",
          {"action": enum("start", "context", "stop")}, ["action"]),
     tool("occ_exec", "Execute raw DRAW Tcl in the persistent session. Use fresh output names and check them. Errors can leave partial changes.",
          {"script": text("Native DRAW Tcl script; model units default to mm"),
           "check": {"type": "array", "items": text(), "description": "Output shapes required to exist and pass BRepCheck"}}, ["script", "check"]),
-    tool("occ_inspect", "Measure a shape: validity, bounding box, unique topology counts, exact area/volume/center.",
+    tool("occ_inspect", "Measure a shape: validity, bounding box, unique topology counts, mesh-independent geometric area/volume/center and revision.",
          {"shape": text()}, ["shape"], True),
+    tool("occ_surface_info", "Read world-space analytic surface parameters, inward-wall sense, UV bounds, mesh-independent area/tolerance and wire edge uses. Returns a shape revision for subsequent selections.",
+         {"shape": text(), "faces": FACE_IDS, "expected_revision": text(),
+          "offset": {"type": "integer", "minimum": 0}, "limit": {"type": "integer", "minimum": 1, "maximum": 500}}, ["shape"], True),
+    tool("occ_patch_context", "Read bounded local face geometry and edge adjacency around seed faces. Refuses stale revisions; reports truncation and preserves seam uses.",
+         {"shape": text(), "faces": FACE_IDS, "expected_revision": text(), "depth": {"type": "integer", "minimum": 0, "maximum": 5},
+          "max_faces": {"type": "integer", "minimum": 1, "maximum": 500}}, ["shape", "faces", "expected_revision"], True),
+    tool("occ_expand_selection", "Propose the connected inward coaxial cylinder/cone walls and annular ledges for a hole. Returns boundary faces, reasons and measured tool/profile sections; unsupported features remain explicit.",
+         {"shape": text(), "faces": FACE_IDS, "expected_revision": text(), "linear_tolerance": {"type": "number", "exclusiveMinimum": 0, "maximum": .01}}, ["shape", "faces", "expected_revision"], True),
+    tool("occ_edit_candidate", "Create an audited independent BRep branch from raw source faces, expand a coaxial hole, fill it, build a measured tool, calibrate at zero displacement, translate/re-cut, validate and export BREP/STEP. Does not replace source. Inspect data.accepted/status, not just ok. No timeout replay.",
+         {"shape": text(), "faces": FACE_IDS, "vector": VECTOR, "policy": POLICY, "expected_revision": text()},
+         ["shape", "faces", "vector", "policy", "expected_revision"]),
+    tool("occ_validate_edit", "Independently measure moved targets, adjacency, core circles, full bore void occupancy, boundary preservation outside the old/new feature envelope, new supports, exact validity and tolerance growth. Automatic acceptance requires a verifiable coaxial bore scope. Explicit policy and revisions required. ok means execution; data.accepted is policy acceptance. STEP roundtrip is separate in occ_edit_candidate.",
+         {"source": text(), "candidate": text(), "faces": FACE_IDS, "vector": VECTOR, "policy": POLICY,
+          "source_revision": text(), "candidate_revision": text()}, ["source", "candidate", "faces", "vector", "policy", "source_revision", "candidate_revision"], True),
     tool("occ_topology", "List edge/face geometry, bounds and indices; optionally bind one indexed subshape to a DRAW name. Indices change after edits.",
          {"shape": text(), "type": enum("edge", "face", "vertex", "wire", "shell", "solid"),
           "offset": {"type": "integer", "minimum": 0}, "limit": {"type": "integer", "minimum": 1, "maximum": 500},
@@ -67,11 +94,19 @@ def validate(value, schema, path="arguments"):
                 raise ValueError(f"{path}: unknown argument {key}")
             validate(item, schema["properties"][key], f"{path}.{key}")
     if kind == "array":
-        if len(value) < schema.get("minItems", 0):
-            raise ValueError(f"{path}: too few items")
+        if len(value) < schema.get("minItems", 0) or len(value) > schema.get("maxItems", float("inf")):
+            raise ValueError(f"{path}: invalid array length")
+        if schema.get("uniqueItems") and len({json.dumps(v, sort_keys=True) for v in value}) != len(value):
+            raise ValueError(f"{path}: duplicate items")
         for i, item in enumerate(value):
             validate(item, schema.get("items", {}), f"{path}[{i}]")
     if kind in ("number", "integer"):
+        try:
+            finite = math.isfinite(value)
+        except OverflowError:
+            finite = False
+        if not finite:
+            raise ValueError(f"{path}: number must be finite")
         if "minimum" in schema and value < schema["minimum"] or "maximum" in schema and value > schema["maximum"] or "exclusiveMinimum" in schema and value <= schema["exclusiveMinimum"]:
             raise ValueError(f"{path}: value out of range")
 
@@ -85,6 +120,15 @@ def invoke(h: Harness, name: str, args: dict) -> dict:
         return h.execute(session, p["script"], p["check"])
     if name == "occ_inspect":
         return h.call(session, "inspect", **p)
+    if name == "occ_edit_candidate":
+        return h.edit_candidate(session, **p)
+    if name in ("occ_surface_info", "occ_patch_context", "occ_expand_selection", "occ_validate_edit"):
+        if name == "occ_surface_info" and "faces" in p and ("offset" in p or "limit" in p):
+            raise HarnessError("Use faces or pagination, not both")
+        if name == "occ_validate_edit":
+            from .editing import normalize_policy
+            p["policy"] = normalize_policy(p["policy"])
+        return h.call(session, name.removeprefix("occ_"), **p)
     if name == "occ_topology_graph":
         if "path" in p:
             if not Path(p["path"]).is_absolute():

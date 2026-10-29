@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "input": "../../artifacts/benchmarks/case02_part05_move_xz3/input/part_05.brep",
+  "format": "brep",
+  "faces": [8, 317],
+  "vectors": [[-3, 0, 0], [3, 0, 0], [0, 0, -3], [0, 0, 3]],
+  "policy": {
+    "target_mode": "support_geometry",
+    "allow_breakthrough": false,
+    "allow_new_supports": false,
+    "require_exact": false,
+    "relative_volume_tolerance": 0.00001
+  }
+}

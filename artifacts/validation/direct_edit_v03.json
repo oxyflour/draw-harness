@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "module_version": "0.3.0",
+  "input": "artifacts/benchmarks/case02_part05_move_xz3/input/part_05.brep",
+  "input_sha256": "dba5abfe36df255dfaae974751dd2f9ca6d27efd96ce38b9f92feae0d2754b0a",
+  "input_scope": "Raw original BREP, seed faces, vectors and fixed policy; no prepared filled part, tool, expansion or benchmark answers read by recipe",
+  "user_faces": [
+    8,
+    317
+  ],
+  "expanded_faces": [
+    6,
+    7,
+    8,
+    317,
+    318,
+    319,
+    320
+  ],
+  "boundary_faces": [
+    30,
+    83,
+    84
+  ],
+  "policy": {
+    "target_mode": "support_geometry",
+    "allow_breakthrough": false,
+    "allow_new_supports": false,
+    "require_exact": false,
+    "relative_volume_tolerance": 1e-05
+  },
+  "results": [
+    {
+      "vector": [
+        -3,
+        0,
+        0
+      ],
+      "accepted": true,
+      "native_checks": {
+        "ordinary_valid_single_solid": true,
+        "target_supports_located": true,
+        "internal_adjacency_retained": true,
+        "single_solid_without_free_or_duplicate_uses": true,
+        "positive_finite_volume": true,
+        "full_trimmed_patch_retained": false,
+        "breakthrough_check_available": true,
+        "core_transition_sections_complete": true,
+        "entire_moved_bore_void": true,
+        "outside_feature_envelope_preserved": true,
+        "new_supports_allowed_or_absent": true,
+        "tolerance_growth_allowed": true
+      },
+      "source_unchanged": true,
+      "source_exact_valid": false,
+      "candidate_exact_valid": false,
+      "unclassified_supports": [],
+      "STEP_pass": true,
+      "STEP_relative_volume_error": 2.8928043300930213e-08,
+      "seconds": 68.203,
+      "candidate_brep_sha256": "c1e3fe2b936173b886d9a6aced1d5e4e375118775b3500796da11cc01e75453d",
+      "source_void": {
+        "solid_count": 0,
+        "volume": 0.0,
+        "empty_material": true
+      },
+      "moved_void": {
+        "solid_count": 0,
+        "volume": 0.0,
+        "empty_material": true
+      },
+      "change_locality": {
+        "source_boundary_area_outside_envelope": 1956.6932501333142,
+        "candidate_boundary_area_outside_envelope": 1956.693245315626,
+        "shared_boundary_area_outside_envelope": 1956.6932447831564,
+        "identical_finite_faces": 359,
+        "preserved": true
+      }
+    },
+    {
+      "vector": [
+        3,
+        0,
+        0
+      ],
+      "accepted": true,
+      "native_checks": {
+        "ordinary_valid_single_solid": true,
+        "target_supports_located": true,
+        "internal_adjacency_retained": true,
+        "single_solid_without_free_or_duplicate_uses": true,
+        "positive_finite_volume": true,
+        "full_trimmed_patch_retained": false,
+        "breakthrough_check_available": true,
+        "core_transition_sections_complete": true,
+        "entire_moved_bore_void": true,
+        "outside_feature_envelope_preserved": true,
+        "new_supports_allowed_or_absent": true,
+        "tolerance_growth_allowed": true
+      },
+      "source_unchanged": true,
+      "source_exact_valid": false,
+      "candidate_exact_valid": false,
+      "unclassified_supports": [],
+      "STEP_pass": true,
+      "STEP_relative_volume_error": 2.874376032298775e-08,
+      "seconds": 74.0,
+      "candidate_brep_sha256": "4be954eb71ab2f76cba51c469dd355212203f3790c3cfb84fbe929c819199d63",
+      "source_void": {
+        "solid_count": 0,
+        "volume": 0.0,
+        "empty_material": true
+      },
+      "moved_void": {
+        "solid_count": 0,
+        "volume": 0.0,
+        "empty_material": true
+      },
+      "change_locality": {
+        "source_boundary_area_outside_envelope": 1956.7355123648424,
+        "candidate_boundary_area_outside_envelope": 1956.735509342171,
+        "shared_boundary_area_outside_envelope": 1956.7355095804974,
+        "identical_finite_faces": 359,
+        "preserved": true
+      }
+    },
+    {
+      "vector": [
+        0,
+        0,
+        -3
+      ],
+      "accepted": false,
+      "native_checks": {
+        "ordinary_valid_single_solid": true,
+        "target_supports_located": true,
+        "internal_adjacency_retained": true,
+        "single_solid_without_free_or_duplicate_uses": true,
+        "positive_finite_volume": true,
+        "full_trimmed_patch_retained": false,
+        "breakthrough_check_available": true,
+        "core_transition_sections_complete": false,
+        "entire_moved_bore_void": true,
+        "outside_feature_envelope_preserved": true,
+        "new_supports_allowed_or_absent": true,
+        "tolerance_growth_allowed": true
+      },
+      "source_unchanged": true,
+      "source_exact_valid": false,
+      "candidate_exact_valid": false,
+      "unclassified_supports": [],
+      "STEP_pass": false,
+      "STEP_relative_volume_error": 8.20346235329308e-05,
+      "seconds": 72.234,
+      "candidate_brep_sha256": "9f6361cbea7f01ceba13721ad2669da3b4976dc51a9a68c4ad93114100b6f7c6",
+      "source_void": {
+        "solid_count": 0,
+        "volume": 0.0,
+        "empty_material": true
+      },
+      "moved_void": {
+        "solid_count": 0,
+        "volume": 0.0,
+        "empty_material": true
+      },
+      "change_locality": {
+        "source_boundary_area_outside_envelope": 1946.4839898554842,
+        "candidate_boundary_area_outside_envelope": 1946.4839897268848,
+        "shared_boundary_area_outside_envelope": 1946.4839897032768,
+        "identical_finite_faces": 349,
+        "preserved": true
+      }
+    },
+    {
+      "vector": [
+        0,
+        0,
+        3
+      ],
+      "accepted": false,
+      "native_checks": {
+        "ordinary_valid_single_solid": true,
+        "target_supports_located": true,
+        "internal_adjacency_retained": true,
+        "single_solid_without_free_or_duplicate_uses": true,
+        "positive_finite_volume": true,
+        "full_trimmed_patch_retained": false,
+        "breakthrough_check_available": true,
+        "core_transition_sections_complete": false,
+        "entire_moved_bore_void": true,
+        "outside_feature_envelope_preserved": true,
+        "new_supports_allowed_or_absent": true,
+        "tolerance_growth_allowed": true
+      },
+      "source_unchanged": true,
+      "source_exact_valid": false,
+      "candidate_exact_valid": false,
+      "unclassified_supports": [],
+      "STEP_pass": true,
+      "STEP_relative_volume_error": 2.9142765829250234e-11,
+      "seconds": 69.547,
+      "candidate_brep_sha256": "9cfdc440687d5c0457381fdfbc50a887cb0736c8522159a4456c9c2cd28c5fd7",
+      "source_void": {
+        "solid_count": 0,
+        "volume": 0.0,
+        "empty_material": true
+      },
+      "moved_void": {
+        "solid_count": 0,
+        "volume": 0.0,
+        "empty_material": true
+      },
+      "change_locality": {
+        "source_boundary_area_outside_envelope": 1955.733916937435,
+        "candidate_boundary_area_outside_envelope": 1955.7339170480718,
+        "shared_boundary_area_outside_envelope": 1955.733916937435,
+        "identical_finite_faces": 354,
+        "preserved": true
+      }
+    }
+  ],
+  "reproduce": "python examples/run_direct_edit_cases.py --case examples/cases/part05_hole_moves.json --output <new empty directory>",
+  "scope": "Deterministic harness regression; independent model reviewers are reported separately. Core-section checks do not certify global design intent.",
+  "native_module_sha256": "1a17c022cefa14262047d10fad9541ba75f409c64655dbdbd36094031d7a3e7e",
+  "final_validation_scope": "Includes complete bore void occupancy, core sections and bidirectional boundary preservation outside old/new analytic envelopes."
+}

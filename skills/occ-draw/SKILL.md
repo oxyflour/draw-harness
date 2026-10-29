@@ -13,6 +13,10 @@ description: 使用 OpenCASCADE DRAW Tcl 创建、直接编辑和检查三维 BR
 
 直接编辑前，用 `topology` / `occ_topology` 枚举当前边面，以类型、位置、尺寸确定目标，再用 `select` 或 `occ_topology(index,name)` 绑定名字。索引从 1 开始，布尔或圆角后须重新枚举。不要凭记忆猜测边号。
 
+面移动任务先读取 [直接编辑闭环](references/direct-edit.md)。`occ_surface_info` 返回世界坐标曲面参数和形状 revision，`occ_patch_context` 获取局部邻接，`occ_expand_selection` 建议同一孔的扩展范围。后续使用该 revision，拒绝过期索引。先明确有限面片保留、邻面重裁剪、穿透外壁和新增支撑面的允许范围。
+
+解析同轴孔可使用 `occ_edit_candidate` 从原件自动补孔、建工具、原位校准、平移重切和验收；不要求预先准备工具。`ok` 仅表示操作完成，成功应读取 `data.accepted`、`status`、几何验收及 STEP 往返结果。其他类型保留 `occ_exec` 小步建模，并用 `occ_validate_edit` 独立验收；范围或几何不受支持时保留证据、换策略，不把普通实体有效当成目标已达成。
+
 需要包含或邻接关系时，用 `topology_graph` / `occ_topology_graph` 获取 nodes、uses、edge_faces 和 vertex_edges；共享边、seam、实例和方向语义见 [references/topology-graph.md](references/topology-graph.md)。图 ID 与选择索引不同，选择使用 node.type_index；大图传输出路径。
 
 可能破坏已有结果的编辑前保存 checkpoint。脚本报错可能已改变部分状态，先检查，再决定恢复。超时会停止该会话，不能自动重放。checkpoint 仅恢复列出的 BRep 实体；不会恢复 Tcl 变量/过程，也不会删除其他实体。

@@ -17,12 +17,12 @@ cd C:\Projects\occ-harness
 .\occ-harness.ps1 stop part
 ```
 
-`--state-dir <directory>`、`--timeout <seconds>` 为全局选项，位于子命令前。命令返回 JSON，成功退出码为 0，失败为 1。复杂 Tcl 使用 `exec part --file C:/path/model.tcl --check final_shape`。默认单位约定为 mm。
+`--state-dir <directory>`、`--timeout <seconds>` 为全局选项，位于子命令前。默认单次 RPC 超时为 180 秒，超时终止对应 DRAW 会话，不自动重试。命令返回 JSON，操作完成退出码为 0，执行失败为 1；几何验收是否接受另看 `data.accepted`。复杂 Tcl 使用 `exec part --file C:/path/model.tcl --check final_shape`。默认单位约定为 mm。
 
 ## 接入 gpt-6-luna
 
 1. 执行 `scripts/install-skill.ps1`，将 `occ-draw` 安装到个人 skills 目录；本次已经安装。仓库的 `AGENTS.md` 也指向同一 skill。
-2. 本项目 `.codex/config.toml` 已配置目标模型和本地 MCP 服务。客户端载入项目配置后可发现九个 `occ_*` 工具；其他 MCP 客户端使用 `config/mcp.json.example`。
+2. 本项目 `.codex/config.toml` 已配置目标模型和本地 MCP 服务。客户端载入项目配置后可发现十四个 `occ_*` 工具；其他 MCP 客户端使用 `config/mcp.json.example`。新增工具需要刷新 MCP 连接；未刷新时可用 CLI 同名子命令。
 3. 在选择 **gpt-6-luna** 的聊天中使用 `$occ-draw`，例如：“创建 100×70×10 安装板，中心凸台直径 36、高 12，中心通孔直径 16，四个直径 7 的安装孔，外角 R3；检查并导出 STEP。”
 
 MCP 未连接时，skill 可直接调用自己的 `scripts/occ.ps1`。切换模型由客户端完成；`start --model` 仅记录元数据。该工具链不需要 OpenAI API key，也不自行调用模型 API。项目配置只影响本项目，未修改用户全局配置。
@@ -51,6 +51,33 @@ DRAWEXE -b -f server.tcl → occ_agent.dll → OCCT 7.7 BRep
 启动时复用 `draw.bat` 所调用的 **同一 env.bat**，加载 MODELING 和自定义插件。官方 draw.bat 不转发 Tcl 参数，因此运行层直接启动该环境中的 DRAWEXE。原安装目录及启动文件未修改。
 
 全部 DRAW Tcl 均可执行，不受预定义建模操作限制；`set`、`expr`、`foreach`、过程、原生布尔与圆角命令直接使用。几何协议另外提供结构化 inspect、topology/select，以及 STEP/BREP/STL 输出。STEP/BREP 支持导入；STL 导入、交互视窗、截图及 OCAF 历史不是当前接口的内置功能。可按需用 Tcl 加载额外 DRAW 插件。
+
+## 直接编辑闭环（v0.3）
+
+原件、选面、位移和明确的编辑规则是输入；孔参数、扩展范围和切削工具由运行过程计算。保留原生 Tcl 入口，新增五个结构化操作：
+
+| 操作 / MCP 工具 | 输出 |
+|---|---|
+| `surface_info` / `occ_surface_info` | 世界坐标曲面参数、轴向/半径/锥角、UV 范围、wire 引用、几何面积/容差、revision |
+| `patch_context` / `occ_patch_context` | 有界局部邻接、共享边、解析曲面关系、是否截断 |
+| `expand_selection` / `occ_expand_selection` | 同轴孔候选范围、边界面、逐面扩展理由和测得的分段孔轮廓 |
+| `edit_candidate` / `occ_edit_candidate` | 独立 BRep 分支、补孔/建工具/原位校准/移动重切、验收及 STEP 往返 |
+| `validate_edit` / `occ_validate_edit` | 目标面覆盖/支撑面映射、邻接、核心截面、完整孔体为空、影响范围外边界保留、新支撑面、严格有效性和容差增长 |
+
+面引用必须绑定 `(shape, revision, face_index)`。revision 排除显示网格和内部缓存标记，不是密码学哈希；修改几何或拓扑后重新查询。inspect 的面积、体积和长度也已禁止使用显示三角网格。
+
+policy 必须明确 `target_mode`（有限面片完整保留或支撑曲面移动后重裁剪）、`allow_breakthrough` 和 `allow_new_supports`。`ok=true` 表示操作完成，`data.accepted` 才表示声明的检查通过；执行失败、约束失败和证据不足分别保留。截面检查只覆盖识别出的解析孔核心，不证明全局设计正确。
+
+内置配方当前支持连通的 inward 圆柱/圆锥孔壁和环形台阶，要求圆柱端部、原件孔体为空、核心整圆截面，且原位重建必须与原件双向布尔差为空；自由曲面孔壁、开放扇区、混合轴线或复杂轴向轮廓明确返回不支持。一般形状仍可用 Tcl 建模并获取独立诊断；自动验收当前要求可验证的同轴孔影响范围。原始实体不被替换；分支、manifest、操作证据和 task memory 保存在被忽略的 `.occ-harness/sessions/<session>/edits/<id>/`。
+
+```powershell
+# 仅从原件与两面选择重建四个独立 case；输出目录须为空。
+python examples/run_direct_edit_cases.py --case examples/cases/part05_hole_moves.json --output .occ-harness/raw-part05-run
+```
+
+此脚本是确定性 harness 回归，不调用模型 API，也不代表 Luna 的自主成功率。完整接口、阈值和恢复说明见 [直接编辑 skill](skills/occ-draw/references/direct-edit.md)。
+
+本次回归摘要见 [真实原件验证](artifacts/validation/direct_edit_v03.json)，独立模型检查见 [3 个 Luna 的复核记录](artifacts/validation/luna_reviews_v03.md)。其中旧 case03 是开放圆柱扇区，当前整孔配方会提前拒绝；不把它计入自动建模成功。
 
 ## BRep 拓扑关系图
 
